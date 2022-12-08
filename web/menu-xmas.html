@@ -40,27 +40,15 @@
          url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.ttf') format("truetype");
     font-display: swap;
 } 
-    .fc1 {color: #9b6b43;} 
-    .fc3 {color: #c98860;}
-    .fc2 {color: #7f7801;}
-    .fc4 {color: #d9b29c;}
-    .fc5 {color: #fcac89;}
-    .fc6 {color: #D7897E;}
-    .fc7 {color: #e09132;}
+    .fc1 {color: #006400;} /* 한글 */
+    .fc3 {color: #AA1C20 ;} /* 영어 */
+    .fc2 {color: #687E3D;}  /* 과일설명 */
+    .fc4 {color: #98AA7C;} /* 한글설명, blending blacksugar 설명 */
+    .fc5 {color: #631E11 ;} /* 가격 */
+    .fc6 {color: #dbc2ad;} /* blending cacao설명 */
+    /* .fc6 {color: #C55647;}  *//* blending cacao설명 */
+    .fc7 {color: #AA1C20;} /* wave color */
     .fcw {color: white;}
-    /* .fc1 {color: #a3692c;} 
-    .fc3 {color: #ce9c90;}
-    .fc2 {color: #e27b34;}
-    .fc4 {color: #e9b57c;}
-    .fc5 {color: #fcac89;}
-    .fc6 {color: #D7897E;} */
-    /* blue */
-    /* .fc1 {color: #194569;}
-    .fc2 {color: #5F84A2;}
-    .fc3 {color: #91AEC4;}
-    .fc4 {color: #B7D0E1;}
-    .fc5 {color: #CADEED;}
-    .fc6 {color: #DBECF4;} */
     .fft { font-family: twayair;}
     .ffp { font-family: Poppins-Regular;}
     .ffe { font-family: EF_Diary;}
@@ -97,23 +85,18 @@
     .en::before { content: "•"; margin-right: 7px;}
     .ko { font-family: twayair; font-size: 18px; margin-left: 15px;}
     .ex { font-family: DalseoHealing; font-weight: 15px; margin-left: 11px; }
-    /* .ex { font-family: DalseoHealingMedium; font-weight: 15px; margin-left: 11px; } */
     .esoTi { 
-      /* font-family: Bostana;  */
       font-family: TypoRoundRegularDemo; 
-      /* font-family: Starlight;  */
       font-size: 30px; margin: 70px 25px 30px 25px; font-weight: 800;
-      /* color: rgba(161,129,103,1); */
-      color: #c98860;
-      /* color: #8f9e81; */
     }
+    .esoTi span { letter-spacing: -6px;}
     .esoTi:last-child {position: absolute; top:72%;}
     .esoKo { font-family:twayair ; font-size: 17px; } 
     .esoEn{ font-family: "Paytone One"; text-transform: uppercase; 
       display: block;
       font-size: 35px;
       line-height: 20px;
-      text-shadow: 0 6.36px 3.896px #DBD0BD,0 -1px 1px #CBA37B;
+      text-shadow: 0 6.36px 3.896px #98AA7C,0 -1px 1px #98AA7C;
       letter-spacing: -3px;
       opacity: 0.25;        
     } 
@@ -127,17 +110,9 @@
       line-height: 20px;
       position: relative;
       border-radius: 5px;
-      background: linear-gradient(90deg, rgba(161,129,103,1) 15%, rgba(209,183,161,1) 36%, rgba(219,194,173,1) 53%, rgba(233,211,192,1) 69%, rgba(239,220,204,1) 82%, rgba(242,229,217,1) 93%);
-      /* background: linear-gradient(90deg, rgba(116,76,36,1) 14%, rgba(142,84,49,1) 28%, rgba(155,107,67,1) 43%, rgba(201,136,96,1) 61%, rgba(239,206,173,1) 82%, rgba(243,227,211,1) 95%); */
-      /* background: linear-gradient(90deg, rgba(116,76,36,1) 21%, rgba(142,84,49,1) 37%, rgba(155,107,67,1) 51%, rgba(201,136,96,1) 71%, rgba(239,206,173,1) 84%, rgba(243,227,211,1) 95%); */
-      /* background: linear-gradient(90deg, rgba(111,49,50,1) 19%, rgba(161,95,34,1) 40%, rgba(187,108,94,1) 61%, rgba(179,138,105,1) 79%, rgba(212,198,176,1) 94%); */
-      /* background: linear-gradient(90deg, rgba(82,25,8,1) 21%, rgba(130,57,25,1) 43%, rgba(202,123,66,1) 60%, rgba(255,219,175,1) 78%, rgba(247,235,211,1) 91%); */
-      /* background: linear-gradient(90deg, rgba(166,119,106,1) 21%, rgba(206,156,144,1) 43%, rgba(216,174,156,1) 60%, rgba(230,208,202,1) 78%, rgba(238,228,219,1) 89%); */
-      /* background: linear-gradient(90deg, rgba(210,78,1,1) 12%, rgba(220,102,1,1) 28%, rgba(232,133,4,1) 46%, rgba(238,159,87,1) 63%, rgba(245,199,114,1) 78%, rgba(249,221,176,1) 93%);           */
-      /* blue */
-      /* background: linear-gradient(270deg, rgba(219,236,244,1) 11%, rgba(202,222,237,1) 26%, 
-                rgba(183,208,225,1) 40%, rgba(145,174,196,1) 57%, rgba(95,132,162,1) 77%, 
-                rgba(25,69,105,1) 93%); */
+      /* background: linear-gradient(90deg, rgba(161,129,103,1) 15%, rgba(209,183,161,1) 36%, rgba(219,194,173,1) 53%, rgba(233,211,192,1) 69%, rgba(239,220,204,1) 82%, rgba(242,229,217,1) 93%); */
+      background: url(chris.jpg);  
+      background-size: cover;
       padding: 8px 10px;
       color: #f7ebd3;
       /* color: #f7ebd3; */
@@ -197,9 +172,10 @@
     .img:first-child{ background: url(pumkin.jpeg);  background-size: 230px 230px; }
     .img:nth-child(2) { background: url(citron.jpeg);  background-size: 230px 230px;  }
     .img:last-child { background: url(ssang.jpeg);  background-size: 230px 230px; }
+    .img_price { font-weight: 900;}
     .img::before{
       content: "";
-      opacity: 0.5;
+      opacity: 0.3;
       border-radius: 50%;
       position: absolute;
       top: 0px;
@@ -253,10 +229,10 @@
       @keyframes bounce {
         100% {
           top: -6px;
-          text-shadow: 0 1px 0 #c68556,
-                       0 2px 0 #c68556,
-                       0 3px 0 #c68556,
-                       0 4px 0 #c68556, 
+          text-shadow: 0 1px 0 #98AA7C,
+                       0 2px 0 #98AA7C,
+                       0 3px 0 #98AA7C,
+                       0 4px 0 #98AA7C, 
                        0 5px 0 #ffdbaf,
                        /* 0 6px 0 #91AEC4, */
                       /* 0 7px 0 #CCC, */
@@ -270,7 +246,7 @@
       color: white;
       font: 700 normal 19px 'twayair';
       /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
-      text-shadow: 3px 1px #c68556, 1px 2px #ffdbaf, 1px 3px #ffdbaf;
+      text-shadow: 3px 1px #98AA7C, 1px 2px #98AA7C, 1px 3px #98AA7C;
     }
     .ss {
       color:#fff;
@@ -311,8 +287,6 @@
     }
     .we div:first-child, .we .fft {
       color:#8f9e81;
-      /* color:#A77D54; */
-      /* color:#885A3A; */
       font-size:47px;
     } 
     .we div:last-child {
@@ -349,76 +323,7 @@
         80% {opacity:1;}
         100% {opacity:0;width:530px;}
     }
-    /* coffe img */
-    /* @-webkit-keyframes coffee {
-      100% {
-        opacity: 0;
-        -webkit-transform: translateY(-200%);
-                transform: translateY(-200%); } }
-    @keyframes coffee {
-      100% {
-        opacity: 0;
-        -webkit-transform: translateY(-200%);
-                transform: translateY(-200%); } }
-
-    .coffee .cup{
-      display: grid;
-      border-radius: 4px;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
-      height: 30px;
-      position: relative;
-      width: 40px;
-      margin-top: -5px;
-      padding: 1px;
-      margin-left: 10px;
-      justify-items: center; 
-    }
-    .coffee .cup:before {
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      content: '';
-      height: 30px;
-      width: 26px;
-      border: 2px solid #CBA37B;
-      position: absolute;
-      top: 36%;
-      margin-top: -5px;
-      margin-left: -35px;
-      left: 100%;
-      border-radius: 3px 3px 5px 5px; 
-      z-index: 6;
-    }
-    .coffee .cup div {
-      height: 11px;
-      width: 3px;
-      background: #fcac89;
-      opacity: .5;
-      -webkit-animation: coffee 2.5s infinite;
-      animation: coffee 2.5s infinite; }
-    .coffee .cup div:nth-child(1) {
-        -webkit-animation-delay: 0.4s;
-        animation-delay: 0.4s; 
-      }
-    .coffee .cup div:nth-child(2) {
-        margin-left: -5px;
-        -webkit-animation-delay: 1s;
-        animation-delay: 1s; }
-    .coffee .cup div:nth-child(3) {
-      margin-left: -13px;
-      -webkit-animation-delay: 0.2s;
-              animation-delay: 0.2s; }
-    .handle {
-      border:2px solid #885A3A;
-      width: 4px;
-      height: 18px;
-      margin-top: 6px;
-      margin-left: -11px;
-      border-radius: 7px;
-    }  
-     */
-
-
+    
   .box { margin-left: 15px; position: relative;}
 
     .steamimg {
@@ -479,7 +384,7 @@
       position: relative;
       width: 25px;
       height: 30px;
-      background-color: #7f7801;
+      background-color: #006400;
       border-radius: 2px;
       /* box-shadow: inset -20px -1px 0px 12px 7f7801;
       -webkit-box-shadow: inset -20px -1px 0px 12px $mug-shadow-color;} */
@@ -494,18 +399,13 @@
         top: -22px;
         left: 10px;
         z-index: 2;
-        /* box-shadow: inset 2px 2px 0 0 rgb(245 245 245 / 50%),
-          inset 0 0 0 4px rgb(255 245 245), inset 0 15px 0 3px rgb(225 225 225);
-        -webkit-box-shadow: inset 2px 2px 0 0 rgb(245 245 245 / 50%),
-          inset 0 0 0 4px rgb(255 245 245), inset 0 15px 0 3px rgb(225 225 225); */
       }
-
 
     .handle {
       width: 10px;
       height: 20px;
       border-radius: 5px 5px 15px 80%;
-      border: 3px solid #7f7801;
+      border: 3px solid #AA1C20;
       z-index: -1;
       margin-top: 15px;
       margin-left: -9px;
@@ -650,7 +550,7 @@
       height: 24px;
       width: 29px;
       border-radius: 3px 3px 11px 11px;
-      background-color: #dbc2ad;
+      background-color: #AA1C20;
       margin: auto;
       display: inline-block;
       overflow: hidden;
@@ -661,9 +561,8 @@
       height: 12px;
       width: 6px;
       border-radius: 0 3px 12px 0;
-      border: 2px solid #885A3A;
+      border: 2px solid #006400;
       margin-top: 2px;
-      /* margin-bottom: 95px; */
       margin-left: 25px;
       display: inline-block;
       z-index: 0;
@@ -673,7 +572,7 @@
       height: 3px;
       width: 36px;  
       border-radius: 0 0 10px 10px;
-      background-color: #dbc2ad;
+      background-color: #006400;
       margin-top: 25px;
       /* margin-left: 168px; */
       z-index: 2;
@@ -693,7 +592,7 @@
     @keyframes flip {
       0%,80% {
         /* color: #91AEC4; */
-        color: #885A3A;
+        color: #006400;
         transform: rotateY(360deg) 
       }
     }
@@ -708,22 +607,37 @@
         <div class="title shadow "> Espresso </div>
         <div class="disArr">
           <div class="mr50 mt50"> 
-            <div class="esoTi">SEO's Blending </div>
+            <div class="esoTi"> 
+              <span class="fc1"> S</span> <span class="fc3"> E</span> 
+              <span class="fc1"> O</span> <span class="fc3"> 's</span> <br>
+              <span class="fc1"> B</span> <span class="fc3"> l</span> 
+              <span class="fc1"> e</span> <span class="fc3"> n</span> 
+              <span class="fc1"> d</span> <span class="fc3"> i</span> 
+              <span class="fc1"> n</span> <span class="fc3"> g</span> 
+              <!-- <span class="fc1"> SEO's</span> <span class="fc3"> Blending</span>  -->
+            </div>
             <div class="tr ">  
               <div class="esoKo  fc1 "> 블랙슈거 </div>
-              <div class="esoEn fc3 "> Black Suger </div>
-              <div class="esoEx fc5"> 
+              <div class="esoEn  "> Black Suger </div>
+              <div class="esoEx fc4"> 
                 흑설탕과 같은 <br> 진한 단맛, 볶은 견과류의 <br> 고소함, 밀크초콜릿의<br> 풍부한 단맛
               </div>
             </div>
             <div class="tr mt30">  
               <div class="esoKo fc1 "> 카카오 </div>
-              <div class="esoEn fc3"> Cacao </div>
+              <div class="esoEn "> Cacao </div>
               <div class="esoEx fc6 "> 
                  카카오닙스의 <br>쌉쌀한 여운, 호도의 고소한 <br> 향미, 다크초콜릿의  <br> 농도 짙은 단맛
               </div>
             </div>
-            <div class="esoTi">SEO's <br> Cold Brew </div>
+            <div class="esoTi">
+              <span class="fc1"> S</span> <span class="fc3"> E</span> 
+              <span class="fc1"> O</span> <span class="fc3"> 's</span> <br>
+              <span class="fc1"> C</span> <span class="fc3"> o</span> 
+              <span class="fc1"> l</span> <span class="fc3" > d</span> 
+              <span class="fc1"> B</span> <span class="fc3"> r</span> 
+              <span class="fc1"> e</span> <span class="fc3"> w</span>
+            </div>
           </div>
           <div class="disAli"> 
             <div class="border">
@@ -739,14 +653,6 @@
               <div class="dis line">
                 <div class="en fc3">Americano</div>
                 <div class="ko fc1">아메리카노</div>
-                <!-- <div class="coffee dis">
-                    <div class="cup">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                    <div class="handle"></div>
-                </div> -->
               </div>
             </div>
             <div class="border">
@@ -838,18 +744,6 @@
               <div class="en fc3">No add Sugar</div>
               <div class="ko fc2">가당처리 하지않는 과일 그대로의 맛</div>
             </div>
-            <!-- <div class="dis">
-              <div class="en fc3">100% hand-made Syrup with fresh fruit</div>
-              <div class="ko fc2">생과일로 만드는 수제청</div>
-            </div>
-            <div class="dis">
-              <div class="en fc3">100% real Fresh Fruit Juice</div>
-              <div class="ko fc2">100% 생과일 착즙 쥬스</div>
-            </div>
-            <div class="dis">
-              <div class="en fc3">No add Suger</div>
-              <div class="ko fc2">가당처리 하지않는 과일 그대로의 맛</div>
-            </div> -->
           </div>
           <div class="border mt30">
             <div class="disBet ">
@@ -990,7 +884,7 @@
       <div class="thema">
         <div class="title shadow "> Flower Tea </div>
         <div class="border">
-          <div class="price fc3 pt10"> 7.5</div>
+          <div class="price fc5 pt10"> 7.5</div>
           <div class="dis line">
             <div class="en fc3">Chrysanthemum</div>
             <div class="ko fc1">국화꽃</div>
@@ -1027,22 +921,22 @@
               <span>라</span>
               <span>떼</span>
             </div>
-            <div class="price80 mt20"></div>
+            <div class="price80 mt20 img_price"></div>
           </div>
         </div> 
         <div class="img"> 
           <div class="sessonT">
             <div class="en mb12">Citron</div>
             <div class="ko fcw">고흥에서 자란 유기농 <br> 유자차</div>
-            <div class="price85 mt20 "></div>
+            <div class="price85 mt20 img_price"></div>
           </div>
         </div> 
         <div class="img"> 
           <div class="en ss">Ssangwhatang</div>
-          <div class="sessonT">
+          <div class="sessonT ">
             <div class="word"> </div>
           </div>
-          <div class="price90 ssp "></div>
+          <div class="price90 ssp img_price "></div>
         </div> 
       </div>
 
@@ -1059,16 +953,8 @@
                   <div class="mug"></div>
                   <div class="handle"></div>
               </div>
-              <!-- <div class="coffee dis">
-                <div class="cup">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="handle"></div>
-              </div> -->
             </div>
-            <div class="price70 fc3 line" > </div>
+            <div class="price70 fc5 line" > </div>
           </div>
           <div class="disBet ">
             <div class="dis line">
@@ -1076,7 +962,7 @@
               <div class="ko fc1">말차라떼</div>
               <div class="ex fc4">깊고 부드러운 유기농 제주 말차 + 우유</div>
             </div>
-            <div class="price70 fc3 line" >  </div>
+            <div class="price70 fc5 line" >  </div>
           </div>
           <div class="disBet ">
             <div class="dis line">
@@ -1084,7 +970,7 @@
               <div class="ko fc1">밀크티</div>
               <div class="ex fc4">베르가모트향의 얼그레이 + 우유</div>
             </div>
-            <div class="price75 fc3 line" >  </div>
+            <div class="price75 fc5 line" >  </div>
           </div>
           <div class="disBet ">
             <div class="dis line">
@@ -1101,7 +987,7 @@
               </div>
               <div class="ex fc4">초코 + 우유 + 바닐라 아이스크림</div>
             </div>
-            <div class="price85 fc3 line" >  </div>
+            <div class="price85 fc5 line" >  </div>
           </div>
           <div class="disBet ">
             <div class="dis line">
@@ -1109,7 +995,7 @@
               <div class="ko fc1">망고밀크쉐이크</div>
               <div class="ex fc4">하겐다즈 망고아이스크림 + 냉동애플망고 + 우유 </div>
             </div>
-            <div class="price85 fc3 line" >  </div>
+            <div class="price85 fc5 line" >  </div>
           </div>
         </div>
       </div>
