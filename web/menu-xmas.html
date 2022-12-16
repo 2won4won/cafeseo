@@ -601,7 +601,127 @@
         transform: rotateY(360deg) 
       }
     }
- 
+    #rssBlock{
+      /* left:0px; */
+      /* height: 80px; */
+      /* background: red; */
+      /* position: absolute; */
+      width:31%;
+      overflow: hidden;
+      letter-spacing: 0;
+    }
+
+    /*remove p*/
+    .cnnContents {
+      width: 100%;
+      /* padding-top: 20px; */
+      margin:0 auto;
+      /* font-size: 30px; */
+      white-space: nowrap;
+      text-transform: uppercase;
+      /* font-family: 'Museo'; */
+      /* font-weight: 300; */
+    }
+
+    .marqueeStyle {
+      display:inline-block;
+      /* Apply animation to this element */
+      -webkit-animation: scrolling-left1 20s linear infinite;
+      animation: scrolling-left1 20s linear infinite;
+    }
+
+    .marqueeStyle2 {
+      display:inline-block;
+      /* Apply animation to this element */
+      -webkit-animation: scrolling-left2 20s linear infinite;
+      animation: scrolling-left2 20s linear infinite;
+      animation-delay: 10s;
+    }
+    /* scrolling-left is continuous/repeatly text */
+    @keyframes scrolling-left1 {
+        0% {transform: translateX(100%);
+            -webkit-transform: translateX(100%);}
+        100% {transform: translateX(-100%);
+              -webkit-transform: translateX(-100%);}
+    }
+    @keyframes scrolling-left2 {
+        0% {transform: translateX(0%);
+            -webkit-transform: translateX(0%);}
+        100% {transform: translateX(-200%);
+              -webkit-transform: translateX(-200%);}
+    }
+
+    @-webkit-keyframes scrolling-left1 {
+        0% {-webkit-transform: translateX(100%);}
+        100% {-webkit-transform: translateX(-100%);}
+    }
+    @-webkit-keyframes scrolling-left2 {
+        0% {-webkit-transform: translateX(0%);}
+        100% {-webkit-transform: translateX(-200%);}
+    }
+    .string {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      animation: move 4s infinite;
+    }
+
+    .greeting {
+      position: relative;
+      /* top: 8.6vmin; */
+      animation: white-out 5s infinite;
+    }
+    @keyframes move {
+      25% {
+        transform: translatey(-5.8px);
+        opacity: 1;
+      }
+      50% {
+        transform: translatey(-31px);
+      }
+      75% {
+        transform: translatey(-16.5px);
+      }
+    }
+    .animation {
+      height:35px;
+      overflow:hidden;
+      /* margin-left: 2px; */
+    }
+
+    .animation > div > div {
+      padding: 0.25rem 0.75rem;
+      height:2.81rem;
+      margin-bottom: 2.81rem;
+      display:inline-block;
+    }
+
+    .animation div:first-child {
+      animation: text-animation 8s infinite;
+    }
+
+    /* .first div {
+      background-color:#20a7d8;
+    }
+    .second div {
+      background-color:#CD921E;
+    }
+    .third div {
+      background-color:#c10528;
+    } */
+
+    @keyframes text-animation {
+      0% {margin-top: 0;}
+      10% {margin-top: 0;}
+      20% {margin-top: -5.62rem;}
+      30% {margin-top: -5.62rem;}
+      40% {margin-top: -11.24rem;}
+      60% {margin-top: -11.24rem;}
+      70% {margin-top: -5.62rem;}
+      80% {margin-top: -5.62rem;}
+      90% {margin-top: 0;}
+      100% {margin-top: 0;}
+    }
 
   </style>
 </head>
@@ -823,12 +943,18 @@
               </div>
             </div>
             <div class="disBet">
-              <div class="dis line">
+              <div class="dis line" style="width: 75%;">
                 <div class="en fc3"> Kiwi </div>
-                <div class="ko fc1"> 키위 </div>
-                <div class="ex fc4">체중 조절, 시력 저하 예방, 체내 산성과 알칼리성 균형</div>
+                <!-- <div class="ko fc1"> 키위 </div> -->
+                <div id="rssBlock" class="ko fc1">
+                  <p class="cnnContents">
+                      <span class="marqueeStyle">&nbsp;상큼 달콤 따뜻한 <span class="fc7">키위차</span> &nbsp;</span>
+                      <span class="marqueeStyle2">&nbsp;최★수가 좋아하는 <span class="fc7">키위차</span>&nbsp;  </span>
+                  </p>
+                </div>
+                <div class="ex fc4"> 시력 저하 예방, 미네랄 보충 </div>
               </div>
-              <div class="disEnd line">
+              <div class="disEnd line" >
                 <div class=" price80 fc5 "></div>
                 <div class=" price80 fc5 "></div>
                 <div class=" price0 fc5 "> </div>
@@ -938,8 +1064,22 @@
         <div class="img"> 
           <div class="sessonT">
             <div class="en mb12">Citron</div>
-            <div class="ko fcw">고흥에서 자란 유기농 <br> 유자차</div>
-            <div class="price85 mt20 img_price"></div>
+            <!-- <div class="ko fcw">고흥  <br> 유기농 유자차</div> -->
+            <div class="ko fcw disArr">
+              <!-- <div> 고흥 </div> -->
+              <!-- <div class="string">
+                <div class="greeting ">유기농 수제 유자차</div>
+                <div class="greeting ">비타민 가득 수제 유자차</div>
+                <div class="greeting ">Hallo Welt!</div>
+                <div class="greeting ">Ciao Mondo!</div>  
+              </div> -->
+              <div class="animation">
+                <div class="first"><div>유기농 수제 유자차</div></div>
+                <div class="second"><div>비타민 가득 유자차</div></div>
+                <div class="third"><div>고흥에서 자란 유자</div></div>
+              </div>
+           </div>
+            <div class="price80 mt20 img_price"></div>
           </div>
         </div> 
         <div class="img"> 
