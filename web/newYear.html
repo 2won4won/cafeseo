@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/typo-round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+  <style>
+    /* font color */
+    .nameFontC1, .koFontC { color: #006400; } /* blending Title1 */
+    .nameFontC2, .enFontC { color: #AA1C20; } /* blending Title2  */
+    .nameFontCoEx, .exFontC { color: #98AA7C; } /* 과일설명, blending Ex */
+    .priceFontC { color: #AA1C20; } /* price */
+    .waveFontC { color: #AA1C20; } /* wave */
+    .fruitFontC { color: #687E3D; } /* fruit */
+    .whiteFontC {color: white;}
+    
+    @font-face {
+      font-family: 'twayair';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'EF_Diary';
+      font-weight: normal;
+      font-style: normal;
+      src: url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.eot');
+      src: url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.eot?#iefix') format('embedded-opentype'),
+          url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.woff2') format('woff2'),
+          url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.woff') format('woff'),
+          url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.ttf') format("truetype");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'DalseoHealing';
+      font-weight: 500;
+      font-style: normal;
+      src: url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.eot');
+      src: url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.eot?#iefix') format('embedded-opentype'),
+           url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff2') format('woff2'),
+           url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff') format('woff'),
+           url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.ttf') format("truetype");
+      font-display: swap;
+    }  
+
+     /* grid size */
+    .disAr {display: flex; justify-content: space-around;}
+    .disBetCol {display: flex; justify-content: space-between ; flex-direction: column;}
+    .disEnd { display: flex; justify-content: end; }
+    .disBet { display: flex; justify-content: space-between;}
+    .con {width: 90%; margin: 80px auto; } 
+    .grid {display: flex; justify-content: space-between ; flex-direction: column;}
+    .grid:first-child { width: 30%; }
+    .grid:nth-child(2){  width: 39%; margin:0 70px; }
+    .grid:last-child { width: 33%; }
+    /* fruit grid */
+    .grid:nth-child(2) .disAr .ko {
+      font-family: twayair;
+      font-size: 15px;
+      margin-top: 5px;
+    }
+    .grid:nth-child(2) .thema:first-child .disEnd  {
+      width: 25%;
+    }
+    .grid:nth-child(2) .thema:first-child .disEnd div {
+      width: 25%;
+      padding: 0 15px;
+      text-align: center;
+    }
+    .fruit .disBet:first-child div {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+    /* 공통 */
+    .tr {text-align: right;}
+    .mr8 {margin-right: 8px;}
+    .mt20 {margin-top: 20px;}
+    .mt30 {margin-top: 30px;}
+    .mb12 {margin-bottom: 12px;}
+    .pt10 {padding-top: 10px;}
+    .w75 {width: 75% !important;}
+    .border { 
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      padding: 10px 25px;
+      margin-bottom: 20px;
+    }
+    .line { display: flex; padding-bottom: 15px; height: 25px; line-height: 25px;}
+    .lineEnd { display: flex; justify-content: end;  padding-bottom: 15px; height: 25px; line-height: 25px;}
+    .price { text-align: right; font-family: Poppins-Regular; padding-top: 10px;}
+    .price0::before  { content: '•'; }
+    .price70::before { content: '7.0';}
+    .price75::before { content: '7.5';}
+    .price80::before { content: '8.0';}
+    .price85::before { content: '8.5';}
+    .price90::before { content: '9.0';}
+    .en { font-family: Poppins-Regular; font-weight: 17px; }
+    .en::before { content: "•"; margin-right: 7px;}
+    .ko { font-family: twayair; font-size: 18px; margin-left: 15px;}
+    .ex { font-family: DalseoHealing; font-weight: 15px; margin-left: 11px; }
+    .title {
+      margin-bottom: 30px;
+      font-family: Poppins-Regular;
+      font-size: 19px;
+      display: block;
+      height: 20px;
+      line-height: 20px;
+      position: relative;
+      border-radius: 5px;
+      /* background: linear-gradient(90deg, rgba(161,129,103,1) 15%, rgba(209,183,161,1) 36%, rgba(219,194,173,1) 53%, rgba(233,211,192,1) 69%, rgba(239,220,204,1) 82%, rgba(242,229,217,1) 93%); */
+      background: url(chris.jpg);  
+      background-size: cover;
+      padding: 8px 10px;
+      color: #f7ebd3;
+      box-shadow: 1px 3px 1px -3px #777;
+      transition: background 450ms ease-in-out;
+    }
+    .shadow {
+      position: relative;
+    }
+    .shadow:before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      bottom: 13px;
+      right: 7px;
+      width: 25%;
+      top: 0;
+      box-shadow: 0 15px 10px #777;
+      transform: rotate(4deg);
+      transition: all 150ms ease-in-out;
+    }
+
+    /* espresso */
+    .esoBoxLeft {margin-right: 50px; margin-top: 50px;}
+    .esoTi { 
+      font-family: TypoRoundRegularDemo; 
+      font-size: 30px; margin: 70px 25px 30px 25px; font-weight: 800;
+      letter-spacing: -11px;
+    }
+    .esoKo { font-family:twayair ; font-size: 17px; } 
+    .esoEn{ font-family: "Paytone One"; text-transform: uppercase; 
+      display: block;
+      font-size: 35px;
+      line-height: 20px;
+      text-shadow: 0 6.36px 3.896px #98AA7C,0 -1px 1px #98AA7C;
+      letter-spacing: -3px;
+      opacity: 0.25;        
+    } 
+    .esoEx { font-family:twayair ; font-size: 15px; margin-top: 15px; line-height: 20px;} 
+    
+    /* fruit */
+    .grid:nth-child(2) .disAr .ko {
+      font-family: twayair;
+      font-size: 15px;
+      margin-top: 5px;
+    }
+    .grid:nth-child(2) .thema:first-child .disEnd  {
+      width: 25%;
+    }
+    .grid:nth-child(2) .thema:first-child .disEnd div {
+      width: 25%;
+      padding: 0 15px;
+      text-align: center;
+    }
+    .fruit .disBet:first-child div {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+
+    /* eso effect, latte*/
+    .latte { margin-left: 17px;}
+    .steam {
+      position: absolute;
+      height: 20px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #CBA37B;
+      margin-top: -5px;
+      margin-left: 5px;
+      z-index: 0;
+      opacity: 0.5;
+    }
+    #steam1 {
+      -webkit-animation: steam1 4s ease-out infinite;
+      animation: steam1 4s ease-out infinite;
+    }
+
+    #steam3 {
+      -webkit-animation: steam1 4s ease-out 1s infinite;
+      animation: steam1 4s ease-out 1s infinite;
+    }
+
+    @-webkit-keyframes steam1 {
+      0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+      100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+    }
+
+    @keyframes steam1 {
+      0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+      100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+    }
+
+    #steam2 {
+      -webkit-animation: steam2 4s ease-out 0.5s infinite;
+      animation: steam2 4s ease-out 0.5s infinite;
+    }
+
+    #steam4 {
+      -webkit-animation: steam2 4s ease-out 1.5s infinite;
+      animation: steam2 4s ease-out 1.5s infinite;
+    }
+
+    @-webkit-keyframes steam2 {
+      0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+      100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+    }
+
+    @keyframes steam2 {
+      0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+      100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+    }
+
+    .latte .cup {z-index: 1;}
+    .cup_body {
+      position: absolute;
+      height: 22px;
+      width: 30px;
+      border-radius: 3px 3px 55% 55%;
+      background-color: #AA1C20;
+      margin: auto;
+      display: inline-block;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .cup_handle {
+      position: relative;
+      height: 12px;
+      width: 8px;
+      border-radius: 0 3px 12px 0;
+      border: 2px solid #006400;
+      margin-top: -20px;
+      margin-left: 25px;
+      display: inline-block;
+      z-index: 0;
+    }
+    .saucer {
+      position: absolute;
+      height: 3px;
+      width: 36px;  
+      border-radius: 0 0 10px 10px;
+      background-color: #006400;
+      margin-top: 23px;
+      margin-left: 193px;
+      z-index: 2;
+    }
+    /* 강조 turning */
+    .waviy { position: relative;}
+    .waviy span {
+      letter-spacing: -4px;
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+      animation: flip 5s infinite;
+      animation-delay: calc(.3s * var(--i));
+    }
+    @keyframes flip {
+      0%,80% {
+        color: #006400;
+        transform: rotateY(360deg) 
+      }
+    }
+
+    /* long sentence */
+    .long {
+      width:31%;
+      overflow: hidden;
+      letter-spacing: 0;
+    }
+    .cnnContents {
+      width: 100%;
+      margin:0 auto;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+    .marqueeStyle {
+      display:inline-block;
+      -webkit-animation: scrolling-left1 20s linear infinite;
+      animation: scrolling-left1 20s linear infinite;
+    }
+    .marqueeStyle2 {
+      display:inline-block;
+      -webkit-animation: scrolling-left2 20s linear infinite;
+      animation: scrolling-left2 20s linear infinite;
+      animation-delay: 10s;
+    }
+    @keyframes scrolling-left1 {
+        0% {transform: translateX(100%);
+            -webkit-transform: translateX(100%);}
+        100% {transform: translateX(-100%);
+              -webkit-transform: translateX(-100%);}
+    }
+    @keyframes scrolling-left2 {
+        0% {transform: translateX(0%);
+            -webkit-transform: translateX(0%);}
+        100% {transform: translateX(-200%);
+              -webkit-transform: translateX(-200%);}
+    }
+
+    @-webkit-keyframes scrolling-left1 {
+        0% {-webkit-transform: translateX(100%);}
+        100% {-webkit-transform: translateX(-100%);}
+    }
+    @-webkit-keyframes scrolling-left2 {
+        0% {-webkit-transform: translateX(0%);}
+        100% {-webkit-transform: translateX(-200%);}
+    }
+
+    /* we */
+    .we {
+      text-align:center;
+      /* background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%); */
+      font-family:'twayair';
+      font-weight:300;
+      padding-top:150px;
+      overflow:hidden;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0,0,0);
+    }
+    .we div {
+      display:inline-block;
+      overflow:hidden;
+      white-space:nowrap;
+    }
+    .we div:first-child {   
+      animation: showup 10s infinite;
+    }
+    .we div:first-child, .weSeo {
+      color:#8f9e81;
+      font-size:47px;
+    } 
+    .we div:last-child {
+      color:#dbc2ad;
+      font-size:30px;
+      font-family: Poppins-Regular;
+      width:0px;
+      animation: reveal 10s infinite;
+    }
+    .we div:last-of-type span {
+      margin-left:-155px;
+      animation: slidein 10s infinite;
+    }
+    @keyframes showup {
+        0% {opacity:0;}
+        20% {opacity:1;}
+        80% {opacity:1;}
+        100% {opacity:0;}
+    }
+    @keyframes slidein {
+        0% { margin-left:-300px; }
+        20% { margin-left:-300px; }
+        35% { margin-left:0px; }
+        100% { margin-left:0px; }
+    }
+    @keyframes reveal {
+        0% {opacity:0;width:0px;}
+        20% {opacity:1;width:0px;}
+        30% {width:530px;}
+        80% {opacity:1;}
+        100% {opacity:0;width:530px;}
+    }
+    /* sesson */
+    .img{
+      width: 230px;
+      height: 230px; 
+      border-radius: 50%;
+      position: relative;
+    }
+    .img:first-child{ background: url(pumkin.jpeg);  background-size: 230px 230px; }
+    .img:nth-child(2) { background: url(citron.jpeg);  background-size: 230px 230px;  }
+    .img:last-child { background: url(ssang.jpeg);  background-size: 230px 230px; }
+    .img_price { font-weight: 900;}
+    .img::before{
+      content: "";
+      opacity: 0.3;
+      border-radius: 50%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: #000;
+      position: relative;
+    }
+    .img .sessonT{
+      color: #fff;
+      text-align: center;
+      position: relative;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+    .jump span {
+        letter-spacing: -3px;
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        animation: bounce .6s ease infinite alternate;
+        font-family: 'twayair', cursive;
+        font-size: 20px;
+        color: #FFF;
+        text-shadow: 0 1px 0 #c68556,
+                     0 2px 0 #c68556,
+                     0 3px 0 #c68556,
+                     0 4px 0 #c68556,
+                    0 5px 0 #c68556,
+                    /* 0 6px 0 transparent, */
+                    /* 0 7px 0 transparent,
+                    0 8px 0 transparent,
+                    0 9px 0 transparent, */
+                    0 5px 5px rgba(0, 0, 0, .4);
+      }
+
+      .jump span:nth-child(2) { animation-delay: .1s; }
+      .jump span:nth-child(3) { animation-delay: .2s; }
+      .jump span:nth-child(4) { animation-delay: .3s; }
+      .jump span:nth-child(5) { animation-delay: .4s; }
+      .jump span:nth-child(6) { animation-delay: .5s; }
+      .jump span:nth-child(7) { animation-delay: .6s; }
+      .jump span:nth-child(8) { animation-delay: .7s; }
+
+      @keyframes bounce {
+        100% {
+          top: -6px;
+          text-shadow: 0 1px 0 #98AA7C,
+                       0 2px 0 #98AA7C,
+                       0 3px 0 #98AA7C,
+                       0 4px 0 #98AA7C, 
+                       0 5px 0 #ffdbaf,
+                       /* 0 6px 0 #91AEC4, */
+                      /* 0 7px 0 #CCC, */
+                      /* 0 8px 0 #CCC,
+                      0 9px 0 #CCC,   */
+                      0 6px 3px rgba(0, 0, 0, .2);
+        }
+    }
+    /* sesson text */
+    .animation {
+      height:35px;
+      overflow:hidden;
+    }
+    .animation > div > div {
+      padding: 0.25rem 0.75rem;
+      height:2.81rem;
+      margin-bottom: 2.81rem;
+      display:inline-block;
+    }
+    .animation div:first-child {
+      animation: text-animation 8s infinite;
+    }
+    @keyframes text-animation {
+      0% {margin-top: 0;}
+      10% {margin-top: 0;}
+      20% {margin-top: -5.62rem;}
+      30% {margin-top: -5.62rem;}
+      40% {margin-top: -11.24rem;}
+      60% {margin-top: -11.24rem;}
+      70% {margin-top: -5.62rem;}
+      80% {margin-top: -5.62rem;}
+      90% {margin-top: 0;}
+      100% {margin-top: 0;}
+    }
+    /* ssang */
+    .word {
+      margin: auto;
+      color: white;
+      font: 700 normal 19px 'twayair';
+      /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
+      text-shadow: 3px 1px #98AA7C, 1px 2px #98AA7C, 1px 3px #98AA7C;
+    }
+    .ssang {
+      color:#fff;
+      font-size: 16px;
+      position: absolute;
+      top: 30%;
+      left: 15%;
+    }
+    .ssangPrice {
+      color:#fff;
+      font-size: 16px;
+      position: absolute;
+      top: 64%;
+      left: 45%;
+    }
+    /* mug */
+    .steamimg {
+      position: absolute;
+      top: -85%;
+      left:-10px;
+      width: 30px;
+      height: 30px;
+      z-index: 4;
+      opacity: 0.6;
+      display: flex;
+      filter: blur(3px);
+      -webkit-filter: blur(3px); 
+    }
+    .steamimg::before {
+      content: "";
+      width: 30px;
+      height: 20px;
+      background-color: red;
+      -webkit-animation: fadeOutUp linear 3s;
+      animation: fadeOutUp linear 3s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      clip-path: polygon(
+        33% 40%,
+        52% 12%,
+        84% 29%,
+        62% 65%,
+        54% 89%,
+        73% 92%,
+        73% 74%,
+        53% 63%,
+        77% 57%,
+        95% 31%,
+        71% 3%,
+        34% 47%,
+        50% 37%,
+        69% 39%,
+        69% 29%,
+        76% 35%,
+        61% 6%,
+        64% 47%,
+        91% 9%,
+        51% 5%,
+        84% 61%,
+        91% 49%,
+        35% 19%,
+        40% 10%,
+        57% 41%,
+        57% 54%,
+        92% 19%
+      );
+      border-radius: 60% 50%;
+    }
+    .mug {
+      position: relative;
+      width: 25px;
+      height: 30px;
+      background-color: #006400;
+      border-radius: 2px 3px;
+      /* box-shadow: inset -20px -1px 0px 12px 7f7801;
+      -webkit-box-shadow: inset -20px -1px 0px 12px $mug-shadow-color;} */
+    }
+    .mug::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: -22px;
+      left: 10px;
+      z-index: 2;
+    }
+    .handle {
+      width: 10px;
+      height: 20px;
+      border-radius: 5px 5px 15px 80%;
+      border: 3px solid #AA1C20;
+      z-index: -1;
+      margin-top: 15px;
+      margin-left: -9px;
+      transform: translateY(-50%) rotate(360deg);
+    }
+    @-webkit-keyframes fadeOutUp {
+      0% {
+        opacity: 0.6;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0);
+      }
+      20% {
+        opacity: 0.3;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+      }
+      40% {
+        opacity: 0.4;
+        -webkit-transform: translate3d(0, -60%, 0);
+        transform: translate3d(0, -60%, 0);
+      }
+      60% {
+        opacity: 0.3;
+        -webkit-transform: translate3d(0, -80%, 0);
+        transform: translate3d(0, -80%, 0);
+      }
+      80% {
+        opacity: 0.4;
+        -webkit-transform: translate3d(0, -90%, 0);
+        transform: translate3d(0, -90%, 0);
+      }
+      90% {
+        opacity: 0.2;
+        -webkit-transform: translate3d(0, -95%, 0);
+        transform: translate3d(0, -95%, 0);
+      }
+      100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+      }
+    }
+    @keyframes fadeOutUp {
+      0% {
+        opacity: 0.6;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0);
+      }
+      20% {
+        opacity: 0.3;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+      }
+      40% {
+        opacity: 0.4;
+        -webkit-transform: translate3d(0, -60%, 0);
+        transform: translate3d(0, -60%, 0);
+      }
+      60% {
+        opacity: 0.3;
+        -webkit-transform: translate3d(0, -80%, 0);
+        transform: translate3d(0, -80%, 0);
+      }
+      80% {
+        opacity: 0.4;
+        -webkit-transform: translate3d(0, -90%, 0);
+        transform: translate3d(0, -90%, 0);
+      }
+      90% {
+        opacity: 0.2;
+        -webkit-transform: translate3d(0, -95%, 0);
+        transform: translate3d(0, -95%, 0);
+      }
+      100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+      }
+    }
+ </style>
+</head>
+<body>
+  <div class="con disAr">
+    <div class="grid">
+      <div class="thema eso">
+        <div class="title shadow"> Espresso </div>
+        <div class="disAr"> 
+          <div class="esoBoxLeft">
+            <div class="esoTi">
+              <span class="nameFontC1"> S</span>
+              <span class="nameFontC2"> E</span>
+              <span class="nameFontC1"> O</span>
+              <span class="nameFontC2"> '</span>
+              <span class="nameFontC1"> s</span> <br>
+              <span class="nameFontC1"> B</span>
+              <span class="nameFontC2"> l</span>
+              <span class="nameFontC1"> e</span>
+              <span class="nameFontC2"> n</span>
+              <span class="nameFontC1"> d</span> 
+              <span class="nameFontC2"> i</span>
+              <span class="nameFontC1"> n</span> 
+              <span class="nameFontC2"> g</span>
+            </div>
+            <div class="tr ">
+              <div class="esoKo nameFontC1 "> 블랙슈거 </div>
+              <div class="esoEn  "> Black Sugar </div>
+              <div class="esoEx nameFontCoEx"> 
+                흑설탕과 같은 <br> 진한 단맛, 볶은 견과류의 <br> 고소함, 밀크초콜릿의<br> 풍부한 단맛
+              </div>
+            </div>
+            <div class="tr mt30">
+              <div class="esoKo nameFontC1 "> 카카오 </div>
+              <div class="esoEn  "> Cacao </div>
+              <div class="esoEx nameFontCoEx"> 
+                카카오닙스의 <br>쌉쌀한 여운, 호도의 고소한 <br> 향미, 다크초콜릿의  <br> 농도 짙은 단맛
+              </div>
+            </div>
+            <div class="esoTi">
+              <span class="nameFontC1"> S</span>
+              <span class="nameFontC2"> E</span>
+              <span class="nameFontC1"> O</span>
+              <span class="nameFontC2"> '</span>
+              <span class="nameFontC1"> s</span> <br>
+              <span class="nameFontC1"> C</span>
+              <span class="nameFontC2"> o</span>
+              <span class="nameFontC1"> l</span>
+              <span class="nameFontC2 mr8"> d</span>
+              <span class="nameFontC1"> B</span> 
+              <span class="nameFontC2"> r</span>
+              <span class="nameFontC1"> e</span> 
+              <span class="nameFontC2"> w</span>
+            </div>
+          </div>
+          <div class="esoBoxRight disBetCol">
+            <div class="border">
+              <div class="priceFontC price "> 6.5 </div>
+              <div class="line">
+                <div class="en enFontC">Espresso</div>
+                <div class="ko koFontC">에스프레소</div>
+              </div>
+            </div>
+            <div class="border">
+              <div class="priceFontC price "> 7.0 </div>
+              <div class="line">
+                <div class="en enFontC"> Cafe Latte</div>
+                <div class="ko koFontC"> 카페라떼 </div>
+              </div>
+              <div class="line">
+                <div class="en enFontC"> Cappuccino</div>
+                <div class="ko koFontC"> 카푸치노 </div>
+                <div class="latte">
+                  <div class="steam" id="steam1"> </div>
+                  <div class="steam" id="steam2"> </div>
+                  <div class="steam" id="steam3"> </div>
+                  <div class="steam" id="steam4"> </div>
+                  <div class="cup">
+                    <div class="cup_body">
+                      <div class="cup_shade"></div>
+                    </div>
+                    <div class="cup_handle"></div>
+                  </div>
+                </div>
+                <div class="saucer"></div>
+              </div>
+            </div>
+            <div class="border">
+              <div class="priceFontC price "> 7.5 </div>
+              <div class="line">
+                <div class="en enFontC"> Vanilla Latte</div>
+                <div class="ko koFontC"> 바닐라라떼 </div>
+              </div>
+              <div class="line">
+                <div class="en enFontC"> Mocha Latte</div>
+                <div class="ko koFontC"> 모카라떼 </div>
+              </div>
+              <div class="line">
+                <div class="en enFontC"> Caramel Macchiato </div>
+                <div class="ko koFontC"> 카라멜마퀴야또 </div>
+              </div>
+            </div>
+            <div class="border">
+              <div class="priceFontC price "> 7.5 </div>
+              <div class="line">
+                <div class="en enFontC"> Einspanner</div>
+                <div class="ko waveFontC waviy"> 
+                  <span style="--i:1">아</span>
+                  <span style="--i:2">인</span>
+                  <span style="--i:3">슈</span>
+                  <span style="--i:4">패</span>
+                  <span style="--i:5">너</span>
+                </div>
+              </div>
+            </div>
+            <div class="border">
+              <div class="priceFontC price "> 7.5 </div>
+              <div class="line">
+                <div class="en enFontC"> Ethiopia Guji G1 Geisha</div>
+                <div class="ko koFontC"> 게이샤 </div>
+              </div>
+              <div class="line">
+                <div class="en enFontC"> Papua New Guinea</div>
+                <div class="ko koFontC"> 블루마운틴 </div>
+              </div>
+              <div class="line">
+                <div class="en enFontC"> Decaf Colombia</div>
+                <div class="ko koFontC"> 디카페인(콜롬비아) </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="thema fruit">
+        <div class="title shadow"> Fruit </div>
+        <div class="disAr"> 
+          <div>
+            <div class="en enFontC"> 100% hand-made Syrup with fresh fruit</div>
+            <div class="ko koFontC">생과일로 만드는 수제청</div>
+          </div>
+          <div>
+            <div class="en enFontC"> 100% real Fresh Fruit Juice </div>
+            <div class="ko koFontC"> 100% 생과일 착즙 쥬스 </div>
+          </div>
+          <div>
+            <div class="en enFontC"> No add Sugar </div>
+            <div class="ko koFontC"> 가당처리 하지않는 과일 그대로의 맛 </div>
+          </div>
+        </div> 
+        <div class="border mt30">
+          <div class="disBet">
+            <div></div>
+            <div class="disEnd line mb12 fruitFontC"> 
+              <div> TEA </div>
+              <div> Ade </div>
+              <div> Juice </div>
+            </div>
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Lemon</div>
+              <div class="ko koFontC">레몬</div>
+              <div class="ex exFontC">골다공증 예방, 면역력 강화</div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price75 priceFontC"></div>
+              <div class="price75 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+            </div>  
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Omija</div>
+              <div class="ko koFontC">오미자</div>
+              <div class="ex exFontC">피부미용, 간의 해독 작용</div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price75 priceFontC"></div>
+              <div class="price75 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+            </div>  
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Passion Fruit</div>
+              <div class="ko koFontC">패션프루츠</div>
+              <div class="ex exFontC">강력한 항염증, 당뇨병 예방</div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price75 priceFontC"></div>
+              <div class="price75 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+            </div>  
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Grapefruit</div>
+              <div class="ko koFontC">자몽</div>
+              <div class="ex exFontC">다이어트 효과, 독소 배출</div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price80 priceFontC"></div>
+              <div class="price80 priceFontC"></div>
+              <div class="price90 priceFontC"></div>
+            </div>  
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Apple + Carrot</div>
+              <div class="ko koFontC">사과 + 당근</div>
+              <div class="ex exFontC">요통 감소, 콜레스테롤 감소</div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price0 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+              <div class="price90 priceFontC"></div>
+            </div>  
+          </div>
+          <div class="disBet">
+            <div class="line w75">
+              <div class="en enFontC">Kiwi</div>
+              <div class="ko koFontC long">
+                <div class="cnnContents">
+                  <span class="marqueeStyle">&nbsp;상큼 달콤 따뜻한 <span class="fc7">키위차</span> &nbsp;</span>
+                  <span class="marqueeStyle2">&nbsp;최★수가 좋아하는 <span class="fc7">키위차</span>&nbsp;  </span>
+                </div>
+              </div>
+              <div class="ex exFontC">시력 저하 예방, 미네랄 보충 </div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price80 priceFontC"></div>
+              <div class="price80 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+            </div>  
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Kiwi + Banana </div>
+              <div class="ko waveFontC waviy"> 
+                <span style="--i:1">키</span>
+                <span style="--i:2">위</span>
+                <span style="--i:3">+</span>
+                <span style="--i:4">바</span>
+                <span style="--i:5">나</span>
+                <span style="--i:6">나</span>
+              </div>
+              <div class="ex exFontC">DNA 손상 예방, 심장병 예방</div>
+            </div>
+            <div class="line disEnd">
+              <div class="price0 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+              <div class="price90 priceFontC"></div>
+            </div>
+          </div>   
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Tomato</div>
+              <div class="ko koFontC">토마토</div>
+              <div class="ex exFontC">전립선 강화, 뼈 건강 증진</div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price0 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+              <div class="price90 priceFontC"></div>
+            </div>  
+          </div> 
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Mandarin</div>
+              <div class="ko koFontC">제주 할머니 비자림 감귤</div>
+              <div class="ex exFontC">혈관 건장 향상, 기억력 향상, 변비 예방</div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price0 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+              <div class="price90 priceFontC"></div>
+            </div>  
+          </div> 
+        </div> 
+
+      </div>
+      <div class=" we">
+        <div>쉼, </div> 
+        <div> 
+          <span>into amazing experiences at</span><span class="weSeo"> SEO</span>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="thema flower">
+        <div class="title shadow"> Flower Tea </div>
+        <div class="border ">
+          <div class="priceFontC price"> 7.5 </div> 
+          <div class="line">
+            <div class="en enFontC">Chrysanthemum</div>
+            <div class="ko koFontC">국화꽃</div>
+            <div class="ex exFontC" >아토피 개선, 노화 예방, 심신 안정 </div>
+          </div>
+          <div class="line">
+            <div class="en enFontC">Cherry Blossom</div>
+            <div class="ko koFontC">겹벚꽃</div>
+            <div class="ex exFontC" >숙취 해소, 천식과 기침 해소, 피로 회복 </div>
+          </div>
+          <div class="line">
+            <div class="en enFontC">Rosa Rubiginosa</div>
+            <div class="ko koFontC">해당화</div>
+            <div class="ex exFontC">고지혈증 개선, 혈당 조절, 항염증 개선 </div>
+          </div>
+          <div class="line">
+            <div class="en enFontC">Magnolia</div>
+            <div class="ko koFontC">목련</div>
+            <div class="ex exFontC">기억력 증진, 알레르기성 비염 개선 </div>
+          </div>
+        </div>
+      </div>
+      <div class="thema sesson disAr">  
+        <div class="img"> 
+          <div class="sessonT ">
+            <div class="en mb12">Sweet pumkin Latte</div>
+            <div class="jump">
+              <span>달</span>
+              <span>달</span>
+              <span>한</span>
+              <span>단</span>
+              <span>호</span>
+              <span>박</span>
+              <span>라</span>
+              <span>떼</span>
+            </div>
+            <div class="price80 mt20 img_price"></div>
+          </div>
+        </div>   
+        <div class="img"> 
+          <div class="sessonT">
+            <div class="en mb12">Citron</div>
+            <div class="ko whiteFontC disAr">
+              <div class="animation">
+                <div class="first"><div>유기농 수제유자차</div></div>
+                <div class="second"><div>비타민 가득 수제 유자차</div></div>
+                <div class="third"><div>고흥에서 자란 유자</div></div>
+              </div>
+           </div>
+            <div class="price80 mt20 img_price"></div>
+          </div>
+        </div> 
+        <div class="img"> 
+          <div class="en ssang">Ssangwhatang</div>
+          <div class="sessonT ">
+            <div class="word"> </div>
+          </div>
+          <div class="price90 ssangPrice img_price "></div>
+        </div>  
+      </div>
+      <div class="thema milk">
+        <div class="title shadow"> Milk Variation </div>
+        <div class="border">
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Choco Latte</div>
+              <div class="ko koFontC">초코라떼</div>
+              <div class="ex exFontC">달콤쌉쌀한 초코 + 우유</div>
+              <div class="coffee dis box">
+                <div class="steamimg"></div>
+                <div class="mug"></div>
+                <div class="handle"></div>
+            </div>
+            </div>  
+            <div class="price70 priceFontC line"></div>
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Green Tea Latte</div>
+              <div class="ko koFontC">말차라떼</div>
+              <div class="ex exFontC">깊고 부드러운 유기농 제주 말차 + 우유</div>
+            </div>  
+            <div class="price70 priceFontC line"></div>
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Milk-Tea</div>
+              <div class="ko koFontC">밀크티</div>
+              <div class="ex exFontC">베르가모트향의 얼그레이 + 우유</div>
+            </div>  
+            <div class="price75 priceFontC line"></div>
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Choco Milk-Shake</div>
+              <div class="ko waveFontC waviy"> 
+                <span style="--i:1">초</span>
+                <span style="--i:2">코</span>
+                <span style="--i:3">밀</span>
+                <span style="--i:4">크</span>
+                <span style="--i:5">쉐</span>
+                <span style="--i:6">이</span>
+                <span style="--i:7">크</span>
+              </div>
+              <div class="ex exFontC">초코 + 우유 + 바닐라 아이스크림</div>
+            </div>  
+            <div class="price85 priceFontC line"></div>
+          </div>
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Mango Milk-Shake</div>
+              <div class="ko koFontC">망고밀크쉐이크</div>
+              <div class="ex exFontC">하겐다즈 망고아이스크림 + 냉동애플망고 + 우유 </div>
+            </div>  
+            <div class="price85 priceFontC line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var words = ['건강 쌍화탕','경동한의원  원장님의 ', '비법 쌍화탕', '약재 넣어 다린', '진짜 쌍화탕'],
+    part,
+    i = 0,
+    offset = 0,
+    len = words.length,
+    forwards = true,
+    skip_count = 0,
+    skip_delay = 15,
+    speed = 70;
+    var wordflick = function () {
+      setInterval(function () {
+        
+        if (forwards) {
+          if (offset >= words[i].length) {
+            ++skip_count;
+            if (skip_count == skip_delay) {
+              forwards = false;
+              skip_count = 0;
+            }
+          }
+        }
+        else {
+          if (offset == 0) {
+            forwards = true;
+            i++;
+            offset = 0;
+            if (i >= len) {
+              i = 0;
+            }
+          }
+        }
+        part = words[i].substr(0, offset);
+        if (skip_count == 0) {
+          if (forwards) {
+            offset++;
+          }
+          else {
+            offset--;
+          }
+        }
+        $('.word').text(part);
+      },speed);
+    };
+
+    $(document).ready(function () {
+      wordflick();
+    });
+  </script>
+</body>
+</html>
