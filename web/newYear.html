@@ -12,12 +12,14 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
   <style>
     /* font color */
-    .nameFontC1, .koFontC { color: #006400; } /* blending Title1 */
-    .nameFontC2, .enFontC { color: #AA1C20; } /* blending Title2  */
-    .nameFontCoEx, .exFontC { color: #98AA7C; } /* 과일설명, blending Ex */
-    .priceFontC { color: #AA1C20; } /* price */
-    .waveFontC { color: #AA1C20; } /* wave */
-    .fruitFontC { color: #687E3D; } /* fruit */
+    .nameFontC1, .koFontC { color: #D92726; } /* blending Title1 */
+    .koFontCF { color: #C901A1; } /* blending Title1 */
+    .nameFontC2, .enFontC { color: #F8CF3D; } /* blending Title2  */
+    .enFontCF { color: #007FBD; } /* fruit ex  */
+    .nameFontCoEx, .exFontC { color: #F5BDC3; } /* 과일설명, blending Ex */
+    .priceFontC { color: #C901A1; } /* price */
+    .waveFontC { color: #F8CF3D; } /* wave */
+    .fruitFontC { color: #007FBD; } /* fruit */
     .whiteFontC {color: white;}
     
     @font-face {
@@ -111,7 +113,8 @@
       position: relative;
       border-radius: 5px;
       /* background: linear-gradient(90deg, rgba(161,129,103,1) 15%, rgba(209,183,161,1) 36%, rgba(219,194,173,1) 53%, rgba(233,211,192,1) 69%, rgba(239,220,204,1) 82%, rgba(242,229,217,1) 93%); */
-      background: url(back01.png);  
+      background: url(back03.jpeg);  
+      /* background: url(back04.jpeg);   */
       background-size: cover;
       padding: 8px 10px;
       color: #f7ebd3;
@@ -268,7 +271,7 @@
     }
     @keyframes flip {
       0%,80% {
-        color: #006400;
+        color: #D92726;
         transform: rotateY(360deg) 
       }
     }
@@ -800,16 +803,16 @@
         <div class="title shadow"> Fruit </div>
         <div class="disAr"> 
           <div>
-            <div class="en enFontC"> 100% hand-made Syrup with fresh fruit</div>
-            <div class="ko koFontC">생과일로 만드는 수제청</div>
+            <div class="en enFontCF"> 100% hand-made Syrup with fresh fruit</div>
+            <div class="ko koFontCF">생과일로 만드는 수제청</div>
           </div>
           <div>
-            <div class="en enFontC"> 100% real Fresh Fruit Juice </div>
-            <div class="ko koFontC"> 100% 생과일 착즙 쥬스 </div>
+            <div class="en enFontCF"> 100% real Fresh Fruit Juice </div>
+            <div class="ko koFontCF"> 100% 생과일 착즙 쥬스 </div>
           </div>
           <div>
-            <div class="en enFontC"> No add Sugar </div>
-            <div class="ko koFontC"> 가당처리 하지않는 과일 그대로의 맛 </div>
+            <div class="en enFontCF"> No add Sugar </div>
+            <div class="ko koFontCF"> 가당처리 하지않는 과일 그대로의 맛 </div>
           </div>
         </div> 
         <div class="border mt30">
@@ -852,7 +855,7 @@
               <div class="ex exFontC">강력한 항염증, 당뇨병 예방</div>
             </div>  
             <div class="line disEnd">
-              <div class="price75 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
               <div class="price75 priceFontC"></div>
               <div class="price0 priceFontC"></div>
             </div>  
