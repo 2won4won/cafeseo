@@ -12,7 +12,9 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm" rel="stylesheet" type="text/css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <style>
     /* font color */
     .nameFontC1 { color: #72C529; }
@@ -33,6 +35,8 @@
     .waveFontC { color: #F8D65E; } /* wave */
     .fruitFontC { color: #007FBD; font-weight: 600;} /* Ade Tea Juice */
     .whiteFontC {color: white;}
+
+    .strong { font-weight: 900 ;}
     
     @font-face {
       font-family: 'twayair';
@@ -96,6 +100,7 @@
     .mt30 {margin-top: 30px;}
     .mb12 {margin-bottom: 12px;}
     .pt10 {padding-top: 10px;}
+    .pts { padding-top: 20px !important;}
     .w75 {width: 75% !important;}
     .border { 
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -111,10 +116,12 @@
     .price80::before { content: '8.0';}
     .price85::before { content: '8.5';}
     .price90::before { content: '9.0';}
+    .price180::before { content: '18.0';}
     .en { font-family: Poppins-Regular; font-weight: 17px; }
     .en::before { content: "•"; margin-right: 7px;}
     .ko { font-family: twayair; font-size: 18px; margin-left: 15px;}
     .ex { font-family: DalseoHealing; font-weight: 15px; margin-left: 11px; }
+  
     .title {
       margin-bottom: 30px;
       font-family: Poppins-Regular;
@@ -265,7 +272,7 @@
       border-radius: 0 0 10px 10px;
       background-color: #BF323F;
       margin-top: 23px;
-      margin-left: 200px;
+      margin-left: 213px;
       z-index: 2;
     }
     /* 강조 turning */
@@ -275,61 +282,26 @@
       position: relative;
       display: inline-block;
       text-transform: uppercase;
-      animation: flip 5s infinite;
-      animation-delay: calc(.3s * var(--i));
+      animation: flip 3s infinite;
+      animation-delay: calc(10s * var(--i));
     }
+    /* @keyframes flip {
+      0% { transform: rotate(0deg) translate(1px, 1px) }
+      40% { transform: rotate(4deg) translate(1px, -1px)  }
+      50% { transform: rotate(-4deg) translate(-1px, 0px)  }
+      60% { transform: rotate(0deg) translate(-3px, 1px) }
+      70% { transform: rotate(-4deg) translate(3px, 1px)  }
+      80% { transform: rotate(4deg) translate(-1px, -1px) }
+      90% { transform: rotate(0deg) translate(1px, 2px) }
+      100% { transform: rotate(4deg)  translate(1px, -2px) }
+    } */
     @keyframes flip {
       0%,80% {
         color: #A86FBA;
         transform: rotateY(360deg) 
       }
     }
-
-    /* long sentence */
-    .long {
-      width:31%;
-      overflow: hidden;
-      letter-spacing: 0;
-    }
-    .cnnContents {
-      width: 100%;
-      margin:0 auto;
-      white-space: nowrap;
-      text-transform: uppercase;
-    }
-    .marqueeStyle {
-      display:inline-block;
-      -webkit-animation: scrolling-left1 20s linear infinite;
-      animation: scrolling-left1 20s linear infinite;
-    }
-    .marqueeStyle2 {
-      display:inline-block;
-      -webkit-animation: scrolling-left2 20s linear infinite;
-      animation: scrolling-left2 20s linear infinite;
-      animation-delay: 10s;
-    }
-    @keyframes scrolling-left1 {
-        0% {transform: translateX(100%);
-            -webkit-transform: translateX(100%);}
-        100% {transform: translateX(-100%);
-              -webkit-transform: translateX(-100%);}
-    }
-    @keyframes scrolling-left2 {
-        0% {transform: translateX(0%);
-            -webkit-transform: translateX(0%);}
-        100% {transform: translateX(-200%);
-              -webkit-transform: translateX(-200%);}
-    }
-
-    @-webkit-keyframes scrolling-left1 {
-        0% {-webkit-transform: translateX(100%);}
-        100% {-webkit-transform: translateX(-100%);}
-    }
-    @-webkit-keyframes scrolling-left2 {
-        0% {-webkit-transform: translateX(0%);}
-        100% {-webkit-transform: translateX(-200%);}
-    }
-
+    
     /* we */
     .weare {
       text-align:center;
@@ -337,11 +309,8 @@
       -webkit-backface-visibility: hidden;
       -webkit-perspective: 1000;
       -webkit-transform: translate3d(0,0,0);
-      height: 300px;
+      /* height: 300px; */
     }
-    /* .weare:is(.we, .hi){
-      animation-fill-mode: forwards;
-    } */
     .weare .we{   
       animation: showup 10s infinite;
     }
@@ -354,7 +323,7 @@
       /* background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%); */
       font-family:'twayair';
       font-weight:300;
-      padding-top:150px;
+      padding-top:30px;
       /* animation-delay: 20s; */
     }
     .we div, .hi div {
@@ -367,12 +336,12 @@
     }
     .we div:first-child, .weSeo {
       color:#8f9e81;
-      font-size:47px;
+      font-size:35px;
       font-family: twayair;
     } 
     .we div:last-child  {
       color:#dbc2ad;
-      font-size:30px;
+      font-size:28px;
       font-family: Poppins-Regular;
       width:0px;
       animation: reveal 10s infinite;
@@ -382,19 +351,16 @@
       animation: slidein 10s infinite;
     }
     .hi {
-      font-size:47px;
-      font-family: twayair;
+      font-size:35px;
+      font-family: Tangerine-Regular;
+      font-weight: 900;
       position: absolute;
-      top: 100px;
-      left: 100px;
-      filter: opacity(0.9);
-      padding-top:-200px;
-    }
-    #countdown {
-    font-size: 32px;
-    letter-spacing: 1px;
-    margin-top: 15px;
-    /* box-shadow: 0px 20px 25px rgba(0,0,0,0.3); */
+      top: 30px;
+      left:50%;
+      transform:translateX(-50%);
+      filter: opacity(0.6);
+      text-align: center;
+      /* padding-top:-200px; */
     }
     @keyframes showup {
       0% {opacity:0;}
@@ -422,21 +388,15 @@
         80% {opacity:1;}
         100% {opacity:0;width:530px;}
     }
-    /* sesson */
-    .img{
+    /* image */
+    .sesson .img {
       width: 230px;
       height: 230px; 
-      border-radius: 50%;
       position: relative;
     }
-    .img:first-child{ background: url(pumkin.jpeg);  background-size: 230px 230px; }
-    .img:nth-child(2) { background: url(citron.jpeg);  background-size: 230px 230px;  }
-    .img:last-child { background: url(ssang.jpeg);  background-size: 230px 230px; }
-    .img_price { font-weight: 900;}
     .img::before{
       content: "";
       opacity: 0.3;
-      border-radius: 50%;
       position: absolute;
       top: 0px;
       left: 0px;
@@ -455,98 +415,10 @@
       left: 50%;
       transform: translate(-50%, -50%)
     }
-    .jump span {
-        letter-spacing: -3px;
-        position: relative;
-        top: 6px;
-        display: inline-block;
-        animation: bounce .6s ease infinite alternate;
-        font-family: 'twayair', cursive;
-        font-size: 20px;
-        color: #FFF;
-        text-shadow: 0 1px 0 #F5BDC3,
-                     0 2px 0 #F5BDC3,
-                     0 3px 0 #F5BDC3,
-                     0 4px 0 #F5BDC3,
-                    0 5px 0 #F5BDC3,
-                    /* 0 6px 0 transparent, */
-                    /* 0 7px 0 transparent,
-                    0 8px 0 transparent,
-                    0 9px 0 transparent, */
-                    0 5px 5px rgba(0, 0, 0, .4);
-      }
+    .img_price { font-weight: 900;}
+   
 
-      .jump span:nth-child(2) { animation-delay: .1s; }
-      .jump span:nth-child(3) { animation-delay: .2s; }
-      .jump span:nth-child(4) { animation-delay: .3s; }
-      .jump span:nth-child(5) { animation-delay: .4s; }
-      .jump span:nth-child(6) { animation-delay: .5s; }
-      .jump span:nth-child(7) { animation-delay: .6s; }
-      .jump span:nth-child(8) { animation-delay: .7s; }
-
-      @keyframes bounce {
-        100% {
-          top: -6px;
-          text-shadow: 0 1px 0 #F5BDC3,
-                       0 2px 0 #F5BDC3,
-                       0 3px 0 #F5BDC3,
-                       0 4px 0 #F5BDC3, 
-                       0 5px 0 #F5BDC3,
-                       /* 0 6px 0 #91AEC4, */
-                      /* 0 7px 0 #CCC, */
-                      /* 0 8px 0 #CCC,
-                      0 9px 0 #CCC,   */
-                      0 6px 3px rgba(0, 0, 0, .2);
-        }
-    }
-    /* sesson text */
-    .animation {
-      height:35px;
-      overflow:hidden;
-    }
-    .animation > div > div {
-      padding: 0.25rem 0.75rem;
-      height:2.81rem;
-      margin-bottom: 2.81rem;
-      display:inline-block;
-    }
-    .animation div:first-child {
-      animation: text-animation 8s infinite;
-    }
-    @keyframes text-animation {
-      0% {margin-top: 0;}
-      10% {margin-top: 0;}
-      20% {margin-top: -5.62rem;}
-      30% {margin-top: -5.62rem;}
-      40% {margin-top: -11.24rem;}
-      60% {margin-top: -11.24rem;}
-      70% {margin-top: -5.62rem;}
-      80% {margin-top: -5.62rem;}
-      90% {margin-top: 0;}
-      100% {margin-top: 0;}
-    }
-    /* 쌍화탕 */
-    .word {
-      margin: auto;
-      color: white;
-      font: 700 normal 19px 'twayair';
-      /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
-      text-shadow: 3px 1px #F5BDC3, 1px 2px #F5BDC3, 1px 3px #F5BDC3;
-    }
-    .ssang {
-      color:#fff;
-      font-size: 16px;
-      position: absolute;
-      top: 30%;
-      left: 15%;
-    }
-    .ssangPrice {
-      color:#fff;
-      font-size: 16px;
-      position: absolute;
-      top: 64%;
-      left: 45%;
-    }
+    
     /* mug */
     .steamimg {
       position: absolute;
@@ -703,36 +575,26 @@
         transform: translate3d(0, -100%, 0);
       }
     }
-    .timer { display: flex; }
-    .box {
-        position: relative;
-        /* color: #1B262C; */
-        height: 100px;
-        width: 120px;
-        border-radius: 5px;
-        margin: 4px;
-        font-size: 1.2rem;
-        text-align: center;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    }
-
-    .box h4 {
-        position: absolute;
-        bottom: -1.33em;
-        background-color: #F8D65E;
-        width: 100%;
-        color: #FFF;
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        padding: 8px 0;
-    }
-
     .swiper {
       width: 100%;
-      height: 200px;
-      /* background-color: #007FBD; */
+      height: 230px;
     }
-    .swiper img { object-fit: cover;  width: 98%; height: 100%; }
+    .swiper-slide-active .img {
+      border-radius: 8% 8% 35% 8% !important ;
+    }
+    .swiper-slide .img{
+      border-radius: 8% 8% 8% 35% ;
+      width: 98%;
+      height: 100%;
+      object-fit: cover;
+      }
+    .swiper-slide .imgS01 { background: url(chris.jpg);  background-size: 100% 230px;  }
+    .swiper-slide .imgS02{ background: url(sand01.jpeg);  background-size:100% 230px; }
+    .swiper-slide .imgS03 { background: url(citron.jpeg);  background-size: 100% 230px;  }
+    .swiper-slide .img::before{
+      border-radius: 8% 8% 8% 35% ;
+    }
+
  </style>
 </head>
 <body>
@@ -964,10 +826,10 @@
             <div class="line w75">
               <div class="en enFontC">Kiwi</div>
               <div class="ko koFontC long">
-                <div class="cnnContents">
-                  <span class="marqueeStyle">&nbsp;상큼 달콤 따뜻한 <span class="fc7">키위차</span> &nbsp;</span>
-                  <span class="marqueeStyle2">&nbsp;최★수가 좋아하는 <span class="fc7">키위차</span>&nbsp;  </span>
-                </div>
+                <div class="ko waveFontC waviy"> 
+                  <span style="--i:1">키</span>
+                  <span style="--i:2">위</span>
+                </div>  
               </div>
               <div class="ex exFontC">시력 저하 예방, 미네랄 보충 </div>
             </div>  
@@ -1011,8 +873,8 @@
           <div class="disBet">
             <div class="line">
               <div class="en enFontC">Mandarin</div>
-              <div class="ko koFontC">제주 할머니 비자림 감귤</div>
-              <div class="ex exFontC">혈관 건장 향상, 기억력 향상, 변비 예방</div>
+              <div class="ko koFontC">제주할머니 비자림 감귤</div>
+              <div class="ex exFontC">기억력 향상, 변비 예방</div>
             </div>  
             <div class="line disEnd">
               <div class="price0 priceFontC"></div>
@@ -1020,7 +882,43 @@
               <div class="price90 priceFontC"></div>
             </div>  
           </div> 
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Citron</div>
+              <div class="ko koFontC">2023 고흥 유자차</div>
+              <div class="ex exFontC"> 피로 회복, 신경통 개선, 혈관건강 개선</div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price80 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+              <div class="price0 priceFontC"></div>
+            </div>  
+          </div> 
         </div> 
+        <div class="border mt30 pts">
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Ssangwhatang</div>
+              <div class="ko koFontC">경동한의원 원장님의 <span class="strong">비법</span> 쌍화탕 </div>
+              <div class="ex exFontC"> 대추, 인삼 </div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price90 priceFontC"></div>
+            </div>  
+          </div>
+        </div>
+        <div class="border mt30 pts">
+          <div class="disBet">
+            <div class="line">
+              <div class="en enFontC">Fresh Strawberry Latte </div>
+              <div class="ko koFontC"> 생딸기 라떼</div>
+              <div class="ex exFontC"> 대추, 인삼 </div>
+            </div>  
+            <div class="line disEnd">
+              <div class="price90 priceFontC"></div>
+            </div>  
+          </div>
+        </div>
       </div>
       <div class="thema weare">
         <div class="we">
@@ -1029,9 +927,9 @@
             <span>into amazing experiences at</span><span class="weSeo"> SEO</span>
           </div>
         </div>  
-        <div class="hi  ">
-          <div class=" enFontC "> Hello 2023</div>
-        </div>  
+        <div class="hi nameFontC3 ">
+            Hello 2023
+        </div>
       </div>  
     </div>  
     <div class="grid disBetCol">
@@ -1065,64 +963,40 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <img alt="img01" src="sand01.jpeg" class="imgS01">
+           <div class="img imgS01"> 
+              <div class="sessonT ">
+                <div class="en mb12">Cafe SEO's Branch</div>
+                <div class="ex exFontC">
+                  Sandwich + Americano + Fresh Fruit
+                </div>
+                <div class="price180 mt20 img_price"></div>
+              </div>
+            </div>  
           </div>
           <div class="swiper-slide">
-            <img alt="img01" src="ssang.jpeg" class="imgS02">
+            <div class="img imgS02"> 
+              <div class="sessonT ">
+                <div class="en mb12">NO 1. </div>
+                <div class="ex exFontC">
+                  오곡식빵, 가지
+                </div>
+              </div>
+            </div>  
           </div>
           <div class="swiper-slide">
-            <img alt="img01" src="pumkin.jpeg" class="imgS03">
+            <div class="img imgS03"> 
+              <div class="sessonT ">
+                <div class="en mb12">NO 2.</div>
+                <div class="ex exFontC">
+                  오곡식빵, 가지
+                </div>
+              </div>
+            </div>  
           </div>
-          ...
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
-    
-        <!-- If we need navigation buttons -->
-        <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
-    
-        <!-- If we need scrollbar -->
-        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
-      <!-- <div class="thema sesson disAr">  
-        <div class="img"> 
-          <div class="sessonT ">
-            <div class="en mb12">Sweet pumkin Latte</div>
-            <div class="jump">
-              <span>달</span>
-              <span>달</span>
-              <span>한</span>
-              <span>단</span>
-              <span>호</span>
-              <span>박</span>
-              <span>라</span>
-              <span>떼</span>
-            </div>
-            <div class="price80 mt20 img_price"></div>
-          </div>
-        </div>   
-        <div class="img"> 
-          <div class="sessonT">
-            <div class="en mb12">Citron</div>
-            <div class="ko whiteFontC disAr">
-              <div class="animation">
-                <div class="first"><div>유기농 수제유자차</div></div>
-                <div class="second"><div>비타민 가득 수제 유자차</div></div>
-                <div class="third"><div>고흥에서 자란 유자</div></div>
-              </div>
-           </div>
-            <div class="price80 mt20 img_price"></div>
-          </div>
-        </div> 
-        <div class="img"> 
-          <div class="en ssang">Ssangwhatang</div>
-          <div class="sessonT ">
-            <div class="word"> </div>
-          </div>
-          <div class="price90 ssangPrice img_price "></div>
-        </div>  
-      </div> -->
       <div class="thema milk">
         <div class="title shadow"> Milk Variation </div>
         <div class="border">
@@ -1184,101 +1058,20 @@
     </div>
   </div>
   <script>
-    var words = ['건강 쌍화탕','경동한의원  원장님의 ', '비법 쌍화탕', '약재 넣어 다린', '진짜 쌍화탕'],
-    part,
-    i = 0,
-    offset = 0,
-    len = words.length,
-    forwards = true,
-    skip_count = 0,
-    skip_delay = 15,
-    speed = 70;
-    var wordflick = function () {
-      setInterval(function () {
-        
-        if (forwards) {
-          if (offset >= words[i].length) {
-            ++skip_count;
-            if (skip_count == skip_delay) {
-              forwards = false;
-              skip_count = 0;
-            }
-          }
-        }
-        else {
-          if (offset == 0) {
-            forwards = true;
-            i++;
-            offset = 0;
-            if (i >= len) {
-              i = 0;
-            }
-          }
-        }
-        part = words[i].substr(0, offset);
-        if (skip_count == 0) {
-          if (forwards) {
-            offset++;
-          }
-          else {
-            offset--;
-          }
-        }
-        $('.word').text(part);
-      },speed);
-    };
-    $(document).ready(function () {
-      wordflick();
-    });
-    // count year
-    var countDownDate = new Date("Jan 1, 2023 00:00:00").getTime();
-    var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-      
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                    
-        document.getElementById("days").innerHTML = days;
-                    
-              document.getElementById("hrs").innerHTML = hours;
-                    
-                    document.getElementById("mins").innerHTML = minutes;
-                    
-                    document.getElementById("secs").innerHTML = seconds;
-    }, 1000);
 
     const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    // direction: 'vertical',
-    loop: true,
-    slidesPerView: 2,
-    // 자동반복
-    autoplay: {
-                //시간 1000 이 1초
-                delay: 2500,
-                disableOnInteraction: false,
-            },  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+      loop: true,
+      slidesPerView: 2,
+      // 자동반복
+      autoplay: {
+                  //시간 1000 이 1초
+                  delay: 2500,
+                  disableOnInteraction: false,
+              },  
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
     });
   </script>
 </body>
