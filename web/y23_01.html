@@ -282,25 +282,16 @@
       position: relative;
       display: inline-block;
       text-transform: uppercase;
-      animation: flip 3s infinite;
-      animation-delay: calc(10s * var(--i));
+      animation: flip 5s infinite;
+      animation-delay: calc(.3s * var(--i));
     }
-    /* @keyframes flip {
-      0% { transform: rotate(0deg) translate(1px, 1px) }
-      40% { transform: rotate(4deg) translate(1px, -1px)  }
-      50% { transform: rotate(-4deg) translate(-1px, 0px)  }
-      60% { transform: rotate(0deg) translate(-3px, 1px) }
-      70% { transform: rotate(-4deg) translate(3px, 1px)  }
-      80% { transform: rotate(4deg) translate(-1px, -1px) }
-      90% { transform: rotate(0deg) translate(1px, 2px) }
-      100% { transform: rotate(4deg)  translate(1px, -2px) }
-    } */
     @keyframes flip {
       0%,80% {
         color: #A86FBA;
         transform: rotateY(360deg) 
       }
     }
+
     
     /* we */
     .weare {
