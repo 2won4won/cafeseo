@@ -1,7 +1,18 @@
 <style>
-   .swiper-slide .img::before{
+  .swiper {
+    width: 100%;
+    height: 135px;
+  }
+  .swiper .img{
+    border-radius: 8% 8% 8% 35% ;
+    width: 98%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+   .swiper .img::before{
     content: "";
-    opacity: 0.1;
+    opacity: 0.4;
     border-radius: 8% 8% 8% 35% ;
     /* border-radius: 50%; */
     position: absolute;
@@ -10,7 +21,6 @@
     right: 0px;
     bottom: 0px;
     background-color: #000;
-    position: relative;
   }
   .swiper .sessonT {
       color: #fff;
@@ -23,22 +33,14 @@
       left: 50%;
       transform: translate(-50%, -50%)
     }
-  .swiper {
-    width: 100%;
-    height: 135px;
-  }
+ 
   .swiper-slide-active .img {
     border-radius: 8% 8% 35% 8% !important ;
   }
   .swiper-slide-next .img {
     border-radius: 8% 8% 35% 35% !important ;
   }
-  .swiper-slide .img{
-    border-radius: 8% 8% 8% 35% ;
-    width: 98%;
-    height: 100%;
-    object-fit: cover;
-  }
+
   .swiper-slide .imgS01 { background: url(sand01.jpg);  background-size: 100% 100%; }
   .swiper-slide .imgS02{ background: url(sand02.jpeg);  background-size:100% 100%; }
   .swiper-slide .imgS03 { background: url(sand03.jpeg);  background-size: 100% 100%;  }
