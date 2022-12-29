@@ -1,0 +1,98 @@
+<style>
+  .weare {
+      text-align:center;
+      overflow:hidden;
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0,0,0);
+      /* height: 300px; */
+    }
+    .weare .we{   
+      animation: showup 10s infinite;
+    }
+    .weare .hi{   
+      animation: showdown 10s infinite;
+      /* padding-top: -150px; */
+    }
+    .we {
+      text-align:center;
+      font-family:'twayair';
+      font-weight:300;
+      padding-top:30px;
+    }
+    .we div, .hi div {
+      display:inline-block;
+      overflow:hidden;
+      white-space:nowrap;
+    }
+    .we div:first-child {   
+      animation: showup 10s infinite;
+    }
+    .we div:first-child, .weSeo {
+      color:#8f9e81;
+      font-size:35px;
+      font-family: twayair;
+    } 
+    .we div:last-child  {
+      color:#dbc2ad;
+      font-size:28px;
+      font-family: Poppins-Regular;
+      width:0px;
+      animation: reveal 10s infinite;
+    }
+    .we div:last-of-type span {
+      margin-left:-155px;
+      animation: slidein 10s infinite;
+    }
+    .hi {
+      font-size:35px;
+      font-family: Tangerine-Regular;
+      font-weight: 900;
+      position: absolute;
+      top: 30px;
+      left:50%;
+      transform:translateX(-50%);
+      filter: opacity(0.6);
+      text-align: center;
+      /* padding-top:-200px; */
+    }
+    @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
+    }
+
+    @keyframes showdown {
+      0% {opacity:1;}
+      20% {opacity:0;}
+      80% {opacity:0;}
+      100% {opacity:1;}
+    }
+    @keyframes slidein {
+        0% { margin-left:-300px; }
+        20% { margin-left:-300px; }
+        35% { margin-left:0px; }
+        100% { margin-left:0px; }
+    }
+    @keyframes reveal {
+        0% {opacity:0;width:0px;}
+        20% {opacity:1;width:0px;}
+        30% {width:530px;}
+        80% {opacity:1;}
+        100% {opacity:0;width:530px;}
+    }
+</style>
+
+<div class="we">
+  <div>쉼, </div> 
+  <div> 
+    <span>into amazing experiences at</span><span class="weSeo"> SEO</span>
+  </div>
+</div>  
+<div class="hi nameFontC3 ">
+    Hello 2023
+</div>
+<script>
+
+</script>

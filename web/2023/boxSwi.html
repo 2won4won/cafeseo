@@ -1,0 +1,112 @@
+<style>
+  .swiper .img::before{
+    content: "";
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+    position: relative;
+  }
+  .swiper .sessonT {
+      color: #fff;
+      text-align: center;
+      position: relative;
+      position: absolute;
+      font-weight: 900;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+  .swiper {
+      width: 100%;
+      height: 135px;
+    }
+    .swiper-slide-active .img {
+      border-radius: 8% 8% 35% 8% !important ;
+    }
+    .swiper-slide-next .img {
+      border-radius: 8% 8% 35% 35% !important ;
+    }
+    .swiper-slide .img{
+      border-radius: 8% 8% 8% 35% ;
+      width: 98%;
+      height: 100%;
+      object-fit: cover;
+      }
+    .swiper-slide .imgS01 { background: url(sand01.jpg);  background-size: 100% 100%; }
+    .swiper-slide .imgS02{ background: url(sand02.jpeg);  background-size:100% 100%; }
+    .swiper-slide .imgS03 { background: url(sand03.jpeg);  background-size: 100% 100%;  }
+    .swiper-slide .imgS04 { background: url(sand04.jpeg);  background-size: 100% 100%;  }
+    .swiper-slide .img::before{
+      border-radius: 8% 8% 8% 35% ;
+    }
+</style >
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+    <div class="img imgS01"> 
+        <div class="sessonT pt10">
+          <div class="en ">Cafe SEO's Branch</div>
+          <div class="ex exFontC">
+            Sandwich 1, <br> Americano 1, <br> desert
+          </div>
+          <div class="price180 pt10 img_price"></div>
+        </div>
+      </div>  
+    </div>
+    <div class="swiper-slide">
+      <div class="img imgS02"> 
+        <div class="sessonT ">
+          <div class="en mb12">NO 1. 고기파 </div>
+          <div class="ex whiteFontC">
+            훈제 삼겹살,<br> 크로와상, 상추, 양파
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="swiper-slide">
+      <div class="img imgS03"> 
+        <div class="sessonT ">
+          <div class="en mb12">NO 2.</div>
+          <div class="ex exFontC">
+            오곡식빵, 가지
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="swiper-slide">
+      <div class="img imgS04"> 
+        <div class="sessonT ">
+          <div class="en mb12">NO 2.</div>
+          <div class="ex exFontC">
+            오곡식빵, 가지
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 3,
+    // 자동반복
+    autoplay: {
+                //시간 1000 이 1초
+                delay: 2500,
+                disableOnInteraction: false,
+            },  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>

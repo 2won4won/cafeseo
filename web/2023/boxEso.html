@@ -1,0 +1,206 @@
+<style>
+    .esoBoxLeft {margin-right: 50px; margin-top: 50px; width: 28%;}
+    .esoTi { 
+      font-family: TypoRoundRegularDemo; 
+      font-size: 30px; margin: 70px 25px 30px 25px; font-weight: 800;
+      letter-spacing: -6px;
+    }
+    .esoKo { font-family:twayair ; font-size: 17px; } 
+    .esoEn{ font-family: "Paytone One"; text-transform: uppercase; 
+      display: block;
+      font-size: 35px;
+      line-height: 20px;
+      text-shadow: 0 6.36px 3.896px #98AA7C,0 -1px 1px #98AA7C;
+      letter-spacing: -3px;
+      opacity: 0.25;        
+    } 
+    .esoEx { font-family:twayair ; font-size: 15px; margin-top: 15px; line-height: 20px;} 
+    .esoTi:last-child {position: absolute; top:72%;} 
+    
+    /* eso effect, latte*/
+    .latte { margin-left: 17px;}
+    .steam {
+      position: absolute;
+      height: 20px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #CBA37B;
+      margin-top: -5px;
+      margin-left: 5px;
+      z-index: 0;
+      opacity: 0.5;
+    }
+    #steam1 {
+      -webkit-animation: steam1 4s ease-out infinite;
+      animation: steam1 4s ease-out infinite;
+    }
+
+    #steam3 {
+      -webkit-animation: steam1 4s ease-out 1s infinite;
+      animation: steam1 4s ease-out 1s infinite;
+    }
+
+    @-webkit-keyframes steam1 {
+      0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+      100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+    }
+
+    @keyframes steam1 {
+      0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+      100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+    }
+
+    #steam2 {
+      -webkit-animation: steam2 4s ease-out 0.5s infinite;
+      animation: steam2 4s ease-out 0.5s infinite;
+    }
+
+    #steam4 {
+      -webkit-animation: steam2 4s ease-out 1.5s infinite;
+      animation: steam2 4s ease-out 1.5s infinite;
+    }
+
+    @-webkit-keyframes steam2 {
+      0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+      100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+    }
+
+    @keyframes steam2 {
+      0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+      100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+    }
+
+</style>
+
+<div class="disAr"> 
+  <div class="esoBoxLeft">
+    <div class="esoTi">
+      <span class="nameFontC1"> S</span>
+      <span class="nameFontC2"> E</span>
+      <span class="nameFontC1"> O</span>
+      <span class="nameFontC2"> '</span>
+      <span class="nameFontC1"> s</span> <br>
+      <span class="nameFontC1"> B</span>
+      <span class="nameFontC2"> l</span>
+      <span class="nameFontC1"> e</span>
+      <span class="nameFontC2"> n</span>
+      <span class="nameFontC1"> d</span> 
+      <span class="nameFontC2"> i</span>
+      <span class="nameFontC1"> n</span> 
+      <span class="nameFontC2"> g</span>
+    </div>
+    <div class="tr ">
+      <div class="esoKo nameFontC3 "> 블랙슈거 </div>
+      <div class="esoEn  "> Black Sugar </div>
+      <div class="esoEx nameFontCoEx"> 
+        흑설탕과 같은 <br> 진한 단맛, 볶은 견과류의 <br> 고소함, 밀크초콜릿의<br> 풍부한 단맛
+      </div>
+    </div>
+    <div class="tr mt30">
+      <div class="esoKo nameFontC3 "> 카카오 </div>
+      <div class="esoEn  "> Cacao </div>
+      <div class="esoEx nameFontCoEx"> 
+        카카오닙스의 <br>쌉쌀한 여운, 호도의 고소한 <br> 향미, 다크초콜릿의  <br> 농도 짙은 단맛
+      </div>
+    </div>
+    <div class="esoTi">
+      <span class="nameFontC1"> S</span>
+      <span class="nameFontC2"> E</span>
+      <span class="nameFontC1"> O</span>
+      <span class="nameFontC2"> '</span>
+      <span class="nameFontC1"> s</span> <br>
+      <span class="nameFontC1"> C</span>
+      <span class="nameFontC2"> o</span>
+      <span class="nameFontC1"> l</span>
+      <span class="nameFontC2 mr8"> d</span>
+      <span class="nameFontC1"> B</span> 
+      <span class="nameFontC2"> r</span>
+      <span class="nameFontC1"> e</span> 
+      <span class="nameFontC2"> w</span>
+    </div>
+  </div>
+  <div class="esoBoxRight disBetCol">
+    <div class="border">
+      <div class="priceFontC price "> 6.5 </div>
+      <div class="line">
+        <div class="en enFontC">Espresso</div>
+        <div class="ko koFontC">에스프레소</div>
+      </div>
+      <div class="line">
+        <div class="en enFontC">Espresso Con Panna</div>
+        <div class="ko koFontC">에스프레소 콘바냐</div>
+      </div>
+      <div class="line">
+        <div class="en enFontC">Americano</div>
+        <div class="ko koFontC">아메리카노</div>
+      </div>
+    </div>
+    <div class="border">
+      <div class="priceFontC price "> 7.0 </div>
+      <div class="line">
+        <div class="en enFontC"> Cafe Latte</div>
+        <div class="ko koFontC"> 카페라떼 </div>
+      </div>
+      <div class="line">
+        <div class="en enFontC"> Cappuccino</div>
+        <div class="ko koFontC"> 카푸치노 </div>
+        <div class="latte">
+          <div class="steam" id="steam1"> </div>
+          <div class="steam" id="steam2"> </div>
+          <div class="steam" id="steam3"> </div>
+          <div class="steam" id="steam4"> </div>
+          <div class="cup">
+            <div class="cup_body">
+              <div class="cup_shade"></div>
+            </div>
+            <div class="cup_handle"></div>
+          </div>
+        </div>
+        <div class="saucer"></div>
+      </div>
+    </div>
+    <div class="border">
+      <div class="priceFontC price "> 7.5 </div>
+      <div class="line">
+        <div class="en enFontC"> Vanilla Latte</div>
+        <div class="ko koFontC"> 바닐라라떼 </div>
+      </div>
+      <div class="line">
+        <div class="en enFontC"> Mocha Latte</div>
+        <div class="ko koFontC"> 모카라떼 </div>
+      </div>
+      <div class="line">
+        <div class="en enFontC"> Caramel Macchiato </div>
+        <div class="ko koFontC"> 카라멜마퀴야또 </div>
+      </div>
+    </div>
+    <div class="border">
+      <div class="priceFontC price "> 7.5 </div>
+      <div class="line">
+        <div class="en enFontC"> Einspanner</div>
+        <div class="ko waveFontC turning"> 
+          <span style="--i:1">아</span>
+          <span style="--i:2">인</span>
+          <span style="--i:3">슈</span>
+          <span style="--i:4">패</span>
+          <span style="--i:5">너</span>
+        </div>
+      </div>
+    </div>
+    <div class="border">
+      <div class="priceFontC price "> 7.5 </div>
+      <div class="line">
+        <div class="en enFontC"> Ethiopia Guji G1 Geisha</div>
+        <div class="ko koFontC"> 게이샤 </div>
+      </div>
+      <div class="line">
+        <div class="en enFontC"> Papua New Guinea</div>
+        <div class="ko koFontC"> 블루마운틴 </div>
+      </div>
+      <div class="line">
+        <div class="en enFontC"> Decaf Colombia</div>
+        <div class="ko koFontC"> 디카페인(콜롬비아) </div>
+      </div>
+    </div>
+  </div>
+</div>
