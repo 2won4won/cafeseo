@@ -29,7 +29,7 @@
   border-radius: 0 0 10px 10px;
   background-color: #BF323F;
   margin-top: 23px;
-  margin-left: 190px;
+  margin-left: 210px;
   z-index: 2;
 }
 
@@ -205,4 +205,18 @@
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
+}
+/* moving letter */
+.moving { position: relative ;}
+.moving .text-wrapper {
+  position: relative;
+  display: inline-block;
+  /* padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.2em; */
+  overflow: hidden;
+}
+.moving .letter { 
+  display: inline-block; line-height: 25px; 
+  font-family: Poppins-Regular; font-weight: 17px; 
 }

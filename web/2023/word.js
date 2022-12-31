@@ -1,12 +1,12 @@
-var words = ['건강 쌍화탕','경동한의원  원장님의 ', '비법 쌍화탕', '약재 넣어 다린', '진짜 쌍화탕'],
+var words = ['건강 쌍화탕','경동한의원  원장님의 비법 쌍화탕', '약재 넣어 다린 진짜 쌍화탕', '천궁, 백작약, 숙지황, 당귀, 황기, 구기자 등등 '],
 part,
 i = 0,
 offset = 0,
 len = words.length,
 forwards = true,
 skip_count = 0,
-skip_delay = 15,
-speed = 70;
+skip_delay = 35,
+speed = 90;
 var wordflick = function () {
   setInterval(function () {
     

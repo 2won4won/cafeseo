@@ -1,3 +1,4 @@
+<script src="word.js"></script>
 <style>
   /* fruit */
   .grid:nth-child(2) .disAr .ko {
@@ -13,17 +14,24 @@
     padding: 0 15px;
     text-align: center;
   }
-
-  .moving { position: relative ;}
-  .moving .text-wrapper {
-    position: relative;
-    display: inline-block;
-    /* padding-top: 0.2em;
-    padding-right: 0.05em;
-    padding-bottom: 0.2em; */
-    overflow: hidden;
+  .strImg { 
+    width: 120px; height: 120px;
+    background: url(strImg.png); background-size: 100% 100%;
+    /* transform: rotate( -10deg ); */
+    animation: shaking 5s infinite;
   }
-  .moving .letter { display: inline-block; line-height: 25px; font-family: Poppins-Regular; font-weight: 17px; }
+  @keyframes shaking {
+    0%{ transform: rotate( 0deg ); }
+    30% { transform: rotate( -11deg ); }
+    60% { transform: rotate( 11deg ); }
+  }
+  #boxFru .leftBox { width: 40%; height: auto;}
+  #boxFru .rightBox{ width: 44%;}
+  #boxFru .border .disBet .leftBox { width: 60% !important}
+  #boxFru .border .disBet .rightBox { width:120px; height: 120px; }
+  #boxFru .lineF { padding-bottom: 15px; height: 25px; line-height: 25px;}
+  #boxFru .lineF:last-child { padding-bottom: 0px !important; }
+  
 </style>
 
 <div class="disAr"> 
@@ -73,7 +81,7 @@
       <div class="price0 priceFontC"></div>
     </div>  
   </div>
-  <div class="disBet">
+  <!-- <div class="disBet">
     <div class="line">
       <div class="en enFontC">Passion Fruit</div>
       <div class="ko koFontC">패션프루츠</div>
@@ -84,7 +92,7 @@
       <div class="price75 priceFontC"></div>
       <div class="price0 priceFontC"></div>
     </div>  
-  </div>
+  </div> -->
   <div class="disBet">
     <div class="line">
       <div class="en enFontC">Grapefruit</div>
@@ -145,7 +153,7 @@
       <div class="price90 priceFontC"></div>
     </div>
   </div>   
-  <div class="disBet">
+  <!-- <div class="disBet">
     <div class="line">
       <div class="en enFontC">Tomato</div>
       <div class="ko koFontC">토마토</div>
@@ -156,7 +164,7 @@
       <div class="price0 priceFontC"></div>
       <div class="price90 priceFontC"></div>
     </div>  
-  </div> 
+  </div>  -->
   <div class="disBet">
     <div class="line">
       <div class="en enFontC">Mandarin</div>
@@ -182,54 +190,24 @@
     </div>  
   </div> 
 </div> 
-<div class="border mt30 pts">
-  <div class="disBet">
-    <div class="line">
-      <div class="en enFontC">Ssangwhatang</div>
-      <div class="ko koFontC">경동한의원 원장님의 비법 쌍화탕 </div>
-      <div class="ex exFontC"> 천궁,백작약,숙지황 등등 </div>
-    </div>  
-    <div class="line disEnd">
-      <div class="price90 priceFontC"></div>
-    </div>  
-  </div>
-</div>
-<div class="border mt30 pts">
-  <div class="disBet">
-    <div class="line">
-      <span class="en enFontC"></span>
-      <!-- <div class="en enFontC">Fresh Strawberry Latte </div> -->
-      <div class="enFontC moving">
-        <span class="text-wrapper">
-          <span class="letters">Fresh Strawberry Latte</span>
-        </span>
-      </div>
-      <div class="ko koFontC"> <span class="star">생</span>딸기 퐁당 라떼</div>
-      <div class="ex exFontC"> 진~짜 비싼 딸기, 생딸기 그대로   </div>
-    </div>
-    <div class="line disEnd">
-      <div class="price90 priceFontC"></div>
-    </div>  
-  </div>
- 
-  <script>
-    var textWrapper = document.querySelector('.moving .letters');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    anime.timeline({loop: true})
-      .add({
-        targets: '.moving .letter',
-        translateY: ["1.1em", 0],
-        translateZ: 0,
-        duration: 1500,
-        delay: (el, i) => 50 * i
-      })
-      .add({
-        targets: '.moving',
-        opacity: 0,
-        duration: 2000,
-        easing: "easeOutExpo",
-        delay: 1500
-      })
-      ;
-  </script>
+<div class="disBet ">
+  <div class="border mt30  leftBox">
+    <div class="en enFontC lineF">Ssangwhatang</div>
+    <div class="ko koFontC lineF mr8 "> 쌍화탕 </div>
+    <div class="ex exFontC lineF mr8 word"> </div>
+    <div class="price90 priceFontC lineF  tr"></div>
+  </div>
+  <div class="border mt30  rightBox">
+    <div class="disBet">
+      <div class="leftBox">
+        <div class="en enFontC lineF">Fresh Strawberry Latte </div>
+        <div class="ko koFontC lineF mr8 "> <span class="strong">생</span>딸기 퐁당 라떼</div>
+        <div class="ex exFontC lineF mr8 "> 진짜 비싼 딸기, 생딸기 그대로  </div>
+      </div>  
+      <div class="strImg rightBox lineF pt10"></div>
+    </div>
+    <div class="price90 priceFontC lineF  tr"></div>
+  </div>
+</div>  
+  
