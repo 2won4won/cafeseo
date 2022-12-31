@@ -12,9 +12,7 @@
   }
    .swiper .img::before{
     content: "";
-    opacity: 0.5;
-    /* border-radius: 8% 8% 8% 35% ; */
-    /* border-radius: 50%; */
+    opacity: 0.4;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -26,8 +24,8 @@
       color: #fff;
       text-align: center;
       position: relative;
-      position: absolute;
-      font-weight: 900;
+      /* position: absolute; */
+      /* font-weight: 900; */
       width: 100%;
       top: 50%;
       left: 50%;
@@ -53,13 +51,13 @@
     border-radius: 8% 8% 35% 35% !important ;
   }
 
-  .swiper-slide .imgS01 { background: url(sand01.jpg);  background-size: 100% 100%; }
-  .swiper-slide .imgS02{ background: url(sand02.jpeg);  background-size:100% 100%; }
+  .swiper-slide .imgS01 { background: url(sand01.jpeg);  background-size: 100% 100%; }
+  .swiper-slide .imgS02{ background: url(sand11.jpeg);  background-size:100% 100%; }
+  /* .swiper-slide .imgS02{ background: url(sand2.jpeg);  background-size:100% 100%; } */
   .swiper-slide .imgS03 { background: url(sand03.jpeg);  background-size: 100% 100%;  }
-  .swiper-slide .imgS04 { background: url(sand04.jpeg);  background-size: 100% 100%;  }
-  /* .swiper-slide .img::before{
-    border-radius: 8% 8% 8% 35% ;
-  } */
+  .swiper-slide .imgS04 { background: url(sand04.png);  background-size: 100% 100%;  }
+  .swiper-slide .ex {font-size: 14px !important ;}
+
 </style >
 <div class="swiper">
   <div class="swiper-wrapper">
@@ -67,11 +65,11 @@
     <div class="swiper-slide">
       <div class="img imgS01"> 
         <div class="sessonT pt10">
-          <div class="en ">Cafe SEO's Branch</div>
-          <div class="ex exFontC">
+          <div class="en ">Cafe SEO's 한끼</div>
+          <div class="ex whiteFontC">
             Sandwich 1, <br> Americano 1, <br> desert
           </div>
-          <div class="price180 pt10 img_price"></div>
+          <div class="price190 pt10 img_price"></div>
         </div>
       </div>  
     </div>
@@ -88,23 +86,24 @@
     <div class="swiper-slide">
       <div class="img imgS03"> 
         <div class="sessonT ">
-          <div class="en mb12">NO 2.</div>
-          <div class="ex exFontC">
-            오곡식빵, 가지
+          <div class="en mb12">NO 2. 비건파 </div>
+          <div class="ex whiteFontC">
+            통곡물식빵<br>가지,버섯,호박,양파 <br>  각종 치즈
           </div>
         </div>
       </div>  
     </div>
-    <div class="swiper-slide">
+   
+    <!-- <div class="swiper-slide">
       <div class="img imgS04"> 
         <div class="sessonT ">
-          <div class="en mb12">NO 2.</div>
+          <div class="en mb12">NO 3.</div>
           <div class="ex exFontC">
             오곡식빵, 가지
           </div>
         </div>
       </div>  
-    </div>
+    </div> -->
   </div>
   <!-- pagination -->
   <div class="swiper-pagination"></div>
