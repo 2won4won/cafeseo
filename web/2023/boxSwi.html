@@ -4,7 +4,7 @@
     height: 135px;
   }
   .swiBox .img{
-    border-radius: 0 0 5px5px;
+    /* border-radius: 0 0 5px5px; */
     /* border-radius: 8% 8% 8% 35% ; */
     width: 98%;
     height: 100%;
@@ -20,7 +20,7 @@
     right: 0px;
     bottom: 0px;
     background-color: #000;
-    border-radius: 0 0 5px 5px;
+    /* border-radius: 0 0 5px 5px; */
   }
   /* .swiBox .imgS01::before{
     opacity: 0;
@@ -37,6 +37,18 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%)
+    }
+    .swiBox .leftBox .img { 
+      border-radius: 0 0 35px 5px ;
+    }
+    .swiBox .leftBox .img::before { 
+      border-radius: 0 0 35px 5px ;
+    }
+    .swiBox .rightBox .img { 
+      border-radius: 0 0 5px 35px ;
+    }
+    .swiBox .rightBox .img::before { 
+      border-radius: 0 0 5px 35px ;
     }
   /* .swiper-slide-duplicate .img {
     border-radius: 8% 8% 8% 35% !important ;
@@ -57,21 +69,24 @@
     border-radius: 8% 8% 35% 35% !important ;
   } */
 
-  .imgS01 { background: url(sand01.jpeg);  background-size: 100% 100%; }
+  .imgS01 { background: url(sand01.jpeg);  background-size: 90% 90%; }
   .swiper-slide .imgS02{ background: url(sand02.jpeg);  background-size:100% 100%; }
   .swiper-slide .imgS03 { background: url(sand03.jpeg);  background-size: 100% 100%;  }
   .swiper-slide .imgS04 { background: url(sand04.png);  background-size: 100% 100%;  }
   .swiper-slide .ex {font-size: 14px !important ;}
-  .swiBox .leftBox { width: 43%; height: 135px; }
+  .swiBox .leftBox { width: 73%; height: 135px;  }
 </style >
 <div div class="disAr swiBox">
-  <div class="leftBox mr8 imgS01 img" > 
-    <div class="sessonT ">
-      <div class="en mb12">Cafe SEO's 한끼 </div>
-      <div class="ex whiteFontC">
-        Sandwich 1, <br> Americano 1, <br> Desert
+  <div class="leftBox mr8 " > 
+    <div class="imgS01 img">
+
+      <div class="sessonT ">
+        <div class="en mb12">Cafe SEO's 한끼 </div>
+        <div class="ex whiteFontC">
+          Sandwich 1, <br> Americano 1, <br> Desert
+        </div>
+        <div class="price190 pt10 img_price"></div>
       </div>
-      <div class="price190 pt10 img_price"></div>
     </div>
       
   </div>
