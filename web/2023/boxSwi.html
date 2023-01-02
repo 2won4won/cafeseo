@@ -6,7 +6,7 @@
   .swiBox .img{
     /* border-radius: 0 0 5px5px; */
     /* border-radius: 8% 8% 8% 35% ; */
-    width: 98%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     position: relative;
@@ -39,7 +39,7 @@
       left: 50%;
       transform: translate(-50%, -50%)
     }
-    .swiBox .leftBox .img { 
+    /* .swiBox .leftBox .img { 
       border-radius: 0 0 35px 5px ;
     }
     .swiBox .leftBox .img::before { 
@@ -50,8 +50,8 @@
     }
     .swiBox .rightBox .img::before { 
       border-radius: 0 0 5px 35px ;
-    }
-  /* .swiper-slide-duplicate .img {
+    } */
+  .swiper-slide-duplicate .img {
     border-radius: 8% 8% 8% 35% !important ;
   }
   .swiper-slide-duplicate .img::before {
@@ -59,8 +59,8 @@
   }
   .swiper-slide-active .img {
     border-radius: 8% 8% 35% 8% !important ;
-  } */
-  /* .swiper-slide-active .img::before {
+  }
+  .swiper-slide-active .img::before {
     border-radius: 8% 8% 35% 8% !important ;
   }
   .swiper-slide-next .img {
@@ -68,8 +68,9 @@
   }
   .swiper-slide-next .img::before {
     border-radius: 8% 8% 35% 35% !important ;
-  } */
+  }
 
+  /* .imgS01 { background: url(back01.jpeg);  background-size: 90% 90%; } */
   .imgS01 { background: url(sand01.jpeg);  background-size: 90% 90%; }
   .swiper-slide .imgS02{ background: url(sand02.jpeg);  background-size:100% 100%; }
   .swiper-slide .imgS03 { background: url(sand03.jpeg);  background-size: 100% 100%;  }
@@ -78,19 +79,19 @@
   .swiBox .leftBox { width: 73%; height: 135px;  }
 </style >
 <div div class="disAr swiBox">
-  <div class="leftBox mr8 " > 
+  <!-- <div class="leftBox mr8 " > 
     <div class="imgS01 img">
 
       <div class="sessonT ">
         <div class="en mb12">Cafe SEO's 한끼 </div>
         <div class="ex whiteFontC">
-          Sandwich 1, <br> Americano 1, <br> Desert
+          Sandwich 1, <br> Americano 1, <br> Häagen-Dazs Ice Cream & Fruit
         </div>
         <div class="price190 pt10 img_price"></div>
       </div>
     </div>
       
-  </div>
+  </div> -->
   <div class="swiper rightBox">
     <div class="swiper-wrapper">
      
@@ -117,6 +118,18 @@
         </div>  
       </div>  -->
     
+      <div class="swiper-slide">
+        <div class="imgS01 img">
+
+          <div class="sessonT ">
+            <div class="en mb12">Cafe SEO's 한끼 </div>
+            <div class="ex whiteFontC">
+              Sandwich 1, <br> Americano 1, <br> Häagen-Dazs Ice Cream & Fruit
+            </div>
+            <div class="price190 pt10 img_price"></div>
+          </div>
+        </div>
+      </div>  
       <div class="swiper-slide">
         <div class="img imgS02"> 
           <div class="sessonT ">
@@ -145,11 +158,12 @@
 <script>
   const swiper = new Swiper('.swiper', {
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: 3,
+    spaceBetween: 10,
     // 자동반복
     autoplay: {
                 //시간 1000 이 1초
-                delay: 2500,
+                delay: 3000,
                 disableOnInteraction: false,
             },  
     // If we need pagination

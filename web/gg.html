@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js">
+    </script>
+    <style>
+    
+        .jb { height: 200px; padding: 20px; text-align: center; 
+          background-color: magenta;
+          color: #ffffff; opacity: 0; }
+      .jb-1 { background-color: #333333; }
+      .jb-2 { background-color: red; }
+      .jb-3 { background-color: gray; }
+      body { box-sizing: border-box; margin: 0px; }
+    </style>
+</head>
+  
+<body>
+  <h1 class="w1">Hisdsdsdfsfsf</h1>
+  <h1 class="w1">Hisdsdsdfsfsf</h1>
+  <h1 class="w1">Hisdsdsdfsfsf</h1>
+  <div class="jb jb-1">Hello!</div>
+  <div class="jb jb-2">Hello!</div>
+  <div class="jb jb-3">Hello!</div>
+  <!-- <div class="jb jb-3">Hello!</div> -->
+    <!-- jQuery code to show the animate method -->
+    <script>
+       
+        gsap.from('.w1',{y:20, opacity: 0, stagger:1.0});
+    </script>
+</body>
+  
+</html>
