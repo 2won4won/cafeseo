@@ -18,13 +18,13 @@
   <link href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm" rel="stylesheet" type="text/css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
  
   
   <!-- local style sheet -->
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="effect.css">
 
-</head>
 <style>
   /* container size */
   .con { width: 90%; margin: 80px auto;}
@@ -104,6 +104,8 @@
     transition: all 150ms ease-in-out;
   }
 </style>
+
+</head>
 <body>
   <div class="con disAr">
     <div class="grid disBetCol">
@@ -141,7 +143,13 @@
      $("#boxFlo").load("boxFlo.html");
      $("#boxMilk").load("boxMilk.html");
      $("#boxSwi").load("boxSwi.html");
+
+     $( ".ch1" ).animate( {
+        opacity: '1'
+      }, 1000 );
     });
+   
  </script>
+ 
 </body>
 </html>
