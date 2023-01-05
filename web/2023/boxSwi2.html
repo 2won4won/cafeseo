@@ -1,0 +1,147 @@
+<style>
+  .h135 { height: 140px; box-sizing: border-box;} 
+  .swiBox .leftBox { 
+    width: 33%;  
+    position: relative;
+    text-align: center;
+    border-radius: 0 0 40px 3px; 
+    margin-right: 9px;
+  }
+  .swiBox .swiper { 
+    width: 67%; text-align: center;  border-radius: 0 0 3px 40px; 
+  }
+  .borderS {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+  .swiBox .title {
+    background: none;
+    color: black;
+    margin-bottom: 15px !important;
+  }
+  .swiper-slide  { width: 100%;  text-align: center; }
+  .exBox:first-child { width: 50%; }
+  .exBox:last-child { width: 50%; }
+  .exBox .img{
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    position: relative;
+  }
+   .exBox .img::before{
+    content: "";
+    opacity: 0.4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+  } 
+
+  .swiper-slide {position: relative; height: auto; }
+  .swiper-slide .koFontC {font-size: 14px !important ;  }
+  .swiBox .en, .swiBox .ex { position: relative;}
+  .swiBox .en { font-weight: 900;}
+  .swiBox .en::after { content: "•••"; margin-left: 7px; position: relative;}
+  .swiBox .en::before { content: "•••" !important; position: relative;}
+  .imgS01{ 
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    width: 90px;
+    height: 90px;
+    opacity: 0.5;
+  }
+  .imgS01::before{ 
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    width: 90px;
+    height: 90px;
+    opacity: 0.1;
+    background-color: #000;
+  }
+  .imgS02{ background: url(sand02.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }
+  .imgS03{ background: url(sand03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }
+  .lineH { line-height: 13px;}
+</style >
+
+<div div class="disAr swiBox">
+  <div class="leftBox h135 borderS  "> 
+    <div class="mt20">
+      <div class="title" > Cafe's SEO 한끼 </div>
+      <div class="price190 img_price">  </div>
+      <div class="img"> 
+        <img src="sand01.jpeg" alt="ti" class="imgS01" />
+      </div>
+    </div>
+  </div>
+  <div class="swiper rightBox  borderS  h135">
+    <div class="swiper-wrapper ">
+      
+      <!-- Slides --> 
+      <div class="swiper-slide    ">
+        <div class="disAr "> 
+          <div class="sessonT mt20 exBox">
+            <div class="koFontC pb8 ko">No 1. 고기파 샌드위치 1 </div>
+            <div class="koFontC pb8 ko">아메리카노 1 </div>
+            <div class="koFontC pb8 ko">
+              하겐다즈 아이스크림 택 1 <br> 
+              <span class="exFontC pb8"> ( 오레오 / 마카다니아 넛 ) </span>
+            </div>  
+            <div class="koFontC ko pb8">시즌과일 </div>
+          </div> 
+          <div class="disCen  exBox mt20"> 
+            <div class="sessonT img imgS02">
+              <div class="en mb12 whiteFontC">NO 1. 고기파</div>
+              <div class="ex whiteFontC">
+                훈제 삼겹살, 크로와상 <br> 고기가 많아 크로와상이 찢어질 수 있어요.
+              </div>
+            </div>
+          </div>  
+        </div>  
+      </div>  
+      <div class="swiper-slide    ">
+        <div class="disAr "> 
+          <div class="sessonT mt20 exBox">
+            <div class="koFontC pb8 ko">No 2. 비건파 샌드위치 1 </div>
+            <div class="koFontC pb8 ko">아메리카노 1 </div>
+            <div class="koFontC pb8 ko lineH">
+              하겐다즈 아이스크림 택 1 <br> 
+              <span class="exFontC "> ( 오레오/마카다니아 넛 ) </span>
+            </div>  
+            <div class="koFontC ko pb8">시즌과일 </div>
+          </div> 
+          <div class="disCen exBox mt20"> 
+            <div class="sessonT img imgS03 ">
+              <div class="en mb12 whiteFontC">NO 2. 비건파</div>
+              <div class="ex whiteFontC">
+                통곡물식빵 <br> 버섯, 호박, 가지, 양파, 마늘 등 <br> 4가지 종류의 치즈
+              </div>
+            </div>
+          </div>  
+        </div>  
+      </div>  
+      
+    </div>   
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>  
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 1,
+    // spaceBetween: 10,
+    // 자동반복
+    autoplay: {
+                //시간 1000 이 1초
+                delay: 3000,
+                disableOnInteraction: false,
+            },  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>

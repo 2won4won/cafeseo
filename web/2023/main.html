@@ -34,7 +34,10 @@
   .disAr {display: flex; justify-content: space-around;}
   .disBetCol {display: flex; justify-content: space-between ; flex-direction: column;}
   .disEnd { display: flex; justify-content: end; }
+  .disCen { display: flex; align-items: center; }
   .disBet { display: flex; justify-content: space-between;}
+  .pr { position: relative;}
+  .paCen { position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
   
   /* grid size */
   .grid:first-child { width: 30%; }
@@ -48,7 +51,9 @@
   .mt20 {margin-top: 20px;}
   .mt30 {margin-top: 30px;}
   .mb12 {margin-bottom: 12px;}
+  .pb8 {padding-bottom: 8px;}
   .pt10 {padding-top: 10px;}
+  .pt15 {padding-top: 15px;}
   .lineMBox {padding-top: 20px; opacity: 0.7;}
   .pts { padding-top: 20px !important;}
   .w75 {width: 75% !important;}
@@ -104,6 +109,16 @@
     transform: rotate(4deg);
     transition: all 150ms ease-in-out;
   }
+  .on {
+   padding:0 15px;
+   
+   /* background-color: #FFFFFF; */
+/* background-image: linear-gradient(90deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%); */
+background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+  color:#fff;
+}
 </style>
 
 </head>
@@ -127,10 +142,10 @@
         <div class="title shadow">  Flower </div>
         <div id="boxFlo"> </div>
       </div>
-      <div class="thema branch"> 
+      <div class="thema branch "> 
         <div id="boxSwi"></div>
       </div>
-      <div class="thema milk">
+      <div class="thema milk mt30">
         <div class="title shadow">  Milk Variation </div>
         <div id="boxMilk"> </div>
       </div>
@@ -143,9 +158,21 @@
       $(".weAre").load("boxWeare.html");
       $("#boxFlo").load("boxFlo.html");
       $("#boxMilk").load("boxMilk.html");
-      $("#boxSwi").load("boxSwi.html");
+      $("#boxSwi").load("boxSwi2.html");
     });
-  
+
+    $(function(){
+      // anime.timeline({loop: true});
+    var idx = 0;
+    setInterval(time, 3000);
+    function time(){
+    var box = $('.turning');
+    box.removeClass('on');
+    box.eq(idx).addClass('on');
+    idx++;
+    if(idx >= box.length) idx= 0;
+  }
+});
 </script>
  
 </body>

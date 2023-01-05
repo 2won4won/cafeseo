@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+  
+  <style>
+    .box {
+  width:50%; margin:10px;
+}
+.box div {
+  width:100%;
+  padding-top:5px;
+  border:1px solid #000;
+  text-align:center;
+  font-size:20px;
+  list-style:none;
+}
+.on {
+  background-color:#c00;
+  color:#fff;
+}
+.moving { position: relative ;}
+.moving .text-wrapper {
+  position: relative;
+  display: inline-block;
+  /* padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.2em; */
+  overflow: hidden;
+}
+.moving .letter { 
+  display: inline-block; line-height: 25px; 
+  font-family: Poppins-Regular; font-weight: 17px; 
+}
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <span class=" moving">
+      <span class=".text-wrapper ">
+        <span class="letters">Strawberry Cream Milk Tea</span>
+      </span>
+    </span>
+  </div>  
+  <div class="box">
+    <span class=" moving">
+      <span class=".text-wrapper ">
+        <span class="letters">Strawberry Cream Milk Tea</span>
+      </span>
+    </span>
+  </div>  
+  <div class="box">
+    <span class=" moving">
+      <span class=".text-wrapper ">
+        <span class="letters">Strawberry Cream Milk Tea</span>
+      </span>
+    </span>
+  </div>  
+  
+   
+  <script>
+    $(function(){
+      // anime.timeline({loop: true});
+  var idx = 0;
+  setInterval(time, 1000);
+  function time(){
+    var box = $('.box .moving');
+    box.removeClass('on');
+    box.eq(idx).addClass('on');
+    idx++;
+    if(idx >= box.length) idx= 0;
+  }
+});
+
+  </script>
+</body>
+</html>
