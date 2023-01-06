@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+
+  <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/tangerine" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/typo-round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm" rel="stylesheet" type="text/css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+  
+  <!-- local style sheet -->
+  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="effect.css">
+ 
+
+<style>
+  /* container size */
+  .con { width: 90%; margin: 80px auto;}
+
+  /* grid display */
+  .disAr {display: flex; justify-content: space-around;}
+  .disBetCol {display: flex; justify-content: space-between ; flex-direction: column;}
+  .disEnd { display: flex; justify-content: end; }
+  .disCen { display: flex; align-items: center; }
+  .disBet { display: flex; justify-content: space-between;}
+  .pr { position: relative;}
+  .paCen { position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+  
+  /* grid size */
+  .grid:first-child { width: 30%; }
+  .grid:nth-child(2){  width: 37%; margin:0 70px; }
+  .grid:last-child { width: 33%; }
+
+  /* 공통 */
+  .tr {text-align: right;}
+  .tc {text-align: center;}
+  .mr8 {margin-right: 8px;}
+  .mt20 {margin-top: 20px;}
+  .mt30 {margin-top: 30px;}
+  .mb12 {margin-bottom: 12px;}
+  .pb8 {padding-bottom: 8px;}
+  .pb30 {padding-bottom: 30px;}
+  .pt10 {padding-top: 10px;}
+  .pt15 {padding-top: 15px;}
+  .pt30 {padding-top: 30px;}
+  .lineMBox {padding-top: 20px; opacity: 0.7;}
+  .pts { padding-top: 20px !important;}
+  .w75 {width: 75% !important;}
+  .border { 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+  }
+  .line { display: flex; padding-bottom: 15px; height: 25px; line-height: 25px;}
+  .lineEnd { display: flex; justify-content: end;  padding-bottom: 15px; height: 25px; line-height: 25px;}
+  .price { text-align: right; font-family: Poppins-Regular; padding-top: 10px;}
+  .price0::before  { content: '•'; }
+  .price70::before { content: '7.0';}
+  .price75::before { content: '7.5';}
+  .price80::before { content: '8.0';}
+  .price85::before { content: '8.5';}
+  .price90::before { content: '9.0';}
+  .price190::before { content: '19.0';}
+  .en { font-family: Poppins-Regular; font-weight: 17px; }
+  .en::before { content: "•"; margin-right: 7px;}
+  .lineM .en::before { content: ""; margin-right: 7px;}
+  .ko { font-family: twayair; font-size: 18px; margin-left: 15px;}
+  .ex { font-family: DalseoHealing; font-weight: 15px; margin-left: 11px; }
+
+  .title {
+    margin-bottom: 30px;
+    font-family: Poppins-Regular;
+    font-size: 19px;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    border-radius: 5px;
+    background: url(back01.jpeg);  
+    background-size: cover;
+    padding: 8px 10px;
+    color: #f7ebd3;
+    box-shadow: 1px 3px 1px -3px #777;
+    transition: background 450ms ease-in-out;
+  }
+  .shadow {
+    position: relative;
+  }
+  .shadow:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 13px;
+    right: 7px;
+    width: 25%;
+    top: 0;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(4deg);
+    transition: all 150ms ease-in-out;
+  }
+  .on {
+   padding:0 15px;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+   color:#fff;
+
+  }
+</style>
+
+</head>
+<body>
+  <div class="con disAr">
+    <div class="grid disBetCol">
+      <div class="thema eso"> 
+        <div class="title shadow"> Espresso </div>
+        <div id="boxEso"> </div>
+      </div>
+    </div>
+    <div class="grid disBetCol">
+      <div class="thema fruit">
+        <div class="title shadow"> Fruit </div>
+        <div id="boxFru"> </div>
+      </div>  
+      <div class="thema weAre"> </div>
+      <div class="thema branch "> 
+        <div id="boxSwi"></div>
+      </div>
+    </div>
+    <div class="grid disBetCol">
+      <div class="thema flower">
+        <div class="title shadow">  Flower </div>
+        <div id="boxFlo"> </div>
+      </div>
+      <div class="thema special "> 
+        <div id="boxSpe"></div>
+      </div>
+      <div class="thema milk mt20">
+        <div class="title shadow">  Milk Variation </div>
+        <div id="boxMilk"> </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function (){
+      $("#boxEso").load("boxEso.html");
+      $("#boxFru").load("boxFru.html");
+      $(".weAre").load("boxWeare.html");
+      $("#boxFlo").load("boxFlo.html");
+      $("#boxSpe").load("boxSpe.html");
+      $("#boxMilk").load("boxMilk.html");
+      $("#boxSwi").load("boxSwi3.html");
+    });
+
+    $(function(){
+      // anime.timeline({loop: true});
+    var idx = 0;
+    setInterval(time, 3000);
+    function time(){
+    var box = $('.look');
+    box.removeClass('on');
+    box.eq(idx).addClass('on');
+    idx++;
+    if(idx >= box.length) idx= 0;
+  }
+});
+</script>
+ 
+</body>
+</html>
