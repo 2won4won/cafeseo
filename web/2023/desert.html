@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <style>
+    .swiper { width: 100vw; height: 100vh;}
+    .swiper-wrapper { width: 100vw; height: 100vh;}
+    /* .sandh { background-color: aqua; width: 100px; height: 100px;} */
+    .sandh { background: url(sandh.jpeg); width: 100vw; height: 100vh; background-repeat: no-repeat;}
+  </style>
+</head>
+<body>
+  <div>
+    <div class="swiper"> 
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"> 
+          <div class="img sandh"> </div>
+        </div>
+        <div class="swiper-slide"> 
+          <div class="img sandhT"> </div>
+        </div>
+        <div class="swiper-slide"> 
+          <div class="img sandhV"> </div>
+        </div>
+      </div>
+        <!-- pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <!-- <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 1,
+      // spaceBetween: 10,
+      // 자동반복
+      autoplay: {
+                  //시간 1000 이 1초
+                  delay: 3000,
+                  disableOnInteraction: false,
+              },  
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>   -->
+</body>
+</html>
