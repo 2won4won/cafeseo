@@ -2,7 +2,7 @@
 <style>
   /* special */
   .strImg { 
-    width: 100px; height: 105px;
+    width: 100px; height:90px;
     background: url(strImg.png); background-size: 100% 100%;
     /* transform: rotate( -10deg ); */
     animation: shaking 5s infinite;
@@ -12,25 +12,37 @@
     30% { transform: rotate( -11deg ); }
     60% { transform: rotate( 11deg ); }
   }
-  #boxSpe .leftBox { width:48%; height: auto; margin-right: 30px;}
-  #boxSpe .rightBox{ width: 45%;}
-  #boxSpe .border .disBet .leftBox { width: 90% !important;}
-  #boxSpe .border .disBet .rightBox { width:100px; height: 105px; }
+  #boxSpe .leftBox { width:28%; height: auto;}
+  #boxSpe .rightBox{ width: 24%;}
+  #boxSpe .middleBox{ width: 24%;}
+  #boxSpe .border .disBet .leftBox { width: 90% !important; }
+  #boxSpe .border .disBet .rightBox { width:100px; height: 90px; }
   #boxSpe .lineF { padding-bottom: 15px; height: 25px; line-height: 25px;}
   #boxSpe .lineF:last-child { padding-bottom: 0px !important; }
-  #boxSpe .on { padding-top:0 !important ; padding-bottom: 0 !important; margin-bottom: 15px;}
+  #boxSpe .on { padding:0 10px 0 10px !important ; margin-bottom: 15px;}
   
 </style>
 
 <div class="disBet  ">
-  <div class="border  pt30 leftBox">
+  <div class="border  pt30 leftBox ">
     <div class="disBet">
       <div class="leftBox">
-        <div class="en enFontC lineF">Fresh Strawberry Latte </div>
+        <div class="en enFontC lineF">Strawberry Latte </div>
         <div class="ko koFontC lineF look "> <span class="strong">생</span>딸기 퐁당 라떼</div>
-        <div class="ex exFontC lineF  "> 진짜 비싼 딸기,  생딸기 그대로  </div>
+        <div class="ex exFontC lineF  "> 진짜 비싼 딸기,<br>  생딸기 그대로  </div>
       </div>  
       <div class="strImg rightBox lineF mt20"></div>
+    </div>
+    <div class="price90 priceFontC lineF  tr"></div>
+  </div>
+  
+  <div class="border  pt30  middleBox">
+    <div class="disBet">
+      <div class="leftBox">
+        <div class="en enFontC lineF">Pineapple</div>
+        <div class="ko koFontC lineF "> 파인애플 </div>
+        <div class="ex exFontC lineF  "> 소화 촉진, <br> 갑상선 건강 유지</div>
+      </div>  
     </div>
     <div class="price90 priceFontC lineF  tr"></div>
   </div>
