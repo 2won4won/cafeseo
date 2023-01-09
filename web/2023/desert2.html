@@ -14,33 +14,42 @@
   <link rel="stylesheet" href="font.css">
 
   <style>
-    .container { width: 60vw; height: 65vh}
+    .container { width: 100vw; height: 100vh}
+    /* .container { width: 60vw; height: 65vh} */
     .swiper { width: 100%; height: 100%; }
     .disCen { display: flex; align-items: center; }
+    .disCen2 { display: flex; align-items: center; justify-content: center; }
     .paCen { position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+    
     .swiper-wrapper { width: 100%; height: 100%;}
     .swiper-slide  {width: 100%; height: 100%;   text-align: center; }
-    .imgBox { width: 49%; height: 49%; object-fit: cover; position: relative;}
-    .imgBox::before { 
-      width: 100%; height: 100%; content: "";
-      position: absolute; top: 0; left: 0;
-      opacity: 0.2;  background-color: #000; 
+    /* .imgBox { width: 49%; height: 49%; object-fit: cover; position: relative;} */
+    .img { 
+      object-fit: cover;
+      position: relative;  width: 100vw; height: 100vh;
     } 
+    .img::before { 
+    /* .imgBox::before {  */
+      width: 100%; height: 100%; content: ""; 
+      position: absolute; top:0; left: 0;
+      opacity: 0.5;  background-color: #000; 
+    } 
+    .img  { color: #fff;}
     .textBox { 
       width: 250px; height: 250px; 
       border-radius: 50%;
-      opacity: 0.8;
-      background-color: #000; 
+      /* opacity: 0.8; */
+      /* background-color: #000;  */
     }
     .textBox::before { 
       width: 100%; height: 100%; 
       border-radius: 50%;
-      opacity: 0.5;
+      opacity: 0.1;
       background-color: #000;
-      z-index: 
+      z-index: 1;
     }
       
-    .sandh { background: url(sandh.jpeg); background-size: 100% 110%; }
+    .sandh { background: url(sandh.jpeg); background-size: 100% 100%; }
     .sandM01 { background: url(sandM01.jpeg); background-size: 100% 100%; }
     .sandM02 { background: url(sandM02.jpeg); background-size: 100% 100%; }
     .sandM03 { background: url(sandM03.jpeg); background-size: 100% 100%; }
@@ -48,12 +57,19 @@
   </style>
 </head>
 <body>
-  <div class="container paCen">
+  <div class="container img sandh  ">
     <!-- <video src="Cat - 2879.mp4" controls></video>   -->
       
     <div  class="swiper"> 
       <div class="swiper-wrapper "> 
-        <div class="swiper-slide sandh"> 
+        <div class="swiper-slide  "> 
+          <div class="disCen2"> 
+            <div class="textBox">
+              <div> Cafe SEO' 한끼  </div>
+              <div> 19.0 </div>
+            </div>
+          </div>
+          <!-- <div class="textBox paCen"> </div> -->
         </div>
         <div class="swiper-slide sandM01 "> 
         </div>
