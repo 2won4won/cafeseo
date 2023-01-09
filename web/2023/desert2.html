@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Document</title>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  
+  <!-- local style sheet -->
+  <link rel="stylesheet" href="font.css">
+
+  <style>
+    .container { width: 58vw; height: 65vh}
+    .swiper { width: 100%; height: 100%; }
+    .disCen { display: flex; align-items: center; }
+    .paCen { position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+    .swiper-wrapper { width: 100%; height: 100%;}
+    .swiper-slide  {width: 100%; height: 100%;   text-align: center; }
+    .imgBox { width: 49%; height: 49%; object-fit: cover; position: relative;}
+    .imgBox::before { 
+      width: 100%; height: 100%; content: "";
+      position: absolute; top: 0; left: 0;
+      opacity: 0.2;  background-color: #000; 
+    } 
+    .textBox { 
+      width: 250px; height: 250px; 
+      border-radius: 50%;
+      opacity: 0.8;
+      background-color: #000; 
+    }
+    .textBox::before { 
+      width: 100%; height: 100%; 
+      border-radius: 50%;
+      opacity: 0.5;
+      background-color: #000;
+      z-index: 
+    }
+      
+    .sandh { background: url(sandh.jpeg); background-size: 100% 110%; }
+    .sandM01 { background: url(sandM01.jpeg); background-size: 100% 100%; }
+    .sandM02 { background: url(sandM02.jpeg); background-size: 100% 100%; }
+    .sandM03 { background: url(sandM03.jpeg); background-size: 100% 100%; }
+    .sandV01 { background: url(sandV01.jpeg); background-size: 100% 100%; }
+  </style>
+</head>
+<body>
+  <div class="container paCen">
+    <!-- <video src="Cat - 2879.mp4" controls></video>   -->
+      
+    <div  class="swiper"> 
+      <div class="swiper-wrapper "> 
+        <div class="swiper-slide sandh"> 
+        </div>
+        <div class="swiper-slide sandM01 "> 
+        </div>
+        <div class="swiper-slide sandV"> 
+        </div>
+      </div>
+          <!-- pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+   
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 1,
+      // spaceBetween: 10,
+      // 자동반복
+      autoplay: {
+                  //시간 1000 이 1초
+                  delay: 3000,
+                  disableOnInteraction: false,
+              },  
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+</body>
+</html>
