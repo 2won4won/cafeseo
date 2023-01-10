@@ -13,10 +13,11 @@
   
   <!-- local style sheet -->
   <link rel="stylesheet" href="font.css">
-
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+
+  <link rel="manifest" href="manifest.json">
   <style>
     body { margin: 0 !important;}
     .container { width: 100vw; height: 100vh}
@@ -112,7 +113,7 @@
         </div>
         <div class="swiper-slide sandD01 img sandD"> 
           <div class=" paCen font">
-            <!-- <div class="ti  ko"> NO 3. 식단파 </div> -->
+            <div class="ti  ko"> NO 3. 식단파 </div>
             <div class="content "> 고구마, 훈제닭가슴살 </div>
             <div class="content "> 곤약 </div>
             <div class="content "> 시즌과일 </div>
@@ -143,7 +144,7 @@
         </div>
         <div class="swiper-slide sandD02 img sandD"> 
           <div class=" paCen font">
-            <!-- <div class="ti  ko"> NO 3. 식단파 </div> -->
+            <div class="ti  ko"> NO 3. 식단파 </div>
             <div class="content "> 고구마, 훈제닭가슴살 </div>
             <div class="content "> 곤약 </div>
             <div class="content "> 시즌과일 </div>
@@ -174,7 +175,7 @@
         </div>
         <div class="swiper-slide sandD03 img sandD"> 
           <div class=" paCen font">
-            <!-- <div class="ti  ko"> NO 3. 식단파 </div> -->
+            <div class="ti  ko"> NO 3. 식단파 </div>
             <div class="content "> 고구마, 훈제닭가슴살 </div>
             <div class="content "> 곤약 </div>
             <div class="content "> 시즌과일 </div>
@@ -204,26 +205,7 @@
       },
     });
 
-    $( document ).on(
-      "click",
-      "a",
-      function( event ){
-      
-
-      // Stop the default behavior of the browser, which
-      // is to change the URL of the page.
-      event.preventDefault();
-      
-
-      // Manually change the location of the page to stay in
-      // "Standalone" mode and change the URL at the same time.
-      location.href = $( event.target ).attr( "href" );
-      
-
-      }
-      );
-
- 
+    // window.scrollTo(0,1);
   </script>
 </body>
 </html>
