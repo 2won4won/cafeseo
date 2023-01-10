@@ -13,7 +13,10 @@
   
   <!-- local style sheet -->
   <link rel="stylesheet" href="font.css">
-
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
   <style>
     body { margin: 0 !important;}
     .container { width: 100vw; height: 100vh}
@@ -200,6 +203,27 @@
         el: '.swiper-pagination',
       },
     });
+
+    $( document ).on(
+      "click",
+      "a",
+      function( event ){
+      
+
+      // Stop the default behavior of the browser, which
+      // is to change the URL of the page.
+      event.preventDefault();
+      
+
+      // Manually change the location of the page to stay in
+      // "Standalone" mode and change the URL at the same time.
+      location.href = $( event.target ).attr( "href" );
+      
+
+      }
+      );
+
+ 
   </script>
 </body>
 </html>
