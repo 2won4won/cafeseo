@@ -170,6 +170,26 @@
     <!-- pagination -->
     <div class="swiper-pagination"></div>
   </div>
+<!-- modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="swiper-container" id="popupGallery">
+            <div class="swiper-wrapper">
+              <img class="swiper-slide" src="https://static.reades.co.uk/1001-487d/0/image_1.jpg">
+              <img class="swiper-slide" src="https://static.reades.co.uk/1001-487d/0/image_2.jpg">
+              <img class="swiper-slide" src="https://static.reades.co.uk/1001-487d/0/image_3.jpg">
+              <img class="swiper-slide" src="https://static.reades.co.uk/1001-487d/0/image_4.jpg">
+              <img class="swiper-slide" src="https://static.reades.co.uk/1001-487d/0/image_5.jpg">
+            </div>
+            <div class="popupGalleryPrev" style="position: absolute; top: 0; bottom: 0; left: 0; width: 50%; cursor: pointer; z-index: 2;"></div>
+            <div class="popupGalleryNext" style="position: absolute; top: 0; bottom: 0; right: 0; width: 50%; cursor: pointer; z-index: 2;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>  
 <script>
   const swiper = new Swiper('.swiper', {
@@ -187,4 +207,31 @@
       el: '.swiper-pagination',
     },
   });
+
+  var popupGallery;
+$(document).ready(function () {
+  $('.img').click(function (e) {
+    e.preventDefault();
+    $('#myModal').on('show.bs.modal', function (e) {
+      popupGallery = new Swiper('#popupGallery', {
+        spaceBetween: 2,
+        loop: true
+      });
+
+      $('.popupGalleryNext').click(function () {
+        popupGallery.slideNext();
+      });
+
+      $('.popupGalleryPrev').click(function () {
+        popupGallery.slidePrev();
+      });
+    });
+    
+    $('#myModal').on('shown.bs.modal', function (e) {
+      popupGallery.update();
+    });
+
+    $('#myModal').modal();
+  });
+});
 </script>
