@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<style>
+.swiBox .img { object-fit: cover;  position: relative; }  
+.swiBox .img::before{
+  width: 100%;  height: 100%; content: "";  opacity: 0.3;
+  position: absolute;  top: 0px;  left: 0px;  right: 0px;  bottom: 0px;
+  background-color: #000;
+} 
+.sandM01 { background: url(sandM01.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }
+.sandM02 { background: url(sandM02.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandM03 { background: url(sandM03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }  .sandImg03 { background: url(sandM03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandV01 { background: url(sandV01.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }
+.sandV02 { background: url(sandV02.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }  .sandImg07 { background: url(sandD01.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }
+.sandV03 { background: url(sandV03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandD01 { background: url(sandD01.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandD02 { background: url(sandD02.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandD03 { background: url(sandD03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+
+</style>
+
+<div class="swiBox"> 
+  <div class="swiper ">
+    <div class="swiper-wrapper ">
+      <!-- Slides -->
+      <div class="swiper-slide img sandM01" > </div>
+      <div class="swiper-slide img sandM02" > </div>
+      <div class="swiper-slide img sandM03" > </div>
+      <div class="swiper-slide img sandV01" > </div>
+      <div class="swiper-slide img sandV02" > </div>
+      <div class="swiper-slide img sandV03" > </div>
+      <div class="swiper-slide img sandD01" > </div>
+      <div class="swiper-slide img sandD02" > </div>
+      <div class="swiper-slide img sandD03" > </div>
+      
+    </div>
+  </div>
+  <!-- pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<script >
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 1,
+    // spaceBetween: 10,
+    // 자동반복
+    autoplay: {
+      //시간 1000 이 1초
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+  
+
+</script>

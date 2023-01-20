@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<style>
+.modal {
+  display: none; width: 100vw;  height: 100vh;
+  position: fixed; z-index: 1; left: 0; top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.close {
+  color: #aaaaaa;
+  float: right; font-size: 28px; font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;  text-decoration: none; cursor: pointer;
+}
+.swiBox .img { width:100vw;   height: 45vh; ;  object-fit: cover;  position: relative; }  
+.swiBox .img::before{
+  width: 100%;  height: 100%; content: "";  opacity: 0.3;
+  position: absolute;  top: 0px;  left: 0px;  right: 0px;  bottom: 0px;
+  background-color: #000;
+} 
+.sandM01 { background: url(sandM01.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }
+.sandM02 { background: url(sandM02.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandM03 { background: url(sandM03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }  .sandImg03 { background: url(sandM03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandV01 { background: url(sandV01.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }
+.sandV02 { background: url(sandV02.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }  .sandImg07 { background: url(sandD01.jpeg); background-size: 100% 100%; background-repeat: no-repeat; }
+.sandV03 { background: url(sandV03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandD01 { background: url(sandD01.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandD02 { background: url(sandD02.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+.sandD03 { background: url(sandD03.jpeg); background-size: 100% 100%; background-repeat: no-repeat; } 
+</style>
+</head>
+
+  <!-- The Modal -->
+  <div id="meet" class="modal">
+    <span class="close">&times;</span>
+    <div class="swiBox">
+      <div class="swiper ">
+        <div class="swiper-wrapper ">
+          <!-- Slides -->
+          <div class="swiper-slide img sandM01"> </div>
+          <div class="swiper-slide img sandM02"> </div>
+          <div class="swiper-slide img sandM03"> </div>
+          <!-- <div class="swiper-slide img sandV01"> </div>
+          <div class="swiper-slide img sandV02"> </div>
+          <div class="swiper-slide img sandV03"> </div>
+          <div class="swiper-slide img sandD01"> </div>
+          <div class="swiper-slide img sandD02"> </div>
+          <div class="swiper-slide img sandD03"> </div> -->
+    
+        </div>
+      </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+  </div>  
+  <div id="vegan" class="modal">
+    <span class="close">&times;</span>
+    <div class="swiBox">
+      <div class="swiper ">
+        <div class="swiper-wrapper ">
+          <div class="swiper-slide img sandV01"> </div>
+          <div class="swiper-slide img sandV02"> </div>
+          <div class="swiper-slide img sandV03"> </div>
+        </div>
+      </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div id="diet" class="modal">
+    <span class="close">&times;</span>
+    <div class="swiBox">
+      <div class="swiper ">
+        <div class="swiper-wrapper ">
+          <div class="swiper-slide img sandD01"> </div>
+          <div class="swiper-slide img sandD02"> </div>
+          <div class="swiper-slide img sandD03"> </div>
+        </div>
+      </div>
+      <!-- pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <script>
+    // Get the modal
+    // var modal = document.getElementsByClassName("modal");
+    var meet = document.getElementById("meet");
+    var vegan = document.getElementById("vegan");
+    var diet = document.getElementById("diet");
+    var btn = document.querySelectorAll(".box");
+    var modal = document.querySelectorAll(".modal");
+   
+    btn.forEach((el, index) => {
+      el.onclick = () => {
+        if(index == 0) {
+          modal[0].style.display = "block";
+        } else if (index == 1) {
+          modal[1].style.display = "block";
+        } else if (index == 2) {
+           modal[2].style.display = "block";
+        } else {}
+      }
+    });
+     
+    
+
+    // box click 시 swiper modal
+    $('.box').click(function () {
+      $('modalBox').css('display', 'block');
+      /* modal swiper*/
+      var swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+        //시간 1000 이 1초
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      })
+    });
+
+
+    // close modal
+   $('.close').click(function () {
+      $('.modal').css('display', 'none');
+   });
+   $('.modal').click(function () {
+      $('.modal').css('display', 'none');
+   });
+
+    // window.onclick = function (event) {
+    //   if (event.target == modal) {
+    //    modal.style.display = "none";
+    //   }
+    // }
+
+    
+
+  </script>
+
+</body>
+
+</html>

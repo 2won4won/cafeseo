@@ -20,7 +20,7 @@
   <link rel="manifest" href="manifest.json">
   <style>
     body { margin: 0 !important;}
-    .container { width: 100vw; height: 100vh}
+    .container { width: 60vw; height: 60vh}
     /* .container { width: 60vw; height: 65vh} */
     .swiper { width: 100%; height: 100%; }
     .disCen { display: flex; align-items: center; }
@@ -73,176 +73,90 @@
     .choice{  color: #A9C7E4; font-size: 28px; font-weight: 100 !important; padding-top: 15px;}
     .pr { font-size: 35px; margin-top: 10px; padding-top: 30px; }
     .font { font-family: 'twayair';}
-    .dd {display: none; width: 100%; height: 100%; background-color: darkmagenta;}
+
+    .con {width: 100vw; height: 20vh; display: flex; justify-content: space-between; }
+    /* .dis{
+      position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);
+    } */
+    .box {  height: 12vh; background-color: #72C529; cursor: pointer;} 
   </style>
 </head>
 <body>
+  <div class="con ">
+    <div class="box active" >한끼 </div>
+    <div class="box" >NO.1 고기파</div>
+    <div class="box">NO.2 비건파</div>
+    <div class="box">NO.3 식단파</div>
+  </div>
   <div class="container ">
 
     <div  class="swiper"> 
       <div class="swiper-wrapper "> 
-        <div class="swiper-slide img sandh   "> 
-            <div class=" paCen font">
-              <div class="ti  ko"> Cafe SEO' 한끼  </div>
-              <div class="content "> 샌드위치 택 1 </div>
-              <div class="content "> 하겐다즈 아이스크림 택 1 </div>
-              <div class="choice "> 오레오 </div>
-              <div class="choice "> 마카다미아 넛 </div>
-              <div class="content "> 시즌과일 </div>
-              <div class="pr"> 19.0 </div>
-            </div>
+        <div class="swiper-slide  img sandM01" data-type="NO.1 고기파"> 
+
         </div>
-        <div class="swiper-slide sandM01 img sandM"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 1. 고기파 </div>
-            <div class="content ">  훈제삼겹살 </div>
-            <div class="content ">  크로와상 </div>
-            <div class="content "> 하겐다즈 아이스크림 택 1 </div>
-            <div class="choice "> 오레오 </div>
-            <div class="choice "> 마카다미아 넛 </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
-        <div class="swiper-slide sandV01 img sandV"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 2. 비건파 </div>
-            <div class="content ">  가지, 호박, 버섯, 마늘 </div>
-            <div class="content ">   치즈 </div>
-            <div class="content ">  통곡물식빵 </div>
-            <div class="content "> 하겐다즈 아이스크림 택 1 </div>
-            <div class="choice "> 오레오 </div>
-            <div class="choice "> 마카다미아 넛 </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
-        <div class="swiper-slide sandD01 img sandD01"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 3. 식단파 </div>
-            <div class="content "> 훈제 닭갈비</div>
-            <div class="choice "> 250kcal</div>
-            <div class="content "> 고구마 </div>
-            <div class="choice "> 100kcal </div>
-            <div class="content "> 곤약 샐러드   </div>
-            <div class="choice ">  10kcal  </div>
-            <div class="content "> 그릭요거트   </div>
-            <div class="choice ">  15kcal  </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="choice "> 40kcal </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
-        <div class="swiper-slide sandM02 img sandM"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 1. 고기파 </div>
-            <div class="content ">  훈제삼겹살 </div>
-            <div class="content ">  크로와상  </div>
-            <div class="content "> 하겐다즈 아이스크림 택 1 </div>
-            <div class="choice "> 오레오 </div>
-            <div class="choice "> 마카다미아 넛 </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
-        <div class="swiper-slide sandV02 img sandV"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 2. 비건파 </div>
-            <div class="content ">  가지, 호박, 버섯, 마늘 </div>
-            <div class="content ">   치즈 </div>
-            <div class="content ">  통곡물식빵 </div>
-            <div class="content "> 하겐다즈 아이스크림 택 1 </div>
-            <div class="choice "> 오레오 </div>
-            <div class="choice "> 마카다미아 넛 </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
-        <div class="swiper-slide sandD02 img sandD02"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 3. 식단파 </div>
-            <div class="content "> 훈제 닭갈비</div>
-            <div class="choice "> 250kcal</div>
-            <div class="content "> 고구마 </div>
-            <div class="choice "> 100kcal </div>
-            <div class="content "> 곤약 샐러드   </div>
-            <div class="choice ">  10kcal  </div>
-            <div class="content "> 그릭요거트   </div>
-            <div class="choice ">  15kcal  </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="choice "> 25kcal </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
-        <div class="swiper-slide sandM03 img sandM"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 1. 고기파 </div>
-            <div class="content ">  훈제삼겹살 </div>
-            <div class="content ">  크로와상  </div>
-            <div class="content "> 하겐다즈 아이스크림 택 1 </div>
-            <div class="choice "> 오레오 </div>
-            <div class="choice "> 마카다미아 넛 </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
-        <div class="swiper-slide sandV03 img sandV"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 2. 비건파 </div>
-            <div class="content ">  가지, 호박, 버섯, 마늘 </div>
-            <div class="content ">   치즈 </div>
-            <div class="content ">  통곡물식빵 </div>
-            <div class="content "> 하겐다즈 아이스크림 택 1 </div>
-            <div class="choice "> 오레오 </div>
-            <div class="choice "> 마카다미아 넛 </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
-        <div class="swiper-slide sandD03 img sandD03"> 
-          <div class=" paCen font">
-            <div class="ti  ko"> NO 3. 식단파 </div>
-            <div class="content "> 훈제 닭갈비</div>
-            <div class="choice "> 250kcal</div>
-            <div class="content "> 고구마 </div>
-            <div class="choice "> 100kcal </div>
-            <div class="content "> 곤약 샐러드   </div>
-            <div class="choice ">  10kcal  </div>
-            <div class="content "> 그릭요거트   </div>
-            <div class="choice ">  15kcal  </div>
-            <div class="content "> 시즌과일 </div>
-            <div class="choice "> 40kcal </div>
-            <div class="pr"> 19.0 </div>
-          </div>
-        </div>
+        <div class="swiper-slide  img sandM02" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide  img sandM03" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide  img sandV01" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide  img sandV02" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide  img sandV03" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide  img sandD01" data-type="NO.3 식단파"> </div>
+        <div class="swiper-slide  img sandD02" data-type="NO.3 식단파"> </div>
+        <div class="swiper-slide  img sandD03" data-type="NO.3 식단파"> </div>
       </div>
           <!-- pagination -->
       <div class="swiper-pagination"></div>
     </div>
-    <div class="do"> 1111 </div>
+
   </div>
    
   <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
+
+    const cloneSlide = $('.container .swiper-wrapper').html();
+    const arraySlide = [];
+
+    $('.swiper .swiper-slide').each(function(i, e) {
+      arraySlide.push(e);
+      console.log(arraySlide);
+    })
+
+    const swiper = new Swiper(' .swiper', {
       slidesPerView: 1,
-      // spaceBetween: 10,
-      // 자동반복
-      autoplay: {
-                  //시간 1000 이 1초
-                  delay: 3000,
-                  disableOnInteraction: false,
-              },  
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      on:{
-        click: function(){
-          // alert('你点了Swiper');
-          $(".dd").slideDown("slow");
-        },
-      },
+      centeredSlides: true,
+      // spaceBetween: 30,
+      speed: 1000,
+      loop: false,
+      loopAdditionalSlides: 1,
+      autoplay:{
+        autoplay: true,
+        delay: 3000,
+        disableOnInteraction: false
+      }
+    });
+
+    $('.box').on('click', function() {
+      const type = $(this).text();
+      console.log(type);
+      
+      $('.box').removeClass('active');
+      $(this).addClass('active');
+      $('.swiper .swiper-wrapper').empty();
+
+      if (type === '한끼') {
+        $('.swiper .swiper-wrapper').append(cloneSlide);
+      } else {
+        $(arraySlide).each(function(i, e) {
+          const exist = $(e).attr('data-type').indexOf(type);
+
+          if (exist >= 0) {
+            $('.swiper .swiper-wrapper').append(e);
+            console.log("exist:" + exist);
+          }
+        });
+      }
+  
+      swiper.update();
+      swiper.slideTo(0);
     });
     // window.scrollTo(0,1);
 

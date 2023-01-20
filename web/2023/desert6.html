@@ -1,0 +1,237 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<style>
+  .modal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .swiBox .img {
+    width: 100vw;
+    height: 45vh;
+    ;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .swiBox .img::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+  }
+
+  .sandM01 {
+    background: url(sandM01.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandM02 {
+    background: url(sandM02.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandM03 {
+    background: url(sandM03.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandImg03 {
+    background: url(sandM03.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandV01 {
+    background: url(sandV01.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandV02 {
+    background: url(sandV02.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandImg07 {
+    background: url(sandD01.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandV03 {
+    background: url(sandV03.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandD01 {
+    background: url(sandD01.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandD02 {
+    background: url(sandD02.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .sandD03 {
+    background: url(sandD03.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+</style>
+</head>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="swiBox">
+    <div class="swiper ">
+      <div class="swiper-wrapper ">
+        <!-- Slides -->
+        <div class="swiper-slide img sandM01" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide img sandM02" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide img sandM03" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide img sandV01" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide img sandV02" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide img sandV03" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide img sandD01" data-type="NO.3 식단파"> </div>
+        <div class="swiper-slide img sandD02" data-type="NO.3 식단파"> </div>
+        <div class="swiper-slide img sandD03" data-type="NO.3 식단파"> </div>
+
+      </div>
+    </div>
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+  // Get the modal
+  // var modal = document.getElementsByClassName("modal");
+  var cloneSlide = $('.container .swiper-wrapper').html();
+  var arraySlide = [];
+
+  $('.swiper .swiper-slide').each(function (i, e) {
+    arraySlide.push(e);
+    console.log(arraySlide);
+  })
+
+  var modal = document.getElementById("myModal");
+  var btn = document.querySelectorAll(".box");
+
+
+  btn.forEach((el, index) => {
+    el.onclick = () => {
+        modal.style.display = "block";
+    }
+  });
+
+
+
+  // box click 시 swiper modal
+  $('.box').click(function () {
+    // $('.modalBox').css('display', 'block');
+    
+    const type = $(this).text();
+    console.log(type);
+    
+    $('.box').removeClass('active');
+    $(this).addClass('active');
+    $('.swiper .swiper-wrapper').empty();
+    
+    if (type === "Cafe SEO's 한끼") {
+      $('.swiper .swiper-wrapper').append(cloneSlide);
+    } else {
+      $(arraySlide).each(function (i, e) {
+        const exist = $(e).attr('data-type').indexOf(type);
+        
+        if (exist >= 0) {
+          $('.swiper .swiper-wrapper').append(e);
+        }
+      });
+    }
+    /* modal swiper*/
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+      loop: true,
+      loopAdditionalSlides: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        //시간 1000 이 1초
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    })
+
+    swiper.update();
+    swiper.slideTo(0);
+  });
+
+
+  // close modal
+  $('.close').click(function () {
+    $('.modal').css('display', 'none');
+  });
+  $('.modal').click(function () {
+    $('.modal').css('display', 'none');
+  });
+
+    // window.onclick = function (event) {
+    //   if (event.target == modal) {
+    //    modal.style.display = "none";
+    //   }
+    // }
+
+
+
+</script>
+
+</body>
+
+</html>

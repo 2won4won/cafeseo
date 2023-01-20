@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<style>
+  .modal {
+    display: none;  width: 100vw; height: 100vh;  z-index: 1;
+    position: fixed;left: 0; top: 0; background-color: rgba(0, 0, 0, 0.6); }
+
+  .close {color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; }
+ 
+  .close:hover,
+  .close:focus {
+    color: #000; text-decoration: none; cursor: pointer; 
+  }
+
+  /* .modal .img { width: 100vw;  height: 45vh; object-fit: cover; position: relative; } */
+  .modal .img::before {
+    width: 100%; height: 100%; 
+    content: "";
+    position: absolute; top: 0; left: 0;
+    opacity: 0.4; background-color: #000; 
+  }
+</style>
+</head>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="swiBox">
+    <div class="swiper ">
+      <div class="swiper-wrapper ">
+        <!-- Slides -->
+        <div class="swiper-slide img sandM01" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide img sandM02" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide  img sandM03" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide  img sandM04" data-type="NO.1 고기파"> </div>
+        <div class="swiper-slide img sandV01" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide  img sandV02" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide  img sandV03" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide  img sandV04" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide  img sandV06" data-type="NO.2 비건파"> </div>
+        <div class="swiper-slide  img sandD01" data-type="NO.3 식단파 "> </div>
+        <div class="swiper-slide img sandD02" data-type="NO.3 식단파 "> </div>
+        <div class="swiper-slide  img sandD03" data-type="NO.3 식단파 "> </div>
+        <div class="swiper-slide  img sandD04" data-type="NO.3 식단파 "> </div>
+      </div>
+    </div>
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+  // Get the modal
+  // var modal = document.getElementsByClassName("modal");
+  var cloneSlide = $('.modal .swiper-wrapper ').html();
+  var arraySlide = [];
+  var modal = document.getElementById("myModal");
+  var btn = document.querySelectorAll(".box");
+
+  
+  btn.forEach((el, index) => {
+    el.onclick = () => {
+      modal.style.display = "block";
+    }
+  });
+
+  $('.modal .swiper-slide ').each(function (i, e) {
+    arraySlide.push(e);
+    console.log(arraySlide);
+  })
+
+  // box click 시 swiper modal
+  $('.box').click(function () {
+   
+    const type = $(this).children('div').children('.ti').text();
+    console.log("type:" +type);
+    
+    $('.box').removeClass('active');
+    $(this).addClass('active');
+    $('.modal .swiper-wrapper').empty();
+
+    if (type === "Cafe SEO' 한끼") {
+      $('.modal .swiper-wrapper').append(cloneSlide);
+      
+    } else {
+      $(arraySlide).each(function (i, e) {
+        const exist = $(e).attr('data-type').indexOf(type);
+        if (exist >= 0) {
+          $('.modal .swiper-wrapper').append(e);
+          console.log("exist:"+exist);
+        }
+      });
+    }
+    /* modal swiper*/
+    var swiperM = new Swiper('.modal .swiper', {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+      loop: true,
+      loopAdditionalSlides: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        //시간 1000 이 1초
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    })
+    
+    swiperM.update();
+    swiperM.slideTo(0);
+  });
+
+ 
+  // close modal
+  $('.close').click(function () {
+    $('.modal').css('display', 'none');
+  });
+  $('.modal').click(function () {
+    $('.modal').css('display', 'none');
+  });
+
+</script>
+
+</body>
+
+</html>
