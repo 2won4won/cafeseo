@@ -27,6 +27,26 @@
     position: absolute; top: 0; left: 0;
     opacity: 0.4; background-color: #000; 
   }
+  .list { width: 75vw; height: 92vh; text-align: center; }
+  .menu { 
+    background-color: #FF3CAC;
+background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+  color:white ;  
+  width: inherit; height: 30vh; padding:20px; box-sizing: border-box;}
+  .disBet { display: flex; justify-content: space-between;}
+  .disBetCol {display: flex; justify-content: space-between ; flex-direction: column;}
+  .disCenw { display: flex; align-items: center; justify-content: center;}
+  .list .ti { font-size: 25px; margin-bottom: 20px; }
+  .list .content { font-size: 22px;  }
+  .list .choice { font-size: 18px; font-weight: 100 !important; }
+  .list .pr { font-size: 25px; }
+  .list .sl { font-size: 25px; }
+  .list .content div { margin-bottom: 20px ;}
+  .list .content div:nth-child(3) { margin-bottom: 10px !important;}
+  .list .ti, 
+  .list .sl { line-height: 40px;}
+  .list .choice { line-height: 28px;}
 </style>
 </head>
 
@@ -34,6 +54,46 @@
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <div class="swiBox">
+    <div class="list paCen font disBetCol" data-type="Cafe SEO' 한끼"> 
+      <div class="menu disBet">
+        <div class="ti ko disCenw">NO.1 <br> 고기파</div>
+        <div class="content"> 
+          <div class=" "> 훈제삼겹살 </div>
+          <div class=" "> 크로와상 </div>
+          <div class=" "> 하겐다즈 아이스크림 택 1 </div>
+          <div class="choice "> 오레오 <br> 마카다미아 넛</div>
+          <div class=" "> 시즌과일 </div>
+          <div class="pr"> 19.0 </div>
+        </div>
+        <div class="sl disCenw"> 인생이<br> 다 <br> 고기서 <br>고기지 <br>^^ </div>
+      </div>
+      <div class="menu disBet">
+        <div class="ti ko disCenw">NO.2 <br> 비건파</div>
+        <div class="content"> 
+          <div class=" "> 가지•호박•버섯•치즈 </div>
+          <div class=" "> 통곡물식빵 </div>
+          <div class=" "> 하겐다즈 아이스크림 택 1 </div>
+          <div class="choice "> 오레오 <br> 마카다미아 넛</div>
+          <div class=" "> 시즌과일 </div>
+          <div class="pr"> 19.0 </div>
+        </div>
+        <div class="sl disCenw">콩 심은데 <br> 콩 나고,<br>
+                       가지, 호박 <br> 심은데 <br> 비건<br> 난다.
+        </div>
+      </div>
+      <div class="menu disBet">
+        <div class="ti ko disCenw">NO.3 <br> 식단파</div>
+        <div class="content">
+          <div class=" "> 훈제닭갈비 <span class="choice "> 250kcal</span></div>
+          <div class=" "> 고구마 <span class="choice "> 100kcal</span></div>
+          <div class=" "> 곤약샐러드 <span class="choice "> 10kcal</span></div>
+          <div class=" "> 그릭요거트 <span class="choice "> 15kcal</span></div>
+          <div class=" "> 시즌과일 <span class="choice "> 40kcal</span> </div>
+          <div class="pr"> 19.0 </div>
+        </div>
+        <div class="sl disCenw"> 토닭토닭.<br> 괜찮아 <br>먹어도 </div>
+      </div>
+    </div>
     <div class="swiper ">
       <div class="swiper-wrapper ">
         <!-- Slides -->
@@ -88,13 +148,15 @@
     $('.modal .swiper-wrapper').empty();
 
     if (type === "Cafe SEO' 한끼") {
-      $('.modal .swiper-wrapper').append(cloneSlide);
+      // $('.modal .swiper-wrapper').append(cloneSlide);
+      $('.modal .list').append(cloneSlide);
       
     } else {
       $(arraySlide).each(function (i, e) {
         const exist = $(e).attr('data-type').indexOf(type);
         if (exist >= 0) {
           $('.modal .swiper-wrapper').append(e);
+          $('.list').hide();
           console.log("exist:"+exist);
         }
       });
