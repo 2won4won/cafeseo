@@ -41,7 +41,7 @@ background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
   .list .content { font-size: 22px;  }
   .list .choice { font-size: 18px; font-weight: 100 !important; }
   .list .pr { font-size: 25px; }
-  .list .sl { font-size: 25px; }
+  .list .sl { font-size: 25px; font-family: 'EF_Diary';}
   .list .content div { margin-bottom: 20px ;}
   .list .content div:nth-child(3) { margin-bottom: 10px !important;}
   .list .ti, 
@@ -157,14 +157,15 @@ background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
         if (exist >= 0) {
           $('.modal .swiper-wrapper').append(e);
           $('.list').hide();
+          $('.box').css("-webkit-filter", "blur(25px)");
           console.log("exist:"+exist);
         }
       });
     }
     /* modal swiper*/
     var swiperM = new Swiper('.modal .swiper', {
-      slidesPerView: 1,
-      // spaceBetween: 30,
+      slidesPerView: "auto",
+      spaceBetween: 35,
       loop: true,
       loopAdditionalSlides: 1,
       pagination: {
@@ -173,7 +174,7 @@ background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
       },
       autoplay: {
         //시간 1000 이 1초
-        delay: 3000,
+        delay: 2500,
         disableOnInteraction: false,
       },
     })
@@ -186,9 +187,11 @@ background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
   // close modal
   $('.close').click(function () {
     $('.modal').css('display', 'none');
+    $('.box').css("-webkit-filter", "none");
   });
   $('.modal').click(function () {
     $('.modal').css('display', 'none');
+    $('.box').css("-webkit-filter", "none");
   });
 
 </script>
