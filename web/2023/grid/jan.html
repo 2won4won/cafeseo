@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<!-- <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet"> -->
+<!-- <link href="https://fonts.cdnfonts.com/css/tangerine" rel="stylesheet"> -->
+<!-- <link href="https://fonts.cdnfonts.com/css/typo-round" rel="stylesheet"> -->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link
+  href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm"
+  rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+<!-- local style sheet -->
+<link rel="stylesheet" href="../css/font01.css">
+<link rel="stylesheet" href="../css/layout.css">
+
+
+<style>
+.con { width: 93vw; height: 90vh; }
+.grid { height: inherit; }
+.grid:first-child { width: 29vw; border: 3px solid red;}
+.grid:nth-child(2) { width: 33vw; background-color: brown;}
+.grid:last-child { width: 29vw; background-color: olivedrab;}
+
+#boxEso .turning { display: none;}
+
+</style>
+</head>
+
+<body>
+<div class="con disJcAr poAbCen">
+  <div class="grid">
+    <div class="thema "> 
+      <div class="title"> Espresso </div>
+      <div id="boxEso"> </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="thema ">
+      <div class="title"> Fruit </div>
+      <!-- <div id="boxFru"> </div> -->
+    </div>
+    <div class="thema ">
+      <!-- <div id="boxSpe"> </div> -->
+    </div>
+    <div class="thema ">
+      <!-- <div id="boxHere"> </div> -->
+    </div>
+  </div>
+  <div class="grid">
+    <div class="thema ">
+      <div class="title"> Flower Tea</div>
+      <!-- <div id="boxFlo"> </div> -->
+    </div>
+    <div class="thema ">
+      <div class="title"> Milk Variation </div>
+      <!-- <div id="boxMilk"> </div> -->
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#boxEso").load("../thema/boxEso.html");
+    $("#boxFru").load("../thema/boxFru.html");
+    $("#boxSpe").load("../thema/boxSpe.html");
+    $("#boxHere").load("../thema/boxHere.html");
+    $("#boxFlo").load("../thema/boxFlo.html");
+    $("#boxMilk").load("../thema/boxMilk.html");
+  });
+</script>
+
+</body>
+
+</html>

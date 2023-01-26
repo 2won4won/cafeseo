@@ -1,17 +1,31 @@
 /* font color */
-.nameFontC1 { color: #72C529; }
-.nameFontC2 { color: #A86FBA; } /* seo Title1,2-each spelling */
-.nameFontC3 { color: #459BE4; } /* Eso blending Title */
-.nameFontCoEx { color: #E18BB1; } /* blending Ex */
+.nameFontC1 { color: #5F84A2; }
+.nameFontC2 { color: #B7DDE1; } /* seo Title1,2-each spelling */
+.nameFontC3 { color: #91AEC4; } /* Eso blending Title */
+.nameFontCoEx { color: #CCD3D9; } /* blending Ex */
 
-.enFontC { color: #72C529; } /* en */
-.koFontC { color: #A86FBA; } /* ko */
-.exFontC { color: #A9C7E4; } /* ex */
-/* .exFontC { color: #F8D65E; } ex */
-.priceFontC { color: #72C529; } /* price */
+.enFontC { color: #C2C6CE; } /* en */
+.koFontC { color: #668DCD; } /* ko */
+.exFontC { color: #CDDDEF; } /* ex */
+.priceFontC { color: #C2C6CE; } /* price */
+.enFontCF { color: #B7DDE1;}
+.koFontCF { color: #194569;}
+.title { color: #194569 }
+.swiBox .title { color: #668DCD }
 
-.enFontCF { color: #007FBD; } /* 과일 추가설명 ex  */
-.koFontCF { color: #E18BB1;}  /* 과일 추가설명 ex  */
+/* 202301 */
+/* .nameFontC1 { color: #72C529; }
+.nameFontC2 { color: #A86FBA; } seo Title1,2-each spelling
+.nameFontC3 { color: #459BE4; } Eso blending Title
+.nameFontCoEx { color: #E18BB1; } blending Ex
+
+.enFontC { color: #72C529; } en
+.koFontC { color: #A86FBA; } ko
+.exFontC { color: #A9C7E4; } ex
+.priceFontC { color: #72C529; } price
+
+.enFontCF { color: #007FBD; } 과일 추가설명 ex 
+.koFontCF { color: #E18BB1;}  과일 추가설명 ex   */
 
 
 .waveFontC { color: #F8D65E; } /* wave */

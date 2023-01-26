@@ -1,0 +1,207 @@
+<script src="word.js"></script>
+<style>
+  /* fruit */
+  .grid:nth-child(2) .disAr .ko {
+    font-family: twayair;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  .grid:nth-child(2) .thema:first-child .disEnd  {
+    width: 25%;
+  }
+  .grid:nth-child(2) .thema:first-child .disEnd div {
+    width: 25%;
+    padding: 0 15px;
+    text-align: center;
+  }
+  .strImg { 
+    width: 105px; height: 110px;
+    background: url(strImg.png); background-size: 100% 100%;
+    /* transform: rotate( -10deg ); */
+    animation: shaking 5s infinite;
+  }
+  @keyframes shaking {
+    0%{ transform: rotate( 0deg ); }
+    30% { transform: rotate( -11deg ); }
+    60% { transform: rotate( 11deg ); }
+  }
+  #boxFru .leftBox { width: 40%; height: auto;}
+  #boxFru .rightBox{ width: 44%;}
+  #boxFru .border .disBet .leftBox { width: 60% !important}
+  #boxFru .border .disBet .rightBox { width:120px; height: 120px; }
+  #boxFru .lineF { padding-bottom: 15px; height: 25px; line-height: 25px;}
+  #boxFru .lineF:last-child { padding-bottom: 0px !important; }
+  .disF { display: flex;}
+  
+</style>
+
+<div class="disBet"> 
+  <div class="">
+    <div class="en enFontCF"> Hand-made Syrup with fresh fruit</div>
+    <div class="ko koFontCF">생과일로 만드는 수제청</div>
+  </div>
+  <div class="">
+    <div class="en enFontCF"> Fresh Fruit Juice </div>
+    <div class="ko koFontCF"> 100% 생과일 착즙 쥬스 </div>
+  </div>
+  <div class="">
+    <div class="en enFontCF"> No add Sugar </div>
+    <div class="ko koFontCF"> 가당처리 하지않는 과일 그대로의 맛 </div>
+  </div>
+</div> 
+<div class="border mt30">
+  <div class="disBet">
+    <div></div>
+    <div class="disEnd line mb12 fruitFontC"> 
+      <div class="fruitTiBox"> TEA </div>
+      <div class="fruitTiBox"> Ade </div>
+      <div class="fruitTiBox"> Juice </div>
+    </div>
+  </div>
+  <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Lemon</div>
+      <div class="ko koFontC">레몬</div>
+      <div class="ex exFontC">골다공증 예방, 면역력 강화</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price75 priceFontC"></div>
+      <div class="price75 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+    </div>  
+  </div>
+  <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Omija</div>
+      <div class="ko koFontC">오미자</div>
+      <div class="ex exFontC">피부미용, 간의 해독 작용</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price75 priceFontC"></div>
+      <div class="price75 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+    </div>  
+  </div>
+  <!-- <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Passion Fruit</div>
+      <div class="ko koFontC">패션프루츠</div>
+      <div class="ex exFontC">강력한 항염증, 당뇨병 예방</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price0 priceFontC"></div>
+      <div class="price75 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+    </div>  
+  </div> -->
+  <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Grapefruit</div>
+      <div class="ko koFontC">자몽</div>
+      <div class="ex exFontC">다이어트 효과, 독소 배출</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price80 priceFontC"></div>
+      <div class="price80 priceFontC"></div>
+      <div class="price90 priceFontC"></div>
+    </div>  
+  </div>
+  <!-- <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Pineapple</div>
+      <div class="ko koFontC look">파인애플</div>
+      <div class="ex exFontC">소화 촉진, 갑상선 건강 유지</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price0 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+      <div class="price90 priceFontC"></div>
+    </div>  
+  </div> -->
+  <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Apple + Carrot</div>
+      <div class="ko koFontC">사과+당근</div>
+      <div class="ex exFontC">요통 감소, 콜레스테롤 감소</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price0 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+      <div class="price90 priceFontC"></div>
+    </div>  
+  </div>
+  <div class="disBet">
+    <div class="line w75">
+      <div class="en enFontC">Kiwi</div>
+      <div class="ko koFontC long">
+        <!-- <div class="ko waveFontC turning turning3"> 
+          <span style="--i:1">키</span>
+          <span style="--i:2">위</span>
+        </div>   -->
+        <div class="ko koFontC look"> 키위 </div>  
+      </div>
+      <div class="ex exFontC">시력 저하 예방, 미네랄 보충 </div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price80 priceFontC"></div>
+      <div class="price80 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+    </div>  
+  </div>
+  <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Kiwi+Banana </div>
+      <!-- <div class="ko waveFontC turning turning2"> 
+        <span style="--i:1">키</span>
+        <span style="--i:2">위</span>
+        <span style="--i:3">+</span>
+        <span style="--i:4">바</span>
+        <span style="--i:5">나</span>
+        <span style="--i:6">나</span>
+      </div> -->
+      <div class="ko koFontC look">  키위+바나나 </div>  
+      <div class="ex exFontC">DNA 손상 예방, 심장병 예방</div>
+    </div>
+    <div class="line disEnd">
+      <div class="price0 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+      <div class="price90 priceFontC"></div>
+    </div>
+  </div>   
+  <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Tomato</div>
+      <div class="ko koFontC">토마토</div>
+      <div class="ex exFontC">전립선 강화, 뼈 건강 증진</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price0 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+      <div class="price90 priceFontC"></div>
+    </div>  
+  </div> 
+  <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Mandarin</div>
+      <div class="ko koFontC">제주할머니 비자림 감귤</div>
+      <div class="ex exFontC">기억력 향상, 변비 예방</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price0 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+      <div class="price90 priceFontC"></div>
+    </div>  
+  </div> 
+  <div class="disBet">
+    <div class="line">
+      <div class="en enFontC">Citron</div>
+      <div class="ko koFontC">2023 고흥 유자차</div>
+      <div class="ex exFontC"> 피로 회복, 신경통 개선, 혈관건강 개선</div>
+    </div>  
+    <div class="line disEnd">
+      <div class="price80 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+      <div class="price0 priceFontC"></div>
+    </div>  
+  </div> 
+</div> 
