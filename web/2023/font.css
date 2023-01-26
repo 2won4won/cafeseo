@@ -6,10 +6,12 @@
 
 .enFontC { color: #C2C6CE; } /* en */
 .koFontC { color: #668DCD; } /* ko */
-.exFontC { color: #CDDDEF; } /* ex */
+.exFontC { color: #9FB4CC; } /* ex */
+/* .exFontC { color: #CDDDEF; } ex */
 .priceFontC { color: #C2C6CE; } /* price */
 .enFontCF { color: #B7DDE1;}
-.koFontCF { color: #194569;}
+.koFontCF { color: #D9DBE6;}
+/* .koFontCF { color: #194569;} */
 .title { color: #194569 }
 .swiBox .title { color: #668DCD }
 
