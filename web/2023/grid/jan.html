@@ -24,18 +24,25 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 
 <!-- local style sheet -->
-<link rel="stylesheet" href="../css/font01.css">
+<link rel="stylesheet" href="../css/font.css">
 <link rel="stylesheet" href="../css/layout.css">
-
+<!-- <link rel="stylesheet" href="../css/effect.css"> -->
 
 <style>
-.con { width: 93vw; height: 90vh; }
-.grid { height: inherit; }
-.grid:first-child { width: 29vw; border: 3px solid red;}
-.grid:nth-child(2) { width: 33vw; background-color: brown;}
-.grid:last-child { width: 29vw; background-color: olivedrab;}
-
 #boxEso .turning { display: none;}
+
+/* text color */
+.enColor { color: #72C529; }
+.koColor { color: #A86FBA; } 
+.exColor { color: #A9C7E4; } 
+.priceColor{ color: #72C529; } 
+.tiFont:nth-child(odd) { color: #72C529}
+.tiFont:nth-child(even) { color: #A86FBA}
+
+/* price */
+.priceA::before { content: '6.5'; }
+.priceL::before { content: '7.0'; }
+.priceLV::before { content: '7.5'; }
 
 </style>
 </head>

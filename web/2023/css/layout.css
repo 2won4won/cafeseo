@@ -6,6 +6,19 @@
 .disJcBet { display: flex; justify-content: space-between; }
 .poAbCen { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .line { display: flex; padding-bottom: 15px; height: 25px; line-height: 25px;}
+.dis { display: flex;}
+
+.con { width: 93vw; height: 90vh; }
+.grid { height: inherit; }
+.grid:first-child { width: 27vw; border: 3px solid red;}
+.grid:nth-child(2) { width: 33vw; background-color: brown; }
+.grid:last-child { width: 29vw; background-color: olivedrab; }
+
+.border {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+}
 
 .pb10 {padding-bottom: 10px;}
 .pr {

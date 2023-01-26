@@ -1,15 +1,57 @@
 <style>
-/* #eso .leftBox { width: 40%; } */
-/* #eso .rightBox { width: 55%; } */
+/* #boxEso .zone { width: 95%; } */
+#boxEso .leftBox { width: 25%; }
+#boxEso .rightBox { width: 57%; }
+#boxEso .leftBox > div:first-child { 
+  text-align: left; 
+}
+#boxEso .leftBox > div:nth-child(n+2) { 
+  text-align: right; 
+  margin: 50px 0;
+}
+#boxEso .zone:nth-of-type(2) .leftBox > div { 
+  margin-top: 20px !important;
+}
+.ti {
+   font-family: TypoRoundRegularDemo;
+   font-size: 30px;
+   font-weight: 800;
+   letter-spacing: -6px;
+ }
+ .esoKo {
+   font-family: twayair;
+   font-size: 17px;
+ }
+
+.esoEn {
+  font-family: "Paytone One";
+  text-transform: uppercase;
+  display: block;
+  font-size: 35px;
+  line-height: 20px;
+  text-shadow: 0 6.36px 3.896px #98AA7C, 0 -1px 1px #98AA7C;
+  letter-spacing: -3px;
+  opacity: 0.25;
+  margin-bottom: 15px;
+}
+
+.esoEx {
+  font-family: twayair;
+  font-size: 15px;
+  margin-top: 15px;
+  line-height: 20px;
+}
+
 </style>
 
-<div  class="zone disJcAr" >
-  <div class="leftBox"> 
+<div  class="zone disJcAr disAiCen " >
+  <div class="leftBox "> 
     <div class="ti"> 
       <span class="tiFont"> S </span>
       <span class="tiFont"> E </span>
       <span class="tiFont"> O </span>
       <span class="tiFont"> ' </span>
+      <span class="tiFont"> s </span><br>
       <span class="tiFont"> B </span>
       <span class="tiFont"> l </span>
       <span class="tiFont"> e </span>
@@ -36,80 +78,114 @@
       </div>
     </div>  
   </div>
-  <div class="rightBox"> 
-    <div class="border"> 
-      <div class="priceA priceColor disJcEnd pb10"> </div>
-      <div class="line">
-        <div class="enColor en"> Espresso </div>
-        <div class="koColor ko"> 에스프레소 </div>
+  <div class="rightBox "> 
+      <div class="border"> 
+        <div class="priceA priceColor disJcEnd pb10"> </div>
+        <div class="line">
+          <div class="enColor en"> Espresso </div>
+          <div class="koColor ko"> 에스프레소 </div>
+        </div>
+        <div class="line">
+          <div class="enColor en"> Espresso Con Panna</div>
+          <div class="koColor ko"> 에스프레소 콘파냐 </div>
+        </div>
+        <div class="line">
+          <div class="enColor en"> Americano </div>
+          <div class="koColor ko"> 아메리카노 </div>
+        </div>
       </div>
-      <div class="line">
-        <div class="enColor en"> Espresso Con Panna</div>
-        <div class="koColor ko"> 에스프레소 콘파냐 </div>
-      </div>
-      <div class="line">
-        <div class="enColor en"> Americano </div>
-        <div class="koColor ko"> 아메리카노 </div>
-      </div>
-    </div>
-    <div class="border"> 
-      <div class="priceL priceColor disJcEnd pb10"> </div>
-      <div class="line">
-        <div class="enColor en"> Cafe Latte </div>
-        <div class="koColor ko"> 카페라떼 </div>
-      </div>
-      <div class="line">
-        <div class="enColor en"> Cappuccino</div>
-        <div class="koColor ko"> 카푸치노 </div>
-        <div class="latte">
-          <div class="steam" id="steam1"> </div>
-          <div class="steam" id="steam2"> </div>
-          <div class="steam" id="steam3"> </div>
-          <div class="steam" id="steam4"> </div>
-          <div class="cup">
-            <div class="cup_body">
-              <div class="cup_shade"></div>
+      <div class="border"> 
+        <div class="priceL priceColor disJcEnd pb10"> </div>
+        <div class="line">
+          <div class="enColor en"> Cafe Latte </div>
+          <div class="koColor ko"> 카페라떼 </div>
+        </div>
+        <div class="line">
+          <div class="enColor en"> Cappuccino</div>
+          <div class="koColor ko"> 카푸치노 </div>
+          <div class="latte">
+            <div class="steam" id="steam1"> </div>
+            <div class="steam" id="steam2"> </div>
+            <div class="steam" id="steam3"> </div>
+            <div class="steam" id="steam4"> </div>
+            <div class="cup">
+              <div class="cup_body">
+                <div class="cup_shade"></div>
+              </div>
+              <div class="cup_handle"></div>
             </div>
-            <div class="cup_handle"></div>
           </div>
+          <div class="saucer"></div>
         </div>
-        <div class="saucer"></div>
       </div>
-    </div>
-    <div class="border">
-      <div class="priceLV priceColor disJcEnd pb10"> </div>
-      <div class="line">
-        <div class="enColor en"> Vanilla Latte </div>
-        <div class="koColor ko"> 바닐라라떼 </div>
-      </div>
-      <div class="line">
-        <div class="enColor en"> Mocha Latte</div>
-        <div class="koColor ko"> 모카라떼 </div>
-      </div>
-      <div class="line">
-        <div class="enColor en"> Caramel Macchiato</div>
-        <div class="koColor ko"> 카라멜마퀴야또 </div>
-      </div>
-    </div>
-    <div class="border">
-      <div class="priceLV priceColor disJcEnd pb10"> </div>
-      <div class="line">
-        <div class="enColor en"> Einspanner </div>
-        <div class="ko KoColor turning turning1" > 
-          <span style="--i:1">아</span>
-          <span style="--i:2">인</span>
-          <span style="--i:3">슈</span>
-          <span style="--i:4">패</span>
-          <span style="--i:5">너</span>
+      <div class="border">
+        <div class="priceLV priceColor disJcEnd pb10"> </div>
+        <div class="line">
+          <div class="enColor en"> Vanilla Latte </div>
+          <div class="koColor ko"> 바닐라라떼 </div>
         </div>
-        <div class="koColor ko"> 아인슈패너 </div>
+        <div class="line">
+          <div class="enColor en"> Mocha Latte</div>
+          <div class="koColor ko"> 모카라떼 </div>
+        </div>
+        <div class="line">
+          <div class="enColor en"> Caramel Macchiato</div>
+          <div class="koColor ko"> 카라멜마퀴야또 </div>
+        </div>
       </div>
-    </div>
+      <div class="border">
+        <div class="priceLV priceColor disJcEnd pb10"> </div>
+        <div class="line">
+          <div class="enColor en"> Einspanner </div>
+          <div class="ko KoColor turning turning1" > 
+            <span style="--i:1">아</span>
+            <span style="--i:2">인</span>
+            <span style="--i:3">슈</span>
+            <span style="--i:4">패</span>
+            <span style="--i:5">너</span>
+          </div>
+          <div class="koColor ko"> 아인슈패너 </div>
+        </div>
+      </div>
   </div>
 </div>
-<div class="zone">
+<div class="zone disJcAr disAiCen">
   <div class="leftBox"> 
-    
+      <div class="ti">
+        <span class="tiFont"> S </span>
+        <span class="tiFont"> E </span>
+        <span class="tiFont"> O </span>
+        <span class="tiFont"> ' </span>
+        <span class="tiFont"> s </span><br>
+        <span class="tiFont"> C </span>
+        <span class="tiFont"> o </span>
+        <span class="tiFont"> l </span>
+        <span class="tiFont"> d </span>
+        <span class="tiFont"> B </span>
+        <span class="tiFont"> r </span>
+        <span class="tiFont"> e </span>
+        <span class="tiFont"> w </span>
+      </div>
+      <div>
+        <div class="esoKo"> 아이스만 가능 </div>
+        <div class="esoEn"> Only Ice </div>
+      </div>  
   </div>
-  <div class="rightBox"> </div>
+  <div class="rightBox"> 
+    <div class="border">
+      <div class="priceLV priceColor disJcEnd pb10"> </div>
+      <div class="line">
+        <div class="enColor en"> Ethiopia Guji G1 Geisha </div>
+        <div class="koColor ko"> 게이샤 </div>
+      </div>
+      <div class="line">
+        <div class="enColor en"> Papua New Guinea</div>
+        <div class="koColor ko"> 블루마운틴 </div>
+      </div>
+      <div class="line">
+        <div class="enColor en"> Decaf Colombia</div>
+        <div class="koColor ko"> 디카페인(콜롬비아)</div>
+      </div>
+    </div>
+  </div>
 </div>

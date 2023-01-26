@@ -1,36 +1,9 @@
-/* text color */
-.enColor { color: #72C529; }
-.koColor { color: #A86FBA; } 
-.exColor { color: #A9C7E4; } 
-.priceColor{ color: #72C529; } 
 /* font failly & size */
 .en { font-family: Poppins-Regular; font-weight: 17px; }
 .en::before { content: "•"; margin-right: 7px;}
-.ko { font-family: twayair; font-size: 18px; margin-left: 15px;}
+.ko { font-family: twayair; font-size: 18px; margin-left: 15px; }
 .ex { font-family: DalseoHealing; font-weight: 15px; margin-left: 11px; }
-/* price */
-.priceA::before { content: '6.5'; }
-.priceL::before { content: '7.0'; }
-.priceLV::before { content: '7.5'; }
 
-.border {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  padding: 10px 25px;
-  margin-bottom: 20px;
-}
-/* font color */
-  .nameFontC1 { color: #72C529; }
-  .nameFontC2 { color: #A86FBA; } /* seo Title1,2-each spelling */
-  .nameFontC3 { color: #459BE4; } /* Eso blending Title */
-  .nameFontCoEx { color: #E18BB1; } /* blending Ex */
-.lineM .en::before { content: ""; margin-right: 7px;}
-.enFontCF { color: #007FBD; } /* 과일 추가설명 ex  */
-.koFontCF { color: #E18BB1;}  /* 과일 추가설명 ex  */
-.waveFontC { color: #F8D65E; } /* wave */
-.fruitFontC { color: #007FBD; font-weight: 600;} /* Ade Tea Juice */
-.whiteFontC {color: white;}
-
-.strong { font-weight: 900 ;}
 
 
 @font-face {
