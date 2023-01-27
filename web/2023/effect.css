@@ -5,7 +5,7 @@
   height: 22px;
   width: 30px;
   border-radius: 3px 3px 55% 55%;
-  background-color: #F8D65E;
+  background-color: #9FB4CC;
   margin: auto;
   display: inline-block;
   overflow: hidden;
@@ -16,7 +16,7 @@
   height: 12px;
   width: 8px;
   border-radius: 0 3px 12px 0;
-  border: 2px solid #BF323F;
+  border: 2px solid #5F84A2;
   margin-top: -20px;
   margin-left: 25px;
   display: inline-block;
@@ -27,7 +27,7 @@
   height: 3px;
   width: 36px;  
   border-radius: 0 0 10px 10px;
-  background-color: #BF323F;
+  background-color: #5F84A2;
   margin-top: 23px;
   margin-left: 200px;
   z-index: 2;
@@ -109,7 +109,7 @@
   position: relative;
   width: 25px;
   height: 30px;
-  background-color: #BF323F;
+  background-color: #9FB4CC;
   border-radius: 2px 3px;
   /* box-shadow: inset -20px -1px 0px 12px 7f7801;
   -webkit-box-shadow: inset -20px -1px 0px 12px $mug-shadow-color;} */
@@ -126,7 +126,7 @@
   width: 6px;
   height: 20px;
   border-radius: 5px 5px 15px 80%;
-  border: 2px solid #F8D65E;
+  border: 2px solid #B7DDE1;
   z-index: -1;
   margin-top: -16px;
   margin-left: 24px;
