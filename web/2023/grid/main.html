@@ -24,57 +24,48 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 
 <!-- local style sheet -->
-<link rel="stylesheet" href="../css/font.css">
+<link rel="stylesheet" href="../css/fontStyle.css">
 <link rel="stylesheet" href="../css/layout.css">
-<!-- <link rel="stylesheet" href="../css/effect.css"> -->
-
+<link rel="stylesheet" href="../css/effect.css">
+<link rel="stylesheet" href="../css/jan.css">
+<script src="../js/look.js"></script>
+<!-- <script src="../js/look.js"></script> -->
 <style>
-#boxEso .turning { display: none;}
-
-/* text color */
-.enColor { color: #72C529; }
-.koColor { color: #A86FBA; } 
-.exColor { color: #A9C7E4; } 
-.priceColor{ color: #72C529; } 
-.tiFont:nth-child(odd) { color: #72C529}
-.tiFont:nth-child(even) { color: #A86FBA}
-
-/* price */
-.priceA::before { content: '6.5'; }
-.priceL::before { content: '7.0'; }
-.priceLV::before { content: '7.5'; }
 
 </style>
 </head>
 
 <body>
 <div class="con disJcAr poAbCen">
-  <div class="grid">
+  <div class="grid ">
     <div class="thema "> 
-      <div class="title"> Espresso </div>
+      <div class="title shadow"> Espresso </div>
       <div id="boxEso"> </div>
     </div>
   </div>
   <div class="grid">
     <div class="thema ">
-      <div class="title"> Fruit </div>
-      <!-- <div id="boxFru"> </div> -->
+      <div class="title shadow"> Fruit </div>
+      <div id="boxFru"> </div>
     </div>
     <div class="thema ">
-      <!-- <div id="boxSpe"> </div> -->
+      <div id="boxSpe"> </div>
     </div>
     <div class="thema ">
-      <!-- <div id="boxHere"> </div> -->
+      <div id="boxHere"> </div>
     </div>
   </div>
   <div class="grid">
     <div class="thema ">
-      <div class="title"> Flower Tea</div>
-      <!-- <div id="boxFlo"> </div> -->
+      <div class="title shadow"> Flower Tea</div>
+      <div id="boxFlo"> </div>
     </div>
     <div class="thema ">
-      <div class="title"> Milk Variation </div>
-      <!-- <div id="boxMilk"> </div> -->
+      <div id="boxSwiper"> </div>
+    </div>
+    <div class="thema ">
+      <div class="title shadow"> Milk Variation </div>
+      <div id="boxMilk"> </div>
     </div>
   </div>
 </div>
@@ -87,6 +78,7 @@
     $("#boxHere").load("../thema/boxHere.html");
     $("#boxFlo").load("../thema/boxFlo.html");
     $("#boxMilk").load("../thema/boxMilk.html");
+    $("#boxSwiper").load("../thema/boxSwiper.html");
   });
 </script>
 

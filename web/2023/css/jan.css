@@ -1,0 +1,59 @@
+.turning,
+#boxFru .border > div:nth-child(4),
+#boxFru .border > div:nth-child(6),
+#boxFru .border > div:nth-child(10),
+#boxHere .we, 
+#boxMilk .moving { display: none;}
+
+/* text color */
+.enColor { color: #C2C6CE;}
+.koColor { color: #668DCD; }
+.exColor { color: #9FB4CC; }
+.priceColor { color: #C2C6CE; }
+.tiFont:nth-child(odd) { color: #5F84A2;}
+.tiFont:nth-child(even) { color: #B7DDE1; }
+.title { 
+  color: #194569; 
+  background: url('../img/back02.jpeg');
+}
+
+/* price */
+.priceA::before { content: '6.5'; }
+.priceL::before { content: '7.0'; }
+.priceLV::before { content: '7.5'; }
+.price0::before { content: '•'; }
+.price70::before { content: '7.0'; }
+.price75::before { content: '7.5'; }
+.price80::before { content: '8.0'; }
+.price85::before { content: '8.5'; }
+.price90::before { content: '9.0'; }
+.price190::before { content: '19.0'; }
+
+/* esoBox */
+.esoKo { color:#91AEC4; }
+.esoEx { color:#CCD3D9; }
+
+/* latter */
+.cup_body { background-color: #B7DDE1; }
+.saucer { background-color: #5F84A2; }
+.cup_handle{ border: 2px solid #91AEC4; }
+
+/* mug effect */
+.mug { background-color: #5F84A2; }
+.handle { border: 2px solid #91AEC4;}
+.steamimg::before { background-color: #9FB4CC; }
+
+/* fruBox */
+.enSubColor { color: #B7DDE1;}
+.koSubColor { color: #5F84A2;}
+
+/* we */
+.newYearColor { color: #C2C6CE; }
+.we { color: #9FB4CC; }
+.we span:first-child { color: #C2C6CE; }
+.here { color: #668DCD; }
+
+/* boxSwiper */
+.exBox .tiSwi { color: #5F84A2;}
+.exBox .subSwi { color: #91AEC4;}
+.exBox .chiceSwi { color: #C2C6CE;}

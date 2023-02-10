@@ -1,0 +1,178 @@
+<style>
+  .swiBox { height: 220px; box-sizing: border-box; 
+    margin: 15px 0; 
+    font-family: 'twayair';
+  } 
+  .swiBox .title {
+    background: none;
+    margin: 0 !important;
+  }
+  .swiBox .tiSwi { font-size: 19px; margin-bottom: 10px;}
+  .swiBox .disCen .subSwi { margin-top: 8px;}
+  .swiBox .disCen .chiceSwi { line-height: 16px;margin-top: 2px;}
+
+  /* leftBox  */
+  .swiBox .leftBox { 
+    width: 33%;  
+    position: relative;
+    border-radius: 0 0 40px 3px; 
+    margin-right: 9px;
+    color: #fff !important;
+  }
+  .swiBox .imgBox div:nth-child(2)  { margin: 20px 0 15px 0; }
+  .swiBox .imgBox .ex  { line-height: 20px;}
+  .sand01{ 
+    position: absolute;
+    top: 49px;
+    left: 38px;
+    width: 110px;
+    height: 105px;
+    opacity: 0.5;
+    transform: rotateY(180deg);
+  }
+  /* rightBox */
+  .swiBox .swiper { 
+    width: 67%; text-align: center;  
+    border-radius: 0 0 3px 40px; 
+   
+  }
+  .swiBox .border {
+    padding: 0 !important;
+  }
+  .swiper-slide  { 
+    width: 100%;  text-align: center; 
+    position: relative; height: auto; 
+  }
+  .swiper-slide  .tiSwi::after, 
+  .swiper-slide  .tiSwi::before { 
+    content: "•••" !important; color:black;
+  }
+  .imgBox { width: 54%; }
+  .exBox { width: 46%; }
+
+  .imgBox .tiSwi,
+  .imgBox .subSwi,
+  .imgBox .ex { color:#fff ; font-family: twayair ; }
+  .imgBox .img{
+    width:100%;
+    height: 210px;
+    object-fit: cover;
+    position: relative;
+  }
+  .imgBox .img::before{
+    width: 100%;
+    height: 210px;
+    content: "";
+    opacity: 0.2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+  } 
+  .sandM{ background: url('../img/sandM01.jpeg'); background-size: 100% 100%; background-repeat: no-repeat; }
+  .sandV{ background: url('../img/sandV01.jpeg'); background-size: 100% 100%; background-repeat: no-repeat; }
+  .sandD{ background: url('../img/sandD03.jpeg'); background-size: 100% 100%; background-repeat: no-repeat; }
+</style >
+
+<div div class="disJcAr swiBox  ">
+  <div class="leftBox  border  "> 
+    <div class="title tc pt20" > Cafe's SEO 한끼 </div>
+    <div class="price190 priceColor tr mr50 pt50">  </div>
+    <div class="img">t
+      <img src="../img/sand01.jpeg" alt="ti" class="sand01" />
+    </div>
+  </div>
+  <div class="swiper rightBox  border  ">
+    <div class="swiper-wrapper ">
+      <!-- Slides --> 
+      <div class="swiper-slide  disJcAr   ">
+        <div class="imgBox img sandM disCen ">
+          <div >
+            <div class="tiSwi "> NO.1 고기파</div>
+            <div class="subSwi "> 훈제 삼겹살, 크로와상 </div>
+            <div class="ex  "> 인생이 다 <br> 고기서 고기지<br> ^^ </div>
+          </div>
+        </div>
+        <div class="exBox disCen">
+          <div>
+            <div class="tiSwi ">No.1 고기파</div>
+            <div class="subSwi  "> 샌드위치 1 </div>
+            <div class="subSwi    "> 아메리카노 1 </div>
+            <div class="subSwi   " > 하겐다즈 아이스크림 택 1 </div>
+            <div class="chiceSwi "> 오레오 <br> 마카다미아 넛 </div>
+            <div class="subSwi   ">시즌과일 </div>
+          </div>
+        </div>
+      </div>    
+      <div class="swiper-slide  disJcAr   ">
+        <div class="imgBox img sandV disCen">
+          <div>
+            <div class="tiSwi "> NO.2 비건파</div>
+            <div class="subSwi "> 통곡물 식빵, 야채, 치즈 </div>
+            <div class="ex  "> 
+              콩 심은데 콩 나고 <br>
+              팥 심은데 팥 나고 <br>
+              버섯 가지 심은데 비건 난다 <br> 
+            </div>
+          </div>
+        </div>
+        <div class="exBox disCen">
+          <div>
+            <div class="tiSwi ">No.2 비건파</div>
+            <div class="subSwi  "> 샌드위치 1 </div>
+            <div class="subSwi    "> 아메리카노 1 </div>
+            <div class="subSwi   " > 하겐다즈 아이스크림 택 1 </div>
+            <div class="chiceSwi lineHeight"> 오레오 <br> 마카다미아 넛 </div>
+            <div class="subSwi   ">시즌과일 </div>
+          </div>
+        </div>
+      </div>    
+      <div class="swiper-slide  disJcAr   ">
+        <div class="imgBox img sandD disCen">
+          <div>
+            <div class="tiSwi "> NO.3 식단파</div>
+            <div class="subSwi "> 훈제닭갈비, 고구마 </div>
+            <div class="ex "> 
+              토닭토닭 <br>
+              먹어도 괜찮아 <br>
+            </div>
+          </div>
+        </div>
+        <div class="exBox disCen">
+          <div>
+            <div class="tiSwi ">No.2 식단파</div>
+            <div class="subSwi  "> 샌드위치 1 </div>
+            <div class="subSwi "> 아메리카노 1 </div>
+            <div class="subSwi " > 곤약샐러드 </div>
+            <div class="subSwi "> 그릭요거트 </div>
+            <div class="subSwi ">시즌과일 </div>
+          </div>
+        </div>
+      </div>    
+    </div>   
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+</div>  
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 1,
+    // spaceBetween: 10,
+    // 자동반복
+    autoplay: {
+                //시간 1000 이 1초
+                delay: 3000,
+                disableOnInteraction: false,
+            },  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+
+  
+</script>

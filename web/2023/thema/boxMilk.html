@@ -1,77 +1,92 @@
-<script src="moving.js"></script>
+<style>
+  #boxMilk .leftBox { width: 39%; }
+  #boxMilk .rightBox { width: 44%; }
+  #boxMilk .leftBox .ex,
+  #boxMilk .rightBox .ex { margin-left: 15px !important; padding-top: 6px; }
+  #boxMilk .leftBox .line, 
+  #boxMilk .rightBox .line { padding-bottom: 4px; }
+  /* #boxMilk .line:nth-child(even) { padding-top: 15px; } */
+  #boxMilk .koColor:first-child { 
+    margin: 0;
+    align-items: center;
+    display: flex;
+  }
+  #boxMilk .exColor:last-child { padding-bottom: 15px;}
+  #boxMilk .w4 {width: 4% ; }
+  #boxMilk .w2 {width: 2% ; }
+  #boxMilk .w80 {width: 84% ;}
+  #boxMilk .w90 {width: 90% ; }
+</style>
 
-<div class="border">
-  <div class="disBet">
-    <div class="line">
-      <div class="en enFontC">Choco Latte</div>
-      <div class="ko koFontC">초코라떼</div>
-      <div class="ex exFontC">달콤쌉쌀한 초코 + 우유</div>
-      <div class="coffee dis mugBox">
-        <div class="steamimg"></div>
-        <div class="mug"></div>
-        <div class="handle"></div>
-    </div>
-    </div>  
-    <div class="price70 priceFontC line"></div>
+<div class="disJcBet">
+  <div class="border leftBox"> 
+    <div class=" disJcBet ">
+      <div class="ko koColor w4">  </div>
+      <div class="w80">
+        <div class="line disJcBet"> 
+          <div class="en enColor">Choco Latte</div>
+          <div class="price70 priceColor "></div>
+        </div>
+        <div class="ko koColor">초코라떼</div>
+        <div class="ex exColor">달콤쌉쌀한 초코 우유 </div>
+        <div class="line disJcBet pt15"> 
+          <div class="en enColor">Green Tea Latte</div>
+          <div class="price70 priceColor "></div>
+        </div>  
+        <div class="ko koColor">말차라떼</div>
+        <div class="ex exColor">깊고 부드러운 유기농 말차우유 </div>
+      </div>
+    </div>    
   </div>
-  <div class="disBet">
-    <div class="line">
-      <div class="en enFontC">Green Tea Latte</div>
-      <div class="ko koFontC">말차라떼</div>
-      <div class="ex exFontC">깊고 부드러운 유기농 제주 말차 + 우유</div>
-    </div>  
-    <div class="price70 priceFontC line"></div>
+  <div class="border rightBox"> 
+    <div class=" disJcBet ">
+      <div class="ko koColor w4"> 밀크티 </div>
+      <div  class="w80">
+        <div class="line disJcBet">
+          <div class="en enColor ">Earl Grey MilkTea</div>
+          <div class="price75 priceColor  "></div>
+        </div>
+        <div class="ko koColor">얼그레이</div>
+        <div class="ex exColor">베르가모트향의 얼그레이 </div>
+        <div class="line disJcBet pt15">
+          <div class="en enColor ">Strawberry Cream MilkTea</div>
+          <div class="price80 priceColor  "></div>
+        </div>
+        <div class="ko koColor">딸기크림</div>
+        <div class="ex exColor">향긋하고 부드러운 딸기맛 </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="border">
-  <div class="disBet ">
-    <div class=" line">
-      <div class="en enFontC">Earl Grey Milk Tea</div>
-      <div class="ko koFontC">얼그레이 밀크티</div>
-      <div class="ex exFontC">베르가모트향의 얼그레이 + 우유</div>
-    </div>  
-    <div class="price75 priceFontC line disBet"></div>
-  </div> 
-  <div class="disBet ">
-    <div class=" line">
-      <!-- <div class="en enFontC">Strawberry Cream Milk Tea</div> -->
-      <!-- <span class="en enFontC"></span>
-      <span class="enFontC moving">
-        <span class="text-wrapper">
-          <span class="letters">Strawberry Cream Milk Tea</span>
-        </span>
-      </span> -->
-      <div class="en enFontC ">Strawberry Cream Milk Tea</div>
-      <div class="ko koFontC look">딸기크림 밀크티</div>
-      <div class="ex exFontC"> 향긋한 딸기향의 부드러운 맛</div>
+<!-- <div class=" border"> -->
+  <div class=" disJcBet border">
+    <div class="ko koColor "> 밀크 <br> 쉐이크 </div>
+    <div class="w80">
+      <div class="line disJcBet">
+        <div class="line ">
+          <div class="en enColor"> Choco Milk-Shake</div>
+          <div class="ko koColor turning ">
+            <span style="--i:1">초</span>
+            <span style="--i:2">코</span>
+            <span style="--i:3">밀</span>
+            <span style="--i:4">크</span>
+            <span style="--i:5">쉐</span>
+            <span style="--i:6">이</span>
+            <span style="--i:7">크</span>
+          </div>
+          <div class="ko koColor look"> 초코</div>
+          <div class="ex exColor">초코 + 바닐라 아이스크림</div>
+        </div>
+        <div class="price85 priceColor tr "></div>
+      </div>
+      <div class="line disJcBet">
+        <div class="line ">
+          <div class="en enColor"> Mango Milk-Shake</div>
+          <div class="ko koColor look"> 망고 </div>
+          <div class="ex exColor">하겐다즈 망고아이스크림 + 냉동애플망고</div>
+        </div>
+        <div class="price85 priceColor tr "></div>
+      </div>
     </div>
-    <div class="price80 priceFontC line"></div>
-  </div>     
-</div>  
-<div class="border">
-  <div class="disBet ">
-    <div class="line">
-      <div class="en enFontC">Choco Milk-Shake</div>
-      <!-- <div class="ko koFontC turning turning4"> 
-        <span style="--i:1">초</span>
-        <span style="--i:2">코</span>
-        <span style="--i:3">밀</span>
-        <span style="--i:4">크</span>
-        <span style="--i:5">쉐</span>
-        <span style="--i:6">이</span>
-        <span style="--i:7">크</span>
-      </div> -->
-      <div class="ko koFontC look"> 초코밀크쉐이크 </div>
-      <div class="ex exFontC">초코 + 바닐라 아이스크림</div>
-    </div>  
-    <div class="price85 priceFontC line"></div>
   </div>
-  <div class="disBet">
-    <div class="line">
-      <div class="en enFontC">Mango Milk-Shake </div>
-      <div class="ko koFontC">망고 밀크쉐이크</div>
-      <div class="ex exFontC">하겐다즈 망고아이스크림 + 냉동애플망고  </div>
-    </div>  
-    <div class="price85 priceFontC line"></div>
-  </div>
-</div>    
+<!-- </div> -->

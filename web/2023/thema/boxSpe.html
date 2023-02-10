@@ -1,56 +1,45 @@
-<script src="word.js"></script>
+<script src="../js/word.js"></script>
 <style>
-  /* special */
+  #boxSpe .ko,
+  #boxSpe .ex { line-height: 30px;}
+  #boxSpe .border { padding-top: 20px;} 
+  #boxSpe .priceColor {text-align: right;} 
+  #boxSpe .border div:nth-child(3) { height:6vh;} 
+  #boxSpe .border:first-child {width: 26%;} 
+  #boxSpe .border:last-child {width: 20%;} 
   .strImg { 
-    width: 100px; height:90px;
-    background: url(strImg.png); background-size: 100% 100%;
-    /* transform: rotate( -10deg ); */
+    width: 90px; height:86px;
+    background: url('../img/strImg.png'); background-size: 100% 100%;
     animation: shaking 5s infinite;
+    position: absolute;
+    bottom: 5px;
+    left:39px;
   }
   @keyframes shaking {
     0%{ transform: rotate( 0deg ); }
-    30% { transform: rotate( -11deg ); }
-    60% { transform: rotate( 11deg ); }
+    30% { transform: rotate( -10deg ) scale(1.2); }
+    70% { transform: rotate( 10deg ) ; }
   }
-  #boxSpe .leftBox { width:40%; height: auto;}
-  #boxSpe .rightBox{ width: 37%;}
-  #boxSpe .middleBox{ width: 21%;}
-  #boxSpe .leftBox .en { width:120% !important;  }
-  #boxSpe .border .disBet .leftBox { width: 90% !important; }
-  #boxSpe .border .disBet .rightBox { width:100px; height: 90px; }
-  #boxSpe .lineF { padding-bottom: 15px; height: 25px; line-height: 25px;}
-  #boxSpe .lineF:last-child { padding-bottom: 0px !important; }
-  #boxSpe .on { padding:0 10px 0 10px !important ; margin-bottom: 15px;}
-  
 </style>
 
-<div class="disBet  ">
-  <div class="border  pt30 leftBox ">
-    <div class="disBet">
-      <div class="leftBox">
-        <div class="en enFontC lineF">Fresh Strawberry Latte </div>
-        <div class="ko koFontC lineF look "> <span class="strong">생</span>딸기 퐁당 라떼</div>
-        <div class="ex exFontC lineF  "> 진짜 비싼 딸기, 생딸기 그대로  </div>
-      </div>  
-      <div class="strImg rightBox lineF mt30"></div>
-    </div>
-    <div class="price90 priceFontC lineF  tr"></div>
+<div class="disJcBet mt30">
+  <div class="border posNe"> 
+    <div class="en enColor tr">Fresh Strawberry Latte </div>
+    <div class="ko koColor look tr "> 생딸기 퐁당 라떼 </div>
+    <div class="ex exColor tr"> 생딸기 그대로 </div>
+    <div class="price90 priceColor tr"> </div>
+    <div class="strImg"> </div>
   </div>
-  
-  <!-- <div class="border  pt30  middleBox">
-    <div class="disBet">
-      <div class="leftBox">
-        <div class="en enFontC lineF">Pineapple</div>
-        <div class="ko koFontC lineF "> 파인애플 </div>
-        <div class="ex exFontC lineF  "> 소화 촉진, <br> 갑상선 건강 유지</div>
-      </div>  
-    </div>
-    <div class="price90 priceFontC lineF  tr"></div>
-  </div> -->
-  <div class="border pt30  rightBox">
-    <div class="en enFontC lineF">Ssangwhatang</div>
-    <div class="ko koFontC lineF mr8 "> 쌍화탕 </div>
-    <div class="ex exFontC lineF mr8 word"> </div>
-    <div class="price90 priceFontC lineF  tr"></div>
+  <div class="border "> 
+    <div class="en enColor  ">Fresh Strawberry Smoothie </div>
+    <div class="ko koColor look  "> 생딸기 퐁당 스무디 </div>
+    <div class="ex exColor "> 여름보다 먼저 </div>
+    <div class="price90 priceColor "> </div>
   </div>
-</div>  
+  <div class="border "> 
+    <div class="en enColor ">Ssangwhatang </div>
+    <div class="ko koColor look  "> 쌍화탕 </div>
+    <div class="ex exColor word"> </div>
+    <div class="price90 priceColor "> </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@
   height: 22px;
   width: 30px;
   border-radius: 3px 3px 55% 55%;
-  background-color: #F8D65E;
+  
   margin: auto;
   display: inline-block;
   overflow: hidden;
@@ -16,7 +16,6 @@
   height: 12px;
   width: 8px;
   border-radius: 0 3px 12px 0;
-  border: 2px solid #BF323F;
   margin-top: -20px;
   margin-left: 25px;
   display: inline-block;
@@ -27,10 +26,92 @@
   height: 3px;
   width: 36px;  
   border-radius: 0 0 10px 10px;
-  background-color: #BF323F;
   margin-top: 23px;
-  margin-left: 200px;
+  margin-left: 212px;
   z-index: 2;
+}
+.latte {
+  margin-left: 17px;
+}
+
+.steam {
+  position: absolute;
+  height: 20px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #CBA37B;
+  margin-top: -5px;
+  margin-left: 5px;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+#steam1 {
+  -webkit-animation: steam1 4s ease-out infinite;
+  animation: steam1 4s ease-out infinite;
+}
+
+#steam3 {
+  -webkit-animation: steam1 4s ease-out 1s infinite;
+  animation: steam1 4s ease-out 1s infinite;
+}
+
+@-webkit-keyframes steam1 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-200px) translateX(-20px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes steam1 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-200px) translateX(-20px) scale(1);
+    opacity: 0;
+  }
+}
+
+#steam2 {
+  -webkit-animation: steam2 4s ease-out 0.5s infinite;
+  animation: steam2 4s ease-out 0.5s infinite;
+}
+
+#steam4 {
+  -webkit-animation: steam2 4s ease-out 1.5s infinite;
+  animation: steam2 4s ease-out 1.5s infinite;
+}
+
+@-webkit-keyframes steam2 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-200px) translateX(20px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes steam2 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-200px) translateX(20px) scale(1);
+    opacity: 0;
+  }
 }
 
 /* 강조 turning */
@@ -50,7 +131,7 @@
   }
 }
 
-/* mug & steaming*/
+/* mug & steaming */
 .steamimg {
   position: absolute;
   top: -85%;
@@ -67,7 +148,6 @@
   content: "";
   width: 30px;
   height: 20px;
-  background-color: red;
   -webkit-animation: fadeOutUp linear 3s;
   animation: fadeOutUp linear 3s;
   -webkit-animation-iteration-count: infinite;
@@ -109,7 +189,6 @@
   position: relative;
   width: 25px;
   height: 30px;
-  background-color: #BF323F;
   border-radius: 2px 3px;
   /* box-shadow: inset -20px -1px 0px 12px 7f7801;
   -webkit-box-shadow: inset -20px -1px 0px 12px $mug-shadow-color;} */
@@ -126,7 +205,6 @@
   width: 6px;
   height: 20px;
   border-radius: 5px 5px 15px 80%;
-  border: 2px solid #F8D65E;
   z-index: -1;
   margin-top: -16px;
   margin-left: 24px;
