@@ -38,3 +38,23 @@
 .mt25 { margin-top: 25px; }
 .mr50 { margin-right: 50px;}
 .mr60 { margin-right: 60px;}
+
+     .img {
+      width: 100%;
+      /* height: 210px; */
+      object-fit: cover;
+      position: relative;
+    }
+  
+   .img::before {
+      width: 100%;
+      /* height: 210px; */
+      content: "";
+      opacity: 0.2;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: #000;
+    }

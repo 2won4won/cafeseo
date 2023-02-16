@@ -137,8 +137,9 @@ background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
   $('.box').click(function () {
     
     $('.modal .swiper-slide ').each(function (i, e) {
+     console.log('cloneSlide' + cloneSlide);
       arraySlide.push(e);
-      console.log(arraySlide);
+       console.log('arraySlide' + arraySlide);
     })
     const type = $(this).children('div').children('.ti').text();
     console.log("type:" +type);
@@ -156,6 +157,7 @@ background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
     } else {
       $(arraySlide).each(function (i, e) {
         const exist = $(e).attr('data-type').indexOf(type);
+          console.log(e);
         if (exist >= 0) {
           $('.modal .swiper-wrapper').append(e);
           $('.list').hide();

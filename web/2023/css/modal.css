@@ -1,0 +1,184 @@
+.modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .modal .img { width: 100vw;  height: 45vh; object-fit: cover; position: relative; } */
+.modal .img::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  background-color: #000;
+}
+/* 
+.list {
+  width: 75vw;
+  height: 92vh;
+  text-align: center;
+} */
+
+.menu {
+  background-color: #FF3CAC;
+  background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+  color: white;
+  width: inherit;
+  height: 30vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.disBet {
+  display: flex;
+  justify-content: space-between;
+}
+
+.disBetCol {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.disCenw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list .ti {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.list .content {
+  font-size: 22px;
+}
+
+.list .choice {
+  font-size: 18px;
+  font-weight: 100 !important;
+}
+
+.list .pr {
+  font-size: 25px;
+}
+
+.list .sl {
+  font-size: 25px;
+  font-family: 'EF_Diary';
+}
+
+.list .content div {
+  margin-bottom: 20px;
+}
+
+.list .content div:nth-child(3) {
+  margin-bottom: 10px !important;
+}
+
+.list .ti,
+.list .sl {
+  line-height: 40px;
+}
+
+.list .choice {
+  line-height: 28px;
+}
+.sandh {
+  background: url(sandh.jpeg);
+  background-size: 100% 100%;
+}
+
+.sandM01 {
+  background: url('../img/sandM01.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandM02 {
+  background: url('../img/sandM02.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandM03 {
+  background: url('../img/sandM03.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandM04 {
+  background: url('../img/sandM04.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandV01 {
+  background: url('../img/sandV01.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandV02 {
+  background: url('../img/sandV02.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandV03 {
+  background: url('../img/sandV03.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandV04 {
+  background: url('../img/sandV04.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandV05 {
+  background: url('../img/sandV05.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandV06 {
+  background: url('../img/sandV06.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandD01 {
+  background: url('../img/sandD01.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandD02 {
+  background: url('../img/sandD02.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandD03 {
+  background: url('../img/sandD03.jpeg');
+  background-size: 100% 100%;
+}
+
+.sandD04 {
+  background: url('../img/sandD04.jpeg');
+  background-size: 100% 100%;
+}

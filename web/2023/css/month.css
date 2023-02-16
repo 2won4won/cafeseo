@@ -57,3 +57,20 @@
 .exBox .tiSwi { color: #5F84A2;}
 .exBox .subSwi { color: #91AEC4;}
 .exBox .chiceSwi { color: #C2C6CE;}
+.sandM {
+  background: url('../img/sandM01.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.sandV {
+  background: url('../img/sandV01.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.sandD {
+  background: url('../img/sandD03.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
