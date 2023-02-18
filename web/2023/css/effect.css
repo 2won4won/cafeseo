@@ -190,8 +190,6 @@
   width: 25px;
   height: 30px;
   border-radius: 2px 3px;
-  /* box-shadow: inset -20px -1px 0px 12px 7f7801;
-  -webkit-box-shadow: inset -20px -1px 0px 12px $mug-shadow-color;} */
 }
 .mug::before {
   position: absolute;

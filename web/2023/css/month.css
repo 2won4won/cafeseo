@@ -1,9 +1,11 @@
 .turning,
+.mugBox,
 #boxFru .border > div:nth-child(4),
 #boxFru .border > div:nth-child(6),
 #boxFru .border > div:nth-child(10),
 #boxHere .we, 
-#boxMilk .moving { display: none;}
+#boxMilk .moving,
+.grid:last-child .thema:nth-child(2) { display: none;}
 
 /* text color */
 .enColor { color: #C2C6CE;}
@@ -39,6 +41,7 @@
 .cup_handle{ border: 2px solid #91AEC4; }
 
 /* mug effect */
+
 .mug { background-color: #5F84A2; }
 .handle { border: 2px solid #91AEC4;}
 .steamimg::before { background-color: #9FB4CC; }

@@ -80,14 +80,14 @@
    
     /* modal */
     .modal {
-      display: none;  width: 89vw; height: 55vh;  
+      display: none;  width: 65vw; height: 80vh;  
       /* z-index: 1; margin-top: 3vh; */
       background-color: rgba(0, 0, 0, 0.6);
     }
 
     /* .modal swiper .img { width: 100vw;  height: 45vh; object-fit: cover; position: relative; } */
     .modal  .img {
-      width: 65vw; height: 49vh; 
+      width: 65vw; height: 80vh; 
       margin-top: 3vh; 
     }
     .modal  .img::before {
@@ -207,6 +207,7 @@
             $('.modal .swiper-wrapper').append(e);
             $('.meal .changeTi').text(type);
             $('.meal .changeEx').text(subEx);
+            // $('.meal .changeEx').css('margin-top', '50px');
           }
         });
       }
