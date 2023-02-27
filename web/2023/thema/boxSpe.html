@@ -4,9 +4,9 @@
   #boxSpe .ex { line-height: 30px;}
   #boxSpe .border { padding-top: 20px;} 
   #boxSpe .priceColor {text-align: right;} 
-  #boxSpe .border div:nth-child(3) { height:6vh;} 
+  #boxSpe .border div:nth-child(3) { height:4vh; } 
   #boxSpe .border:first-child {width: 26%;} 
-  #boxSpe .border:last-child {width: 22%;} 
+  #boxSpe .disJcBet .border:last-child {width: 22%;} 
   .strImg { 
     width: 76px; height:86px;
     background: url('../img/strImg.png'); background-size: 100% 100%;
@@ -20,6 +20,8 @@
     30% { transform: rotate( -10deg ) scale(1.2); }
     70% { transform: rotate( 10deg ) ; }
   }
+  #boxSpe .border:last-child { width: inherit; }
+  #boxSpe .border:last-child .ko { height: 35px;}
 </style>
 
 <div class="disJcBet mt30">
@@ -37,9 +39,19 @@
     <div class="price90 priceColor "> </div>
   </div>
   <div class="border "> 
-    <div class="en enColor ">Ssangwhatang </div>
-    <div class="ko koColor look  "> 쌍화탕 </div>
-    <div class="ex exColor word"> </div>
-    <div class="price90 priceColor "> </div>
+    <div class="en enColor ">Banana + Milk </div>
+    <div class="ko koColor look  "> 바나나랑 우유만 </div>
+    <div class="ex exColor "> 돈 주고 사먹으면 엄마한테 혼나는 </div>
+    <div class="price80 priceColor "> </div>
   </div>
+</div>
+<div class="border disJcBet"> 
+  <div class="dis">
+    <div class="dis">
+      <div class="en enColor ">Ssangwhatang </div>
+      <div class=" ko koColor  look" > 쌍화탕</div>
+    </div>
+    <div class="ex exColor word"> </div>
+  </div>
+  <div class="price90 priceColor "> </div>
 </div>
