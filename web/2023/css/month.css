@@ -3,6 +3,7 @@
 #boxFru .border > div:nth-child(4),
 #boxFru .border > div:nth-child(6),
 #boxFru .border > div:nth-child(10),
+#boxFru .border > div:nth-child(12),
 #boxHere .we, 
 #boxMilk .moving,
 .grid:last-child .thema:nth-child(2) { display: none;}
@@ -50,7 +51,6 @@
 /* fruBox */
 .enSubColor { color: #B7DDE1;}
 .koSubColor { color: #5F84A2;}
-
 /* we */
 .newYearColor { color: #C2C6CE; }
 .we { color: #9FB4CC; }
