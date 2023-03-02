@@ -4,7 +4,7 @@
   #boxSpe .ex { line-height: 30px;}
   #boxSpe .border { padding-top: 20px;} 
   #boxSpe .priceColor {text-align: right;} 
-  #boxSpe .border div:nth-child(3) { height:4vh; } 
+  #boxSpe .disJcBet:first-child .border div:nth-child(3) { height:4vh; } 
   #boxSpe .border:first-child {width: 25%;} 
   #boxSpe .disJcBet .border:last-child {width: 23%;} 
   .strImg { 
@@ -20,8 +20,22 @@
     30% { transform: rotate( -10deg ) scale(1.2); }
     70% { transform: rotate( 10deg ) ; }
   }
+  .strong { font-weight: bolder; font-size: 23px;}
   #boxSpe .border:last-child { width: inherit; }
   #boxSpe .border:last-child .ko { height: 35px;}
+  #boxSpe .img { width: 10vw; height: 11vh; }
+  /* #boxSpe .img::before { width: 9vw; height: 10vh; } */
+  #boxSpe .greekImg:first-child {
+    background: url('../img/greek.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #boxSpe .greekImg:last-child {
+    background: url('../img/greek2.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .tiGreek { color:#fff ; font-family: twayair ;text-align: center;}
 </style>
 
 <div class="disJcBet mt30">
@@ -42,9 +56,31 @@
     <div class="en enColor ">Banana + Milk </div>
     <div class="ko koColor look  "> 바나나랑 우유만 </div>
     <div class="ex exColor "> 돈 주고 사먹으면 엄마한테 혼나는 </div>
-    <div class="price80 priceColor "> </div>
+    <div class="price80 priceColor po"> </div>
   </div>
 </div>
+<!-- <div class="border disJcBet">
+  <div>
+    <div class="en enColor">Latte </div>
+    <div class="ko koColor look "> 퐁당 라떼 </div>
+    <div class="ex exColor "> 생딸기 그대로 </div>
+    <div class="price90 priceColor"> </div>
+    <div class="strImg"> </div>
+  </div>
+  <div class="">
+    <div class="en enColor ">Fresh Strawberry </div>
+    <div class=" ko koColor  look"> 생딸기 </div>
+  </div>
+  <div>
+    <div class="en enColor  "> Smoothie </div>
+    <div class="ko koColor look  "> 퐁당 스무디 </div>
+    <div class="ex exColor "> 여름보다 먼저 </div>
+    <div class="price90 priceColor "> </div>
+  </div>
+</div> -->
+
+
+
 <div class="border disJcBet"> 
   <div class="dis">
     <div class="dis">
@@ -54,4 +90,22 @@
     <div class="ex exColor word"> </div>
   </div>
   <div class="price90 priceColor "> </div>
+</div>
+<div class="border disJcBet "> 
+  <div class="imgBox img greekImg ">
+    <div class=" poAbCen ">
+      <div class="tiGreek "> 그릭<span class="strong">요거</span>트<span class="strong">바라</span> </div>
+    </div>
+  </div>
+  <div class="">
+      <div class="en enColor ">Hand-Made <br> Greek Yourt </div>
+      <div class=" ko koColor  look"> 수제 그릭요거트</div>
+  </div>
+  <div class="imgBox img greekImg">
+    <div class=" poAbCen ">
+      <div class="tiGreek "> 그릭<span class="strong">요거</span>트<span class="strong">어때</span> </div>
+    </div>
+  </div>
+  
+  <!-- <div class="price90 priceColor "> </div> -->
 </div>
