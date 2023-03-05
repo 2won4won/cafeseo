@@ -4,11 +4,11 @@
   #boxSpe .ex { line-height: 30px;}
   #boxSpe .border { padding-top: 20px;} 
   #boxSpe .priceColor {text-align: right;} 
-  #boxSpe .gr .priceColor {text-align: center; } 
+  /* #boxSpe .gr .priceColor {text-align: center; }  */
   #boxSpe .disJcBet:first-child .border div:nth-child(3) { height:4vh; } 
   #boxSpe .disJcBet:first-child .border:first-child {width: 25%;} 
   #boxSpe .disJcBet .border:last-child {width: 20%;} 
-  #boxSpe .disJcBet:last-child .border:first-child {width: 63%; } 
+  #boxSpe .disJcBet:last-child .border:first-child {width: 100%; } 
   .strImg { 
     width: 76px; height:86px;
     background: url('../img/strImg.png'); background-size: 100% 100%;
@@ -28,11 +28,16 @@
   #boxSpe .border:last-child .ko { height: 35px;}
   #boxSpe .greekImg {
     background: url('../img/greek2.png');
-    width: 66px; height:54px; background-size: 100% 100%;
-    margin-top: 10px; margin-left: 30px;
+    width: 75px; height:65px; background-size: 100% 100%;
+    /* margin-top: 10px; margin-left: 30px; */
+    position: absolute;
+    bottom: 35px;
+    right:-77px;
   }
   .gr div:first-child .en::before {content: "";}
+  /* .gr { width: 18%;} */
   .gr {line-height: 25px;}
+  #boxSpe span { float: right;}
 </style>
 
 <div class="disJcBet mt30">
@@ -50,44 +55,45 @@
     <div class="price90 priceColor "> </div>
   </div>
   <div class="border "> 
-    <!-- <div class="en enColor ">Banana + Milk </div>
+    <div class="en enColor ">Banana + Milk </div>
     <div class="ko koColor look  "> 바나나랑 우유만 </div>
-    <div class="ex exColor "> 돈 주고 사먹으면 엄마한테 혼나는 </div>
-    <div class="price80 priceColor po"> </div> -->
-    <div class="en enColor ">Ssangwhatang </div>
+    <div class="ex exColor "> 돈 주고 사먹으면 엄마한테 혼나는 
+      <span class="price80 priceColor"> </span>
+    </div>
+    <!-- <div class="en enColor ">Ssangwhatang </div>
     <div class=" ko koColor "> 쌍화탕</div>
-      <div class="ex exColor word ssang"> </div>
-      <div class="price90 priceColor "> </div>
+    <div class="ex exColor word ssang"> </div>
+    <div class="price90 priceColor "> </div> -->
   </div>
 </div>
-<div class=" disJcBet  "> 
-  <div class="border  disJcBet gr tc "> 
-    <div class="">
-      <div class="en enColor "> Hand-Made <br> Greek Yogurt </div>
-      <div class=" ko koColor "> Cafe SEO <br> 수제 <br>그릭요거트</div>
-      <div class="price120 priceColor pt10"> </div>
+<div class=" border  disJcAr "> 
+  <!-- <div class=" gr tc  disJcBet">  -->
+  <!-- <div class="border  disJcBet gr tc ">  -->
+    <div class="gr">
+      <!-- <div class="en enColor "> Hand-Made <br> Greek Yogurt </div> -->
+      <div class=" ko koColor "> 직접 만드는 <br> 그릭요거트를<br> 즐기는 2가지 <br> 방법</div>
     </div>
-    <div class="   ">
-      <div class="en enColor ">Yogurbala </div>
-      <div class="ko koColor  "> 요거바라 </div>
-      <div class="ex exColor "> 그릭요거트를 <br> 플랫브래드에 <br> 수제잼을 <br> 발라  </div>
+    <!-- <div class="price120 priceColor "> </div> -->
+  <!-- </div> -->
+  <!-- <div class=""> -->
+    <div class="  tc ">
+      <!-- <div class="dis"> -->
+        <div class="en enColor ">Yogurbala </div>
+        <div class="ko koColor  "> 요거바라 </div>
+      <!-- </div> -->
+      <div class="ex exColor "> 그릭요거트를  <br> 발라  </div>
     </div>
-      <div class=" greekBowl">
-        <!-- <div class=" dis "> -->
-          <!-- <div class="greekEx"> -->
-            <div class="en enColor ">Yogurbowl </div>
-            <div class="ko koColor  "> 요거보올 </div>
-            <!-- </div> -->
-            <!-- </div> -->
-            <div class="ex exColor "> 그릭요거트를 <br> 생과일과 함께 </div>
-            <div class="greekImg"></div>
-      </div>
-    <!-- </div> -->
-  </div>
-  <div class="border "> 
+    <div class=" greekBowl tc posNe">
+      <div class="en enColor ">Yogurbowl </div>
+      <div class="ko koColor  "> 요거보올 </div>
+      <div class="ex exColor "> 그릭요거트를 <br> 계절 생과일과 함께 </div>
+      <div class="greekImg"></div>
+    </div>
+  <!-- </div> -->
+  <!-- <div class="border "> 
     <div class="en enColor ">Banana + Milk </div>
     <div class="ko koColor look  "> 바나나랑 우유만 </div>
     <div class="ex exColor "> 돈 주고 사먹으면 엄마한테 혼나는 </div>
     <div class="price80 priceColor "> </div>
-  </div>
+  </div> -->
 </div>
