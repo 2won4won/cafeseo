@@ -8,6 +8,7 @@
 .poAbCen { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .line { display: flex; padding-bottom: 15px; height: 25px; line-height: 25px;}
 .dis { display: flex;}
+.none { display: none;}
 .posNe { position: relative;}
 
 .con { width: 89vw; margin:  auto; }
@@ -68,5 +69,6 @@
 .price80::before { content: '8.0'; }
 .price85::before { content: '8.5'; }
 .price90::before { content: '9.0'; }
+.price100::before { content: '10.0'; }
 .price120::before { content: '12.0';} 
 .price190::before { content: '19.0';} 
