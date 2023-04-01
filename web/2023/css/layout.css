@@ -11,7 +11,7 @@
 .none { display: none;}
 .posNe { position: relative;}
 
-.con { width: 89vw; margin:  auto; }
+.con { width: 90vw; margin:  auto; }
 .grid { height: inherit; }
 .grid:first-child { width: 24vw; }
 .grid:nth-child(2) { width: 30vw; }
