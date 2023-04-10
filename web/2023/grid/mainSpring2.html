@@ -40,49 +40,56 @@
 /* #boxSpe .gr, */
 .grid:last-child .thema:nth-child(2) { display: none;} 
 /* text color */
-.koColor { color: #5b8585;}
-.enColor { color: #9ed4d0; }
+/* .enColor { color: #6cb5db;} */
+/* .koColor { color: #1cc7d5; } */
 /* .exColor { color: #fddae1; } */
-.exColor { color: #FEDBD7; }
-.priceColor { color: #C2C6CE; }
-.tiFont:nth-child(odd) { color: #83D9C8;}
-.tiFont:nth-child(even) { color: #FFCAF8; }
-/* .title { color: #fff;  background: url('../img/back2.jpeg'); } */
-.title { color: #fff;  background: url('../img/back033.jpeg'); }
+/* .exColor { color: #b3b9a5; } */
+.koColor { color: #79b1bd;}
+/* .enColor { color: #86937b; } */
+.enColor { color: #c8d1bd; }
+.exColor { color: #b8dfea; }
+/* .exColor { color: #fddae1; } */
+.priceColor { color: #d5dc6b; }
+.tiFont:nth-child(odd) { color: #86937b;}
+.tiFont:nth-child(even) { color: #b8dfea; }
+.title { color: #fff;  background: url('../img/back2.jpeg'); }
 .on {background-image: linear-gradient(to right top, #a1dcd8, #a9dfdf, #b1e2e6, #bae4eb, #c4e7f0, #c9e7f5, #d0e6f8, #d8e5fa, #e3e1f9, #efdcf2, #f9d8e8, #ffd6da) !important;}
 
 /* esoBox */
-.esoKo { color:#5F9595; }
-.esoEn { color:#f2a1b4; text-shadow: 0 6.36px 3.896px #b9425e, 0 -1px 1px #b9425e;}
-.esoEx { color:#B6E4BE; }
-#boxEso .esoEx span { color: #f2a1b4; }
+.esoKo { color:#86937b; }
+.esoEn { color:#22cad9; text-shadow: 0 6.36px 3.896px #b9425e, 0 -1px 1px #b9425e;}
+.esoEx { color:#b8dfea; }
+#boxEso .esoEx span { color: #fb92a7; }
 
 /* latter */
-.cup_body { background-color: #FFD6DA; }
-.saucer { background-color: #A1DCD8; }
-.cup_handle{ border: 2px solid #CEEBEF; }
+.cup_body { background-color: #b8dfea; }
+.saucer { background-color: #fb92a7; }
+.cup_handle{ border: 2px solid #fb92a7; }
 
 /* mug effect */
 .mugBox { margin-left: 0 !important;}
 .handle { margin-top: 14px; margin-left: -1px;}
-.mug { background-color: #FFD6DA; }
-.handle { border: 2px solid #A1DCD8;}
-.steamimg::before { background-color: #FFDF6F; }
+.mug { background-color: #b8dfea; }
+.handle { border: 2px solid #fb92a7;}
+.steamimg::before { background-color: #fb92a7; }
 
 /* fruBox */
-.enSubColor { color: #D9EFE3;}
-.koSubColor { color: #AFCBCD;}
+.enSubColor { color: #79b1bd;}
+.koSubColor { color: #86937b;}
 #boxFru .hidden:nth-child(2) { display: block !important;}
+.fruitTiBox {color:#fb92a7 }
+
 /* we */
-.we { color: #5b8585; }
-.we span:first-child { color: #D9EFE3; }
-.here { color: #5b8585; }
+.we { color: #79b1bd; }
+.we span:first-child { color: #d5dc6b; }
+.here { color: #79b1bd; }
 
 /* boxSwiper */
-#boxSwiper .title { color:#5b8585 ; font-family: 'twayair';}
-.exBox .tiSwi { color: #5b8585;}
-.exBox .subSwi { color: #AFCBCD;}
-.exBox .chiceSwi { color: #fecad7;}
+#boxSwiper .title { color:#79b1bd ; font-family: 'twayair';}
+.exBox .tiSwi { color: #fb92a7;}
+/* .exBox .tiSwi { color: #1cc1e5;} */
+.exBox .subSwi { color: #86937b;}
+.exBox .chiceSwi { color: #c8d1bd;}
 .sandM {
   background: url('../img/sandM01.jpeg');
   background-size: 100% 100%;
@@ -111,6 +118,9 @@
       <div class="title shadow"> Espresso </div>
       <div id="boxEso"> </div>
     </div>
+    <div class="thema ">
+      <div id="boxHere"> </div>
+    </div>
   </div>
   <div class="grid">
     <div class="thema ">
@@ -120,8 +130,12 @@
     <div class="thema ">
       <div id="boxSpe"> </div>
     </div>
-    <div class="thema ">
+    <!-- <div class="thema ">
       <div id="boxHere"> </div>
+    </div> -->
+    <div class="thema mt20">
+      <div class="title shadow"> Greek Yogurt</div>
+      <div id="boxGreek"> </div>
     </div>
   </div>
   <div class="grid">
@@ -148,6 +162,7 @@
     $("#boxEso").load("../thema/boxEso.html");
     $("#boxFru").load("../thema/boxFru.html");
     $("#boxSpe").load("../thema/boxSpe2.html");
+    $("#boxGreek").load("../thema/boxGreek.html");
     $("#boxHere").load("../thema/boxHere.html");
     $("#boxFlo").load("../thema/boxFlo.html");
     $("#boxMilk").load("../thema/boxMilk.html");
