@@ -29,15 +29,9 @@
 <style>
 .turning,
 #boxEso .hide,
-/* #boxFru .border > div:nth-child(4), */
-/* #boxFru .border > div:nth-child(6), */
 #boxFru .border > div:nth-child(7),
-/* #boxFru .border > div:nth-child(9), */
-/* #boxFru .border > div:nth-child(10), */
-/* #boxFru .border > div:nth-child(12), */
 #boxHere .hi, 
 #boxMilk .moving,
-/* #boxSpe .gr, */
 .grid:last-child .thema:nth-child(2) { display: none;} 
 /* text color */
 /* .enColor { color: #6cb5db;} */
@@ -58,7 +52,7 @@
 /* esoBox */
 .esoKo { color:#86937b; }
 .esoEn { color:#22cad9; text-shadow: 0 6.36px 3.896px #b9425e, 0 -1px 1px #b9425e;}
-.esoEx { color:#b8dfea; }
+.esoEx { color:#c8d1bd; }
 #boxEso .esoEx span { color: #fb92a7; }
 
 /* latter */
@@ -107,13 +101,13 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-#boxHere .mt30 { margin-top: 0;}
+/* #boxHere .mt30 { margin-top: 0;} */
 </style>
 </head>
 
 <body>
 <div class="con disJcAr poAbCen">
-  <div class="grid ">
+  <div class="grid disJcBetCol">
     <div class="thema "> 
       <div class="title shadow"> Espresso </div>
       <div id="boxEso"> </div>
@@ -122,7 +116,7 @@
       <div id="boxHere"> </div>
     </div>
   </div>
-  <div class="grid">
+  <div class="grid disJcBetCol">
     <div class="thema ">
       <div class="title shadow"> Fruit </div>
       <div id="boxFru"> </div>
@@ -133,12 +127,12 @@
     <!-- <div class="thema ">
       <div id="boxHere"> </div>
     </div> -->
-    <div class="thema mt20">
+    <div class="thema ">
       <div class="title shadow"> Greek Yogurt</div>
       <div id="boxGreek"> </div>
     </div>
   </div>
-  <div class="grid">
+  <div class="grid disJcBetCol">
     <div class="thema ">
       <div class="title shadow"> Flower Tea</div>
       <div id="boxFlo"> </div>

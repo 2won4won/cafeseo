@@ -1,0 +1,71 @@
+/* font failly & size */
+.en { font-family: Poppins-Regular; font-weight: 17px; }
+.en::before { content: "•"; margin-right: 7px;}
+.ko { font-family: twayair; font-size: 18px; margin-left: 15px; }
+.ex { font-family: DalseoHealing; font-weight: 15px; margin-left: 11px; }
+.title {
+  margin-bottom: 20px;
+  font-family: Poppins-Regular;
+  font-size: 19px;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  border-radius: 5px;
+  background-size: cover;
+  padding: 8px 10px;
+  box-shadow: 1px 3px 1px -3px #777;
+  transition: background 450ms ease-in-out;
+}
+
+.shadow {
+  position: relative;
+}
+
+.shadow:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 13px;
+  right: 7px;
+  width: 25%;
+  top: 0;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(4deg);
+  transition: all 150ms ease-in-out;
+}
+.on {
+  padding: 0 15px;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  color: #fff !important;
+}
+
+@font-face {
+  font-family: 'twayair';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EF_Diary';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/earlyfont/EF_Diary.ttf') format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DalseoHealing';
+  font-weight: 500;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.ttf') format("truetype");
+  font-display: swap;
+}  

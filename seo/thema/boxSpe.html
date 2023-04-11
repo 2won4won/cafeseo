@@ -1,0 +1,69 @@
+<script src="../js/word.js"></script>
+<style>
+  #boxSpe .ex { line-height: 20px;}
+  #boxSpe .border { padding-top: 20px;} 
+  #boxSpe .priceColor {text-align: right;} 
+  #boxSpe .border:last-child .priceColor {text-align: center; margin-top: 12px;} 
+  /* #boxSpe .border div:nth-child(3) { height:4vh; background-color: aqua; }  */
+  #boxSpe .border:first-child {width: 25%; } 
+  #boxSpe .disJcBet .border:last-child {width: 21%; } 
+  .strImg { 
+    width: 76px; height:86px;
+    background: url('../img/strImg.png'); background-size: 100% 100%;
+    animation: shaking 5s infinite;
+    position: absolute;
+    bottom: 7px;
+    left:18px;
+  }
+  @keyframes shaking {
+    0%{ transform: rotate( 0deg ); }
+    30% { transform: rotate( -10deg ) scale(1.2); }
+    70% { transform: rotate( 10deg ) ; }
+  }
+  .strong { font-weight: bolder; font-size: 23px;}
+  .ssang { height: 4vh;}
+  #boxSpe .border:last-child { width: inherit; }
+  /* #boxSpe .border:last-child .ko { height: 35px;} */
+  #boxSpe .greekImg {
+    background: url('../img/greek2.png');
+    width: 75px; height:65px; background-size: 100% 100%;
+    /* margin-top: 10px; margin-left: 30px; */
+    position: absolute;
+    bottom: 14px;
+    right:17px;
+    opacity: 0.3;
+  }
+  .gr div:first-child .en::before {content: "";}
+  #boxSpe span { float: right;}
+</style>
+
+<div class="disJcBet ">
+  <div class="border posNe"> 
+    <div class="en enColor tr">Fresh Strawberry Latte </div>
+    <div class="ko koColor look tr pt8 "> 생딸기 퐁당 라떼 </div>
+    <div class="ex exColor tr pt8"> 생딸기 그대로 </div>
+    <div class="price90 priceColor tr pt8"> </div>
+    <div class="strImg"> </div>
+  </div>
+  <div class="border "> 
+    <div class="en enColor  ">Fresh Strawberry Smoothie </div>
+    <div class="ko koColor look  pt8"> 생딸기 퐁당 스무디 </div>
+    <div class="ex exColor pt8"> 여름보다 먼저 </div>
+    <div class="price90 priceColor pt8"> </div>
+  </div>
+  <div class="border "> 
+    <div class="en enColor ">Banana + Milk </div>
+    <div class="ko koColor  pt8 "> 바나나랑 우유만 </div>
+    <!-- <div class="ex exColor pt8 dis"> 
+      <div> 돈주고 사먹으면 엄마한테 혼나는 </div>
+      <div class="price80 priceColor"> </div>
+    </div> -->
+    <div class="ex exColor pt8 "> 돈주고 사먹으면 엄마한테 혼나는 
+      <span class="price80 priceColor"> </span>
+    </div>
+    <!-- <div class="en enColor ">Ssangwhatang </div>
+    <div class=" ko koColor "> 쌍화탕</div>
+    <div class="ex exColor word ssang"> </div>
+    <div class="price90 priceColor "> </div> -->
+  </div>
+</div>

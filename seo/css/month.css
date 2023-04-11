@@ -1,0 +1,28 @@
+/* 12월 */
+.enColor { color: #C2C6CE;}
+.koColor { color: #668DCD; }
+.exColor { color: #9FB4CC; }
+.priceColor { color: #C2C6CE; }
+.tiFont:nth-child(odd) { color: #5F84A2;}
+.tiFont:nth-child(even) { color: #B7DDE1; }
+.title { color: #194569; background: url('../img/back02.jpeg');}
+.esoKo { color:#91AEC4; }
+.esoEn { text-shadow: 0 6.36px 3.896px #98AA7C, 0 -1px 1px #98AA7C;}
+.esoEx { color:#CCD3D9; }
+.cup_body { background-color: #B7DDE1; }
+.saucer { background-color: #5F84A2; }
+.cup_handle{ border: 2px solid #91AEC4; }
+.mug { background-color: #5F84A2; }
+.handle { border: 2px solid #91AEC4;}
+.steamimg::before { background-color: #9FB4CC; }
+.enSubColor { color: #B7DDE1;}
+.koSubColor { color: #5F84A2;}
+.newYearColor { color: #C2C6CE; }
+.we { color: #9FB4CC; }
+.we span:first-child { color: #C2C6CE; }
+.here { color: #668DCD; }
+.exBox .tiSwi { color: #5F84A2;}
+.exBox .subSwi { color: #91AEC4;}
+.exBox .chiceSwi { color: #C2C6CE;}
+
+
