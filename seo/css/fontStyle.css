@@ -1,10 +1,11 @@
 /* font failly & size */
 .en { font-family: Poppins-Regular; font-weight: 17px; }
 .en::before { content: "•"; margin-right: 7px;}
+.noDot .en::before { content: none !important;}
 .ko { font-family: twayair; font-size: 18px; margin-left: 15px; }
 .ex { font-family: DalseoHealing; font-weight: 15px; margin-left: 11px; }
 .title {
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
   font-family: Poppins-Regular;
   font-size: 19px;
   display: block;

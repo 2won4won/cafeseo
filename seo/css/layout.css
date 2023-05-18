@@ -30,7 +30,7 @@
 .pl15 {padding-left: 15px;}
 .pt50 { padding-top: 50px; }
 .pt70 { padding-top: 70px; }
-/* .pt30 { padding-top: 30px; } */
+.pt30 { padding-top: 30px; }
 .pt20 { padding-top: 20px; }
 .pt10 { padding-top: 10px; }
 .pt15 { padding-top: 15px; }
@@ -38,6 +38,7 @@
 .pt8 { padding-top: 8px; }
 .mt30 { margin-top: 30px; }
 .mt20 { margin-top: 20px; }
+.ml15 { margin-left: 15px; }
 .mt25 { margin-top: 25px; }
 .mr50 { margin-right: 50px;}
 .mr60 { margin-right: 60px;}
