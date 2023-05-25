@@ -6,7 +6,7 @@
 .disCen { display: flex; align-items: center; justify-content: center;}
 .disJcBet { display: flex; justify-content: space-between; }
 .poAbCen { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-.line { display: flex; padding-bottom: 15px; height: 25px; line-height: 25px;}
+.line { display: flex; padding-bottom: 13px; height: 24px; line-height: 24px;}
 .dis { display: flex;}
 .none { display: none;}
 .posNe { position: relative;}
