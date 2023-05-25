@@ -38,6 +38,7 @@
 .pt8 { padding-top: 8px; }
 .mt30 { margin-top: 30px; }
 .mt20 { margin-top: 20px; }
+.mt10 { margin-top: 10px; }
 .ml15 { margin-left: 15px; }
 .mt25 { margin-top: 25px; }
 .mr50 { margin-right: 50px;}
@@ -72,4 +73,5 @@
 .price90::before { content: '9.0'; }
 .price100::before { content: '10.0'; }
 .price120::before { content: '12.0';} 
+.price150::before { content: '15.0';} 
 .price190::before { content: '19.0';} 

@@ -1,0 +1,76 @@
+<style>
+  #boxGreek .swiper-slide { height: 10vh; }
+  #boxGreek .swiper .border { padding: 10px 0; }
+  .swiper-slide-active {}
+</style>
+
+<div div class="disJcAr none  ">
+  <div class="swiper  ">
+    <div class="swiper-wrapper ">
+      <!-- Slides -->
+      <div class="swiper-slide swiperBox disJcAr border ">
+        <div class=" disCen ">
+          <div class="posNe">
+            <div class="en enColor  "> Yogurt Smoothie</div>
+            <div class="ko koColor "> 요거갈아 스무디 </div>
+            <div class="ex exColor  "> 그릭요거트 <br>얼음 </div>
+            <div class="price100 priceColor"> </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="swiper-slide swiperBox disJcAr border none">
+        <div class=" disCen ">
+          <div class="posNe">
+            <div class="en enColor  "> Lassi </div>
+            <div class="ko koColor  "> 라씨 </div>
+            <div class="ex exColor  "> 그릭요거트 </div>
+            <div class="price100 priceColor"> </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="swiper-slide swiperBox disJcAr border ">
+        <div class=" disCen ">
+          <div class="posNe">
+            <div class="en enColor  "> Choco Milk-Shake</div>
+            <div class="ko koColor  "> 초코 밀크쉐이크 </div>
+            <div class="ex exColor  "> 초코 <br>바닐라아이스크림 </div>
+            <div class="price90 priceColor"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide swiperBox disJcAr border ">
+        <div class=" disCen ">
+          <div class="posNe">
+            <div class="en enColor "> Mango Milk-Shake</div>
+            <div class="ko koColor "> 망고 밀크쉐이크 </div>
+            <div class="ex exColor "> 하겐다즈 망고아이스크림 <br> 냉동애플망고 </div>
+            <div class="price90 priceColor "> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pagination -->
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+</div>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 15,
+    // 자동반복
+    autoplay: {
+      //시간 1000 이 1초
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+
+
+</script>

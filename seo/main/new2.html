@@ -24,7 +24,29 @@
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/effect.css">
   <script src="../js/look.js"></script>
+
   <style>
+    .container { width: 88vw; height: 83vh; border:2px solid red;}
+    .grid:first-child {width: 23vw;}
+    .grid:nth-child(2) {width: 33vw; }
+    .grid:nth-child(3) {width: 29vw;}
+    /* .grid:nth-child(3) {width: 13vw;} */
+    /* .grid:nth-child(4) {width: 13vw;} */
+    .sandM {
+      background: url('../img/sandM01.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .sandV {
+      background: url('../img/sandV01.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .sandD {
+      background: url('../img/sandD03.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
     .turning { display: none; }
     .koColor { color: #79b1bd;}
     .enColor { color: #c8d1bd; }
@@ -78,82 +100,68 @@
     /* .exBox .tiSwi { color: #1cc1e5;} */
     .exBox .subSwi { color: #86937b; }
     .exBox .chiceSwi { color: #c8d1bd;}
-  
-    .sandM {
-      background: url('../img/sandM01.jpeg');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  
-    .sandV {
-      background: url('../img/sandV01.jpeg');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  
-    .sandD {
-      background: url('../img/sandD03.jpeg');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  
-    /* #boxHere .mt30 { margin-top: 0;} */
   </style>
 </head>
 <body>
-  <div class="con disJcAr poAbCen">
+  <div class="container disJcBet poAbCen">
     <div class="grid disJcBetCol">
-      <div class="thema ">
+      <div class="thema disJcBetCol">
         <div class="title shadow"> Espresso </div>
-        <div id="boxEso"> </div>
+        <div id="boxEso" > </div>
       </div>
       <div class="thema ">
-        <div id="boxHere"> </div>
+        <div id="boxEso2" > </div>
       </div>
+      <!-- <div class="thema ">
+        <div id="boxHere"> </div>
+      </div> -->
     </div>
-    <div class="grid disJcBetCol">
+    <div class="grid disJcBetCol ">
       <div class="thema ">
         <div class="title shadow"> Fruit </div>
         <div id="boxFru"> </div>
       </div>
       <div class="thema ">
-        <div id="boxSwiper"> </div>
+        <div id="boxSpe2"> </div>
       </div>
-      <div class="thema ">
-        <div class="title shadow"> Greek Yogurt</div>
-        <div id="boxGreek"> </div>
-      </div>
-    </div>
-    <div class="grid disJcBetCol">
       <div class="thema ">
         <div class="title shadow"> Flower Tea</div>
         <div id="boxFlo"> </div>
       </div>
+    </div>
+    <div class="grid disJcBetCol ">
       <div class="thema ">
-        <div id="boxSpe"> </div>
+        <div class="title shadow"> Cafe SEO's 한끼</div>
+        <div id="boxSwiper"> </div>
       </div>
       <div class="thema ">
-        <!-- <div class="title shadow"> Tea</div> -->
-        <div id="boxTea"> </div>
+        <div class="title shadow"> 2023 Summer Cafe SEO</div>
+        <div id="boxSummer"> </div>
+        <div id="boxGreek"> </div>
       </div>
-      <div class="thema ">
-        <div class="title shadow"> Milk Variation </div>
-        <div id="boxMilk"> </div>
+      <div class="thema none">
+        <div class="title shadow "> Hand-Made Greek Yogurt</div>
+        <div id="boxGreek"> </div>
       </div>
     </div>
+    
   </div>
 
-  <script type="text/javascript">
+
+
+ <script type="text/javascript">
     $(document).ready(function () {
       $("#boxEso").load("../thema/boxEso.html");
-      $("#boxFru").load("../thema/boxFru.html");
-      $("#boxSpe").load("../thema/boxSpe.html");
-      $("#boxGreek").load("../thema/boxGreek.html");
+      $("#boxEso2").load("../thema/boxEso2.html");
+      $("#boxFru").load("../thema/boxFru2.html");
+      $("#boxSummer").load("../thema/boxSummer.html");
+      $("#boxSpe2").load("../thema/boxSpe2.html");
+      $("#boxGreek").load("../thema/boxGreek2.html");
       $("#boxHere").load("../thema/boxHere.html");
-      $("#boxFlo").load("../thema/boxFlo.html");
-      $("#boxMilk").load("../thema/boxMilk.html");
-      $("#boxSwiper").load("../thema/boxSwiper.html");
+      $("#boxFlo").load("../thema/boxTea.html");
+      $("#boxSwiper").load("../thema/boxMeal.html");
     });
   </script>
+  
 </body>
 </html>
