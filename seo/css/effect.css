@@ -115,8 +115,8 @@
 }
 
 /* 강조 turning */
-.turning { position: relative;}
-.turning span {
+.turning { position: relative; }
+.turning span{
   letter-spacing: -4px;
   position: relative;
   display: inline-block;
@@ -124,13 +124,13 @@
   animation: flip 5s infinite;
   animation-delay: calc(.3s * var(--i));
 }
+
 @keyframes flip {
   0%,80% {
-    color: #A86FBA;
-    transform: rotateY(360deg) 
+    color: #0E207B;
+    transform: rotateY(360deg);
   }
 }
-
 /* mug & steaming */
 .steamimg {
   position: absolute;
