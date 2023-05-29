@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>TabMainH</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- local style sheet -->
+  <link rel="stylesheet" href="../css/fontStyle.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/month.css">
+  <style>
+    .con { width: 85vw; height: 85vh; font-family: twayair; text-align: center; }
+    .border { width: 40%; height: 35vh; }
+    .border .tiSwi { padding-top: 20px; }
+    .img { width: 100%;  height: 100%; color: #fff !important; }
+
+
+
+    /* modal */
+    /* .modalCon { width: 75vw; height: 75vh; background-color: #A9C7E4; } */
+    
+    .meal .title {
+      height: 5vh;
+      line-height: 5vh;
+      font-family: twayair;
+    }
+
+
+
+    .box .ti:before,
+    .box .ti:after {
+      content: '●●';
+    }
+
+    .box .subTi {
+      font-size: 18px;
+      color: #72C529;
+    }
+
+    .box .choice {
+      font-family: EF_Diary;
+      line-height: 15px;
+      color: #A9C7E4;
+    }
+
+    .box .price190 {
+      color: #fff
+    }
+
+    .box div:first-child {
+      margin-top: 0;
+      padding-bottom: 7px;
+    }
+
+    .box div:last-child {
+      color: #E18BB1;
+      padding-top: 18px;
+      line-height: 25px;
+    }
+
+
+
+    .meal .img::before {
+      opacity: 0.3;
+    }
+
+    .sandh {
+      background: url('../img/sandh.jpeg');
+      background-size: 100% 100%;
+    }
+
+    .sandM01 {
+      background: url('../img/sandM01.jpeg');
+      background-size: 100% 100%;
+    }
+
+    .sandA { background: url('../img/sandA.jpeg'); background-size: 100% 100%;}
+    .sandM02 { background: url('../img/sandM02.jpeg');  background-size: 100% 100%; }
+    .sandV02 { background: url('../img/sandV02.jpeg'); background-size: 100% 100%;}
+    .sandD03 { background: url('../img/sandD03.jpeg'); background-size: 100% 100%;}
+
+    .sandM03 {
+      background: url('../img/sandM03.jpeg');
+      background-size: 100% 100%;
+    }
+
+    .sandM04 {
+      background: url('../img/sandM04.png');
+      background-size: 100% 100%;
+    }
+
+    .sandV01 {
+      background: url('../img/sandV01.jpeg');
+      background-size: 100% 100%;
+    }
+
+
+    .sandV03 {
+      background: url('../img/sandV03.jpeg');
+      background-size: 100% 100%;
+    }
+
+    .sandV04 {
+      background: url('../img/sandV04.png');
+      background-size: 100% 100%;
+    }
+
+    .sandV05 {
+      background: url('../img/sandV05.png');
+      background-size: 100% 100%;
+    }
+
+    .sandV06 {
+      background: url('../img/sandV06.png');
+      background-size: 100% 100%;
+    }
+
+    .sandD01 {
+      background: url('../img/sandD01.jpeg');
+      background-size: 100% 100%;
+    }
+
+    .sandD02 {
+      background: url('../img/sandD02.jpeg');
+      background-size: 100% 100%;
+    }
+
+
+    .sandD04 {
+      background: url('../img/sandD04.png');
+      background-size: 100% 100%;
+    }
+
+    /* modal */
+    .modalBox { display: none;  width: 75vw; height: 75vh; 
+      /* background-color: rgba(0, 0, 0, 0.1); */
+      z-index: 1; 
+    }
+    .close { width: 4vw; height: 4vh; }
+    /* .modal swiper .img { width: 100vw;  height: 45vh; object-fit: cover; position: relative; } */
+    .modal .img {
+      width: 65vw;
+      height: 49vh;
+      margin-top: 3vh;
+    }
+
+    .modal .img::before {
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.4;
+      background-color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="con poAbCen">
+    <div class="box pb10">Cafe SEO's 한끼 </div>
+    <div class="disJcBet mt30">
+      <div class=" border">
+        <div class=" img sandM02  ">
+          <div class="posNe tc ">
+            <div class="tiSwi ">NO.1 고기파</div>
+            <div class="sub pt10"> 훈제삼겹살, 브뢰첸 </div>
+            <div class="ex  mt10"> 인생이 다 <br> 고기서 고기지 </div>
+            <div class="price190  mt10 pt8 "> </div>
+          </div>
+        </div>
+      </div>
+      <div class=" border">
+        <div class=" img sandV01  ">
+          <div class="posNe tc ">
+            <div class="tiSwi ">NO.2 비건파</div>
+            <div class="subSwi pt10"> 버섯, 가지, 치즈 </div>
+            <div class="ex  mt10"> 호랑이 <br> 비건하던 시절 </div>
+            <div class="price190  mt10 pt8 "> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="disJcBet mt10">
+      <div class=" border">
+        <div class=" img sandD03  ">
+          <div class="posNe tc ">
+            <div class="tiSwi ">NO.3 식단파</div>
+            <div class="subSwi pt10"> 훈제닭갈비, 고구마 </div>
+            <div class="ex  mt10"> 토닭토닭 <br> 괜찮아 먹어도</div>
+            <div class="price190  mt10 pt8 "> </div>
+          </div>
+        </div>
+      </div>
+      <div class=" border">
+        <div class=" img sandA  ">
+          <div class="posNe tc ">
+            <div class="tiSwi ">NO.4 유학파</div>
+            <div class="subSwi pt10"> 생모짜렐라 치즈, 루꼴라 </div>
+            <div class="ex  mt10"> 친구 따라 <br> 유학파 먹는다 </div>
+            <div class="price230  mt10 pt8 "> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modalBox poAbCen"  >
+
+    <div class="modalContent"> 
+      <div>
+      <div id="mm" data-type="NO.1 고기파">
+        <!-- <div class="modalHead"> NO.1 고기파</div> -->
+        <div class="modalBody"> 
+          <div class="ti "> 독일 브뢰첸 </div>
+          <div class="ti "> 훈제삼겹살 </div>
+          <div class="ti "> 아메리카노 </div>
+          <div class="ti "> 아이스크림 </div>
+          <div class="ti "> 시즌과일 + 샐러드 </div>
+        </div>
+        <div class="modalFoot">
+          <img class="modalClose close" alt="close" src="../img/cancel.png"> 
+        </div>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="modalBox poAbCen" id="modalV" data-type="NO.2 비건파"> -->
+      <div class="" data-type="NO.2 비건파">
+        <!-- <div class="modalHead">NO.2 비건파</div> -->
+        <div class="modalBody"> 
+          <div class="ti ">통곡물 식빵 </div>
+          <div class="ti "> 가지 </div>
+          <div class="ti "> 호박 </div>
+          <div class="ti "> 양파 </div>
+          <div class="ti "> 버섯 </div>
+          <div class="ti "> 아메리카노 </div>
+          <div class="ti "> 아이스크림 </div>
+          <div class="ti "> 시즌과일  </div>
+        </div>
+        <div class="modalFoot">
+          <img class="modalClose close" alt="close" src="../img/cancel.png"> 
+        </div>
+      </div>
+    </div> </div>
+  </div>
+  <script>
+    var cloneSlide = $('.modalBox .modalContent').html();
+    var arraySlide = [];
+
+    $('.modalBox').each(function (i, e) {
+      console.log('cloneSlide' + cloneSlide);
+      arraySlide.push(e);
+      console.log('arraySlide' + arraySlide.push(e));
+    })
+
+    // modal open
+    $('.border').on('click', function () {
+      $('.modalBox').fadeIn();
+      $('.border').css("-webkit-filter", "blur(45px)");
+      
+      const type = $(this).children('div').children('div').children('.tiSwi').text();
+      // const ti = $(this).children('div').children('div').children('.tiSwi').text();
+      
+      $('.border').removeClass('active');
+      $(this).addClass('active');
+      // $('.modalBox .modalContent').empty();
+
+      $(arraySlide).each(function (i, e) {
+        var exist = $(e).attr('data-type').indexOf(type);
+        console.log("exist" + exist);
+        
+        if (exist >= 0) {
+          $('.modalBox ').append(e);
+          // $('.box').text(type);
+        }
+      });
+    });
+    // close modal
+    $('.modalClose').click(function () {
+      $('.modalBox').css('display', 'none');
+      $('.border').css("-webkit-filter", "none");
+      $('.box').text("Cafe SEO's 한끼");
+    });
+    // $('.modal').click(function () {
+    //   $('.modal').fadeOut();
+    //   $('.border').css("-webkit-filter", "none");
+      // $('.meal .changeTi ').text("Cafe SEO'S 한끼");
+      // $('.meal .changeEx').text("Cafe SEO'S 한끼");
+  </script>
+  <!-- <script>
+      var cloneSlide = $('.modal .swiper-wrapper').html();
+      var arraySlide = [];
+
+      $('.modal .swiper-slide').each(function (i, e) {
+        console.log('cloneSlide' + cloneSlide);
+        arraySlide.push(e);
+        console.log('arraySlide' + arraySlide.push(e));
+      })
+
+      $('.border').on('click', function () {
+        // modal show
+        $('.modal').fadeIn();
+        $('.border').css("-webkit-filter", "blur(45px)");
+
+
+        const type = $(this).children('div').children('.ti').text();
+        const subEx = $(this).children('div').children('.ex').text();
+        console.log("type:" + type);
+        console.log("subEx:" + subEx);
+
+        $('.border').removeClass('active');
+        $(this).addClass('active');
+        $('.modal .swiper-wrapper').empty();
+
+        if (type === "Cafe SEO' 한끼") {
+          // $('.modal .list').append(cloneSlide);
+          // $('.modal .swiper-wrapper').append(cloneSlide);
+          // console.log("cloneSlide:" + cloneSlide);
+          // alert(1);
+
+        } else {
+          $(arraySlide).each(function (i, e) {
+            var exist = $(e).attr('data-type').indexOf(type);
+            console.log("exist" + exist);
+
+            if (exist >= 0) {
+              $('.modal .swiper-wrapper').append(e);
+              $('.meal .changeTi').text(type);
+              $('.meal .changeEx').text(subEx);
+            }
+          });
+        }
+
+        /* modal swiper*/
+        var swiper = new Swiper('.modal .swiper', {
+          // slidesPerView: 2,  // 화면에 보여질 아이템 개수
+          slidesPerView: "auto",  // 화면에 보여질 아이템 개수
+          spaceBetween: 35,  // 아이템 간격
+          // centeredSlides: true,
+          loop: true,
+          loopAdditionalSlides: 1,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+          },
+
+        });
+        swiper.update();
+        swiper.slideTo(0);
+        swiper.loopDestroy();
+        swiper.loopCreate();
+        // swiper.autoplay.stop();
+        // swiper.autoplay.start();
+
+
+      });
+      // close modal
+      $('.close').click(function () {
+        $('.modal').css('display', 'none');
+        $('.border').css("-webkit-filter", "none");
+      });
+      $('.modal').click(function () {
+        $('.modal').fadeOut();
+        $('.border').css("-webkit-filter", "none");
+        $('.meal .changeTi ').text("Cafe SEO'S 한끼");
+        $('.meal .changeEx').text("Cafe SEO'S 한끼");
+      });
+    </script> -->
+</body>
+
+</html>
