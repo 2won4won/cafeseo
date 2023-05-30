@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>TabMainH</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- local style sheet -->
+  <link rel="stylesheet" href="../css/fontStyle.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <!-- <link rel="stylesheet" href="../css/month.css"> -->
+  <style>
+    .con { width: 85vw; height: 85vh; font-family: twayair; text-align: center; }
+    .border { width: 40%; height: 35vh; }
+    .border .ti { padding-top: 20px; }
+    .border .sub { padding-top: 10px; padding-bottom: 10px;}
+    .border .ex { line-height: 20px; padding-bottom: 10px;}
+
+    .con .img { width: 100%;  height: 100%; color: #fff !important; }
+    .title {  color: #fff; background: url('../img/backOcean.jpeg');}
+
+    .sandA { background: url('../img/sandA.jpeg'); background-size: 100% 100%;}
+    .sandM { background: url('../img/sandM02.jpeg');  background-size: 100% 100%; }
+    .sandV { background: url('../img/sandV01.jpeg'); background-size: 100% 100%;}
+    .sandD { background: url('../img/sandD03.jpeg'); background-size: 100% 100%; ;}
+
+
+    .modal { display: none; width: 85vw; height: 85vh; z-index: 1;
+             position: fixed;  left: 50%;  top: 50%;
+            /* background-color: rgba(0, 0, 0, 0.6); */
+            font-family: twayair; text-align: center;
+    }
+    .modal .ko { color: #0E207B ; font-size: 18px; }
+    .modal .chiceSwi { color: #2196f3 ; line-height: 20px;}
+    .modalFoot { margin-top: 40px;}
+    .modalContent { line-height: 31px;}
+    /* .modal swiper .img { width: 100vw;  height: 45vh; object-fit: cover; position: relative; } */
+    .modal .img { width: 48%; height: 40vh; margin-top: 3vh; } 
+   
+  </style>
+</head>
+  
+<body>
+  <div class="con poAbCen ">
+    <div class="title shadow changeTi"> Cafe SEO' 한끼 </div>
+    <div class=" disJcBet  mt30">
+      <div class="border ">
+        <div class="img sandM posNe ">
+          <div class="ti">NO.1 고기파</div>
+          <div class="sub"> 훈제삼겹살, 브뢰첸 </div>
+          <div class="ex "> 인생이 다 <br> 고기서 고기지 </div>
+          <div class="price190  "> </div>
+        </div>
+      </div>
+      <div class="border ">
+        <div class="img sandV posNe ">
+          <div class="ti  ">NO.2 비건파</div>
+          <div class="subSwi pt10"> 버섯, 가지, 치즈 </div>
+          <div class="ex  "> 호랑이 <br> 비건하던 시절 </div>
+          <div class="price190 "> </div>
+        </div>
+      </div>
+    </div>
+    <div class=" disJcBet  mt30">
+      <div class="border ">
+        <div class="img sandD posNe ">
+          <div class="ti  ">NO.3 식단파</div>
+          <div class="sub"> 훈제닭갈비, 고구마 </div>
+          <div class="ex"> 토닭토닭 <br> 괜찮아 먹어도</div>
+          <div class="price190 "> </div>
+        </div>
+      </div>
+      <div class="border ">
+        <div class="img sandA posNe ">
+          <div class="ti  ">NO.4 유학파</div>
+          <div class="sub"> 생모짜렐라 치즈, 루꼴라 </div>
+          <div class="ex "> 친구 따라<br> 유학파 먹는다 </div>
+          <div class="price230 "> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal poAbCen ">
+    <div class="title shadow changeTi">  </div>
+    <div class="modalBox">
+      <div class="modalContent  " data-type="NO.1 고기파"> 
+        <div class=" ">
+          <div class="ko "> 훈제삼겹살, 브뢰첸 </div>
+          <div class="ko  "> 아메리카노 택 1 </div>
+          <div class="chiceSwi "> Hot / Ice </div>
+          <div class="chiceSwi "> 음료변경 가능 / 추가 금액 발생</div>
+          <div class="ko "> 하겐다즈 아이스크림 택 1 </div>
+          <div class="chiceSwi "> 마카다미아 넛 </div>
+          <div class="chiceSwi "> 오레오 </div>
+          <div class="ko "> 시즌과일 </div>
+        </div>
+        <div class="disJcBet ">
+          <div class="img sandM "></div>
+          <div class="img sandM "></div>
+        </div>
+      </div>
+      <div class="modalContent " data-type="NO.2 비건파"> 
+        <div class=" ">
+          <div class="ko "> 통곡물식빵, 가지, 호박, 버섯 </div>
+          <div class="ko "> 모짜렐라치즈, 고다치즈, 체다치즈, 아메리칸치즈</div>
+          <div class="ko "> 아메리카노 택 1 </div>
+          <div class="chiceSwi "> Hot / Ice </div>
+          <div class="chiceSwi "> 음료변경 가능 / 추가 금액 발생</div>
+          <div class="ko "> 하겐다즈 아이스크림 택 1 </div>
+          <div class="chiceSwi "> 마카다미아 넛 </div>
+          <div class="chiceSwi "> 오레오 </div>
+          <div class="ko "> 시즌과일 </div>
+        </div>
+        <div class="disJcBet ">
+          <div class="img sandV "></div>
+          <div class="img sandV "></div>
+        </div>
+      </div>
+      <div class="modalContent " data-type="NO.3 식단파">
+        <div class=" ">
+          <div class="ko "> 훈제닭갈비, 고구마 </div>
+          <div class="ko "> 곤약샐러드 </div>
+          <div class="ko "> 샐러드 </div>
+          <div class="ko "> 아메리카노 택 1 </div>
+          <div class="chiceSwi "> Hot / Ice </div>
+          <div class="chiceSwi "> 음료변경 가능 / 추가 금액 발생</div>
+          <div class="ko "> 시즌과일 </div>
+        </div>
+        <div class="disJcBet ">
+          <div class="img sandD "></div>
+          <div class="img sandD "></div>
+        </div>
+      </div>
+      <div class="modalContent " data-type="NO.4 유학파"> 
+        <div class=" ">
+          <div class="ko "> 생모짜렐라 치즈, 루꼴라, 토마토</div>
+          <div class="ko "> 아메리카노 택 1 </div>
+          <div class="chiceSwi "> Hot / Ice </div>
+          <div class="chiceSwi "> 음료변경 가능 / 추가 금액 발생</div>
+        </div>
+        <div class="disJcBet ">
+          <div class="img sandA "></div>
+          <div class="img sandA "></div>
+        </div>
+      </div>
+    </div>
+    <div class="modalFoot"> 
+      <div class="title shadow  changeEx"></div>
+    </div>
+  </div>
+  <script>
+    var cloneSlide = $('.modal .modalBox').html();
+    var arraySlide = [];
+
+    $('.modal .modalContent').each(function (i, e) {
+      console.log('cloneSlide' + cloneSlide);
+      arraySlide.push(e);
+      console.log('arraySlide' + arraySlide.push(e));
+    })
+
+    $('.border').on('click', function () {
+      // modal show
+      $('.modal').fadeIn();
+      $('.border').css("-webkit-filter", "blur(95px)");
+      $('.con .changeTi').css("display", "none");
+
+
+      const type = $(this).children('div').children('.ti').text();
+      const subEx = $(this).children('div').children('.ex').text();
+      console.log("type:" + type);
+      console.log("subEx:" + subEx);
+
+      $('.border').removeClass('active');
+      $(this).addClass('active');
+      $('.modal .modalBox').empty();
+
+      if (type === "Cafe SEO' 한끼") {
+
+      } else {
+        $(arraySlide).each(function (i, e) {
+          var exist = $(e).attr('data-type').indexOf(type);
+          console.log("exist" + exist);
+
+          if (exist >= 0) {
+            $('.modal .modalBox').append(e);
+            $('.changeTi').text(type);
+            $('.changeEx').text(subEx);
+          }
+        });
+      }
+    });
+    // close modal
+    $('.close').click(function () {
+      $('.modal').css('display', 'none');
+      $('.border').css("-webkit-filter", "none");
+    });
+    $('.modal').click(function () {
+      $('.modal').fadeOut();
+      $('.border').css("-webkit-filter", "none");
+      $('.changeTi ').text("Cafe SEO'S 한끼");
+      $('.con .changeTi').css("display", "block");
+      // $('.changeEx').text("Cafe SEO'S 한끼");
+    });
+  </script>
+</body>
+</html>
