@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>TabMainH</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- local style sheet -->
+  <link rel="stylesheet" href="../css/fontStyle.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <!-- <link rel="stylesheet" href="../css/month.css"> -->
+  <style>
+    .con { width: 85vw; height: 85vh; font-family: twayair; text-align: center; }
+    .con .border { width: 27vw; height: 15vh; text-align: center; 
+                   display: flex; justify-content: center; align-items: center;
+                   line-height: 3vh;
+    }
+    .con .en::before{ content: ""; }
+    .border .ti { padding: 30px 0 10px 0;  font-size: 20px; }
+    .border .sub { padding-top: 10px; padding-bottom: 10px;}
+    .border .ex { line-height: 20px; padding-bottom: 10px;}
+
+    .con .img { width: 100%;  height: 100%; color: #fff !important; }
+    .title {  color: #fff; background: url('../img/backOcean.jpeg');}
+
+    .sandA { background: url('../img/sandA.jpeg'); background-size: 100% 100%;}
+    .sandM { background: url('../img/sandM02.jpeg');  background-size: 100% 100%; }
+    .sandV { background: url('../img/sandV01.jpeg'); background-size: 100% 100%;}
+    .sandD { background: url('../img/sandD03.jpeg'); background-size: 100% 100%; ;}
+
+
+    .modal { display: none; width: 85vw; height: 85vh; z-index: 1;
+             position: absolute;  left: 50%;  top: 50%;
+            /* background-color: rgba(0, 0, 0, 0.6); */
+            font-family: twayair; text-align: center;
+    }
+    .modal .ko { color: #0E207B ; font-size: 18px; }
+    .modal .chiceSwi { color: #2196f3 ; line-height: 20px;}
+    .modalFoot { margin-top: 40px;}
+    .modalContent { line-height: 31px; }
+    /* .modal swiper .img { width: 100vw;  height: 45vh; object-fit: cover; position: relative; } */
+    .modal .img { width: 48%; height: 40vh; margin-top: 3vh; } 
+   
+  </style>
+</head>
+  
+<body>
+  <div class="con poAbCen ">
+    <div class="title shadow changeTi"> Cafe SEO' 메뉴 </div>
+    <div class="disJcBet">
+      <div class=" border en ">Espresso </div>
+      <div class=" border en"> Fruit </div>
+    </div>
+    <div class="disJcBet">
+      <div class=" border en"> Flower </div>
+      <div class=" border en"> Greek Yougert </div>
+    </div>
+    <div class="disJcBet">
+      <div class=" border en">  Cafe SEO' Han-GGi </div>
+      <div class=" border en"> 2023 Summer with <br>Cafe SEO</div> 
+    </div>
+    <!-- <div id="boxHere"> </div> -->
+  </div>
+  <div class="modal poAbCen ">
+    <div class="title shadow changeTi">  </div>
+    <div class="modalBox">
+      <div class="modalContent  " data-type="Espresso"> 
+        <div id="boxEso"> </div>
+      </div>
+    </div>    
+  </div>
+  <script>
+    var cloneSlide = $('.modal .modalBox').html();
+    var arraySlide = [];
+
+    $('.modal .modalContent').each(function (i, e) {
+      console.log('cloneSlide' + cloneSlide);
+      arraySlide.push(e);
+      console.log('arraySlide' + arraySlide.push(e));
+    })
+
+    $('.border').on('click', function () {
+      // modal show
+      $('.modal').fadeIn();
+      $('.border').css("-webkit-filter", "blur(40px)");
+      $('.con .changeTi').css("display", "none");
+
+
+      const type = $(this).children('div').children('.ti').text();
+      const subEx = $(this).children('div').children('.ex').text();
+      console.log("type:" + type);
+      console.log("subEx:" + subEx);
+
+      $('.border').removeClass('active');
+      $(this).addClass('active');
+      $('.modal .modalBox').empty();
+
+      if (type === "Cafe SEO' 한끼") {
+
+      } else {
+        $(arraySlide).each(function (i, e) {
+          var exist = $(e).attr('data-type').indexOf(type);
+          console.log("exist" + exist);
+
+          if (exist >= 0) {
+            $('.modal .modalBox').append(e);
+            $('.changeTi').text(type);
+            $('.changeEx').text(subEx);
+          }
+        });
+      }
+    });
+    // close modal
+    $('.close').click(function () {
+      $('.modal').css('display', 'none');
+      $('.border').css("-webkit-filter", "none");
+    });
+    $('.modal').click(function () {
+      $('.modal').fadeOut();
+      $('.border').css("-webkit-filter", "none");
+      $('.changeTi ').text("Cafe SEO'S 한끼");
+      $('.con .changeTi').css("display", "block");
+      // $('.changeEx').text("Cafe SEO'S 한끼");
+    });
+
+    $(document).ready(function () {
+      $("#boxEso").load("../thema/boxEso.html");
+      $("#boxEso2").load("../thema/boxEso2.html");
+      $("#boxFru").load("../thema/boxFru3.html");
+      $("#boxSummer").load("../thema/boxSummer.html");
+      $("#boxSpe2").load("../thema/boxSpe2.html");
+      $("#boxGreek").load("../thema/boxGreek.html");
+      // $("#boxHere").load("../thema/boxHere.html");
+      $("#boxFlo").load("../thema/boxTea.html");
+      $("#boxSwiper").load("../thema/boxMeal3.html");
+    });
+  </script>
+</body>
+</html>
