@@ -21,7 +21,7 @@
   <!-- <link rel="stylesheet" href="../css/month.css"> -->
   <style>
     .con { width: 85vw; height: 85vh; font-family: twayair; text-align: center; }
-    .con .border { width: 27vw; height: 15vh; text-align: center; 
+    .con .border { width: 27vw; height: 18vh; text-align: center; 
                    display: flex; justify-content: center; align-items: center;
                    line-height: 3vh;
     }
@@ -45,6 +45,9 @@
             font-family: twayair; text-align: center;
     }
     .modal .ko { color: #0E207B ; font-size: 18px; }
+    .modal .line {  line-height: 18px;}
+    .modal .line .ko {  font-size: 14px; }
+    .modal .line .en {  font-size: 13px; }
     .modal .chiceSwi { color: #2196f3 ; line-height: 20px;}
     .modalFoot { margin-top: 40px;}
     .modalContent { line-height: 31px; }
@@ -58,7 +61,7 @@
   <div class="con poAbCen ">
     <div class="title shadow changeTi"> Cafe SEO' 메뉴 </div>
     <div class="disJcBet">
-      <div class=" border en ">Espresso </div>
+      <div class=" border en ">Espersso</div>
       <div class=" border en"> Fruit </div>
     </div>
     <div class="disJcBet">
@@ -74,8 +77,9 @@
   <div class="modal poAbCen ">
     <div class="title shadow changeTi">  </div>
     <div class="modalBox">
-      <div class="modalContent  " data-type="Espresso"> 
-        <div id="boxEso"> </div>
+      <div class="modalContent"  data-type="Espersso"> 
+        <div id="eso1"> </div>
+        <div id="eso2"> </div>
       </div>
     </div>    
   </div>
@@ -88,15 +92,18 @@
       arraySlide.push(e);
       console.log('arraySlide' + arraySlide.push(e));
     })
-
+  
     $('.border').on('click', function () {
+      // location.href = '../thema/mEso1.html';
       // modal show
       $('.modal').fadeIn();
       $('.border').css("-webkit-filter", "blur(40px)");
+      $('.modal .border').css("-webkit-filter", "blur(0px)");
       $('.con .changeTi').css("display", "none");
 
 
-      const type = $(this).children('div').children('.ti').text();
+      const type = $(this).text();
+      // const type = $(this).children('div').children('.ti').text();
       const subEx = $(this).children('div').children('.ex').text();
       console.log("type:" + type);
       console.log("subEx:" + subEx);
@@ -134,8 +141,8 @@
     });
 
     $(document).ready(function () {
-      $("#boxEso").load("../thema/boxEso.html");
-      $("#boxEso2").load("../thema/boxEso2.html");
+      $("#eso1").load("../thema/mEso1.html");
+      $("#eso2").load("../thema/boxEso2.html");
       $("#boxFru").load("../thema/boxFru3.html");
       $("#boxSummer").load("../thema/boxSummer.html");
       $("#boxSpe2").load("../thema/boxSpe2.html");
