@@ -79,3 +79,4 @@
 .price170::before { content: '17.0';} 
 .price190::before { content: '19.0';} 
 .price230::before { content: '23.0';} 
+.price260::before { content: '26.0';} 
