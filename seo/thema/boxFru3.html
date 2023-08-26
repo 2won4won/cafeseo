@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../css/waviy.css">
 <style>
 #boxFru .rightBox { width: 70% !important; }
 /* #boxFru .swiper  { width: 100%; background-color: aquamarine;} */
@@ -36,6 +37,7 @@
 .kiwi { background: url('../img/kiwi.png');background-size: 100% 100%;}
 .appleCarrot { background: url('../img/appleCarrot.png');background-size: 100% 100%;}
 .watermelon { background: url('../img/watermelon.png');background-size: 100% 100%;}
+.grape { background: url('../img/grape.png');background-size: 120% 120%;}
 .apple { background: url('../img/apple.png');background-size: 100% 100%;}
 .applec { background: url('../img/applec.png');background-size: 100% 100%;}
 .carrot { background: url('../img/carrot.png');background-size: 100% 100%;}
@@ -78,7 +80,7 @@
         </div>
         <div class="price80 priceColor"></div>
       </div>
-      <div class="disJcBet line ">
+      <div class="disJcBet line none ">
         <div class=" dis">
           <div class="en enColor"> Passion Fruit </div>
           <div class="ko koColor "> 향 다른 패션프루츠 </div>
@@ -130,11 +132,17 @@
           
           <!-- <div class="carrot imgL"></div> -->
         </div>
-        <div class="swiper-slide border ">
+        <div class="swiper-slide border none">
           <div class="en enColor"> WaterMelon</div>
           <div class="ko koColor "> 수박 </div>
           <div class="ex exColor"> 수분 유지,<br> 피부 진정효과 <br>  이뇨작용 </div>
           <div class="watermelon imgC"></div>
+        </div>
+        <div class="swiper-slide border ">
+          <div class="en enColor"> Grape</div>
+          <div class="ko koColor "> 캠벨포도 </div>
+          <div class="ex exColor"> 암에 대한 대항성,<br> 피부 건강 증진 <br> 심혈관 개선 </div>
+          <div class="grape imgC"></div>
         </div>
         <div class="swiper-slide border ">
           <div class="en enColor"> WaterMelon</div>
@@ -144,8 +152,21 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-    
-    <!-- </div> -->
+    </div>
+    <div class="disJcBet line border">
+      <div class="dis">
+        <div class="en enColor "> Sweet Pumkin Latte</div>
+        <div class="ko koColor waviy ">
+          <span style="--i:1">단</span>
+          <span style="--i:2">호</span>
+          <span style="--i:3">박</span>
+          <span style="--i:4">라</span>
+          <span style="--i:5">떼</span>
+          
+        </div>
+      </div>
+      <div class="price90 priceColor"> </div>
+    </div>
     <script>
       const swiper = new Swiper('.swiper', {
         loop: true,
@@ -162,8 +183,6 @@
           el: '.swiper-pagination',
         },
       });
-
-
     </script>
-  </div>  
+  <!-- </div>   -->
 </div>
