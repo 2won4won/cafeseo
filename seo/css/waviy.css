@@ -11,8 +11,8 @@
   display: inline-block;
   /* color: #fff; */
   /* text-transform: uppercase; */
-  animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
+  animation: waviy 3s infinite;
+  animation-delay: calc(.2s * var(--i));
 
 }
 @keyframes waviy {
@@ -21,6 +21,7 @@
   }
   20% {
     transform: translateY(-10px);
-    color: #66A1CE;
+    color: chartreuse;
+    /* color: #C58C29; */
   }
 }

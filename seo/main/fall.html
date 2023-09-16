@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- font style -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link
+    href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm"
+    rel="stylesheet" type="text/css" />
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+  <!-- local sheet -->
+  <link rel="stylesheet" href="../css/fontStyle.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/effect.css">
+  <script src="../js/look.js"></script>
+  <script src="../js/word.js"></script>
+
+  <style>
+    .container { width: 88.5vw; height: 84vh; }
+    .hc { height: 77.6vh;}
+    .grid:first-child {width: 23vw;}
+    .grid:nth-child(2) {width: 34.5vw; }
+    .grid:nth-child(3) {width: 29vw;}
+    /* .grid:nth-child(3) {width: 9vw;} */
+    /* .grid:nth-child(4) {width: 23vw;} */
+    /* .grid:nth-child(3) {width: 13vw;} */
+    /* .grid:nth-child(4) {width: 13vw;} */
+    .sandM {
+      background: url('../img/sandM01.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .sandM2 {
+      background: url('../img/sandM201.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .sandM3 {
+      background: url('../img/sandM202.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .sandV {
+      background: url('../img/sandV01.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .sandD {
+      background: url('../img/sandD03.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .sandA {
+      background: url('../img/sandA.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .pumkin {
+      background: url('../img/pumkin.jpeg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    /* .turning { display: none; } */
+    .koColor { color: #B93716;}
+    .priceColor { color: #ddb76a; }
+    .enColor { color: #C58C29;}
+    .exColor { color: #F2BC19; }
+    .tiFont:nth-child(odd) { color: #BE1F15; }
+    .tiFont:nth-child(even) { color: #C58C29;}
+    .title { color: #B5110A; background: url('../img/backFall6.jpeg');}
+    /* .title {  color: #fff; background: url('../img/backFall6.jpeg');} */
+    .on {
+      background-image: linear-gradient(to right top, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #efdcf2, #f9d8e8, #ffd6da) !important;
+    }
+  
+    /* esoBox */
+    .esoKo { color: #BB2813; }
+    .esoEn {
+      color: #C58C29;
+      text-shadow: 0 6.36px 3.896px #ddb76a, 0 -1px 1px #ddb76a;
+    }
+    .esoEx { color: #ddb76a;}
+    #boxEso .esoEx span { color: #BB581E;}
+  
+    /* latter */
+    .cup_body { background-color: #F2BC19;}
+    .saucer { background-color: #BB2813;}
+    .cup_handle { border: 2px solid #BE1F15;}
+  
+    /* mug effect */
+    .mugBox { margin-left: 0 !important;}
+    .handle { margin-top: 14px; margin-left: -1px; }
+    .mug { background-color: #b8dfea;}
+    .handle { border: 2px solid #2444B1; }
+    .steamimg::before { background-color: #fb92a7;}
+    /* we */
+    .we { color: #704E2E;}
+    /* .we { color: #395f60;} */
+    .we span:first-child { color: #E0A92C;}
+    .here { color: #4D361D; }
+    /* meal */
+    /* .chiceSwi { color: #66A1CE;} */
+    .grid:nth-child(3) .leftBox{width: 48%; }
+    .grid:nth-child(3) .rightBox{width: 48%; }
+    .grid:nth-child(3) > div:nth-child(2) .ex:last-child { padding-bottom: 11px ; }
+    .grid:nth-child(3)> div:nth-child(2) .en { padding-bottom: 0 !important; }
+    /* .grid:nth-child(3)> div:nth-child(2) .ko { padding-top: 4px;  } */
+  </style>
+</head>
+<body>
+  <div class="container disJcBet poAbCen">
+    <div class="grid disJcBetCol ">
+      <div class="thema disJcBetCol">
+        <div class="title shadow"> Espresso </div>
+        <div id="boxEso"  > </div>
+      </div>
+      <div class="thema ">
+        <div id="boxEso2" > </div>
+      </div>
+    </div>
+    <div class="grid disJcBetCol">
+      <div class="thema ">
+        <div class="title shadow"> Fruit </div>
+        <div id="boxFru"> </div>
+      </div>
+      <div class="thema none">
+        <div id="boxSpe2"> </div>
+      </div>
+      <div class="thema ">
+        <div id="boxHere"> </div>
+      </div>
+      <div class="thema ">
+        <div class="title shadow"> Cafe SEO's 한끼</div>
+        <div id="boxMeal"> </div>
+      </div>
+    </div>
+    <div class="grid disJcBetCol ">
+      <div class="thema  ">
+        <div class="title shadow"> 2023 Autom</div>
+        <!-- <div class="disJcBet"> -->
+          <div id="boxAutom" class=""> </div>
+          <div id="boxMilkShake" class=""> </div>
+        <!-- </div>   -->
+      </div>
+      <div class="disJcBetCol " >
+        <div class="disJcBet " >
+          <div class="thema leftBox">
+            <div class="title shadow"> Flower Tea</div>
+            <div id="boxFlo"> </div>
+          </div>
+          <div class="thema   rightBox  ">
+            <div class="title shadow"> Hand-Made Greek Yogurt</div>
+            <div id="boxGreek"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+
+ <script type="text/javascript">
+    $(document).ready(function () {
+      $("#boxEso").load("../thema/boxEso.html");
+      $("#boxEso2").load("../thema/boxEso2.html");
+      $("#boxFru").load("../thema/boxFru.html");
+      $("#boxGreek").load("../thema/boxGreek.html");
+      $("#boxHere").load("../thema/boxHere.html");
+      $("#boxFlo").load("../thema/boxTea.html");
+      $("#boxAutom").load("../thema/boxAutom.html");
+      $("#boxMilkShake").load("../thema/boxMilkShake.html");
+      $("#boxMeal").load("../thema/boxMeal.html");
+    });
+  </script>
+  
+</body>
+</html>
