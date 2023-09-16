@@ -5,16 +5,18 @@
   /* .greek .border { margin-bottom: 9px; } */
   .greek .leftBox { margin-left: 19px; width: 44% !important; }
   .greek .leftBox .ko{ padding-top: 44px; margin-left: 0;}
-  .greek .rightBox { width: 55% !important; }
+  .greek .rightBox { width: 52% !important; }
   .greek { line-height: 25px; }
   /* .greek .ko { padding: 6px 0;  } */
-  .yogurt .border { height: 11vh;}
-  .yogurt .border:nth-child(2) { margin-left: 5px;}
+  /* .yogurt .border { height: 11vh;} */
+  .yogurt .img:first-child { height: 16.5vh; width: 7vw; margin-bottom: 20px;}
+  .yogurt .img { height: 16.5vh; width: 7.3vw; margin-bottom: 20px;}
+  /* .yogurt .border:nth-child(2) { margin-left: 5px;} */
   .imgS {   
     width: 2.2vw; 
     height: 3.9vh;
     position: absolute;
-    bottom: 27.9vh;
+    bottom: 30vh;
     right: 0.7vw;
     opacity: 0.6;
   }
@@ -22,9 +24,22 @@
     width: 2vw; 
     height:3.7vh;
     position: absolute;
-    bottom: 17.5vh;
+    bottom: 20.2vh;
     right: 0.3vw;
     opacity: 0.6;
+  }
+  .yogurt .img .en,
+  .yogurt .img .ko,
+  .yogurt .img .priceColor { color: white;}
+  .yourtBowl {
+    background: url('../img/yogurtBowl.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .greekBowl {
+  background: url('../img/greekBowl.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   }
   .strawberry { background: url('../img/strawberry.png');background-size: 100% 100%;}
   .blueberry { background: url('../img/blueberries.png');background-size: 100% 100%;}
@@ -53,31 +68,32 @@
     </div>
     <div class=" posNa border">
       <div class="en enColor  "> BlueBerry </div>
-      <div class="ko koColor line pt5"> 블루베리갈아</div>
+      <div class="ko koColor line pt5"> 블루베리 갈아</div>
       <!-- <div class="ex exColor  ">  </div> -->
       <div class="blueberry imgB"></div>
     </div>
   </div>
 </div>
-<div class="disJcBet yogurt">
-    <div class=" border">
-      <!-- <div class="disJcBet"> -->
-        <div class="en enColor  "> YogurtBowl</div>
-      <!-- </div> -->
-      <div class="">
-        <div class="ko koColor line pt5 "> 요거볼 </div>
-        <div class="ex exColor  "> 요거트+생과일 </div>
-        <div class="price120 priceColor tr pt5"> </div>
+<div class="disJcBet yogurt ">
+    <div class="  img yourtBowl disCen tc">
+      <div class="posNe">
+        <div class="en enColor  "> Yogurt Bowl</div>
+        <!-- </div> -->
+        <div class="">
+          <div class="ko koColor pt8 "> 요거볼 </div>
+          <div class="ex exColor  pt8"> 요거트+생과일 </div>
+          <div class="price120 priceColor pt8"> </div>
+        </div>
       </div>
     </div>
-    <div class=" border ">
-      <!-- <div class="disJcBet"> -->
-        <div class="en enColor  "> GreekBowl</div>
-      <!-- </div> -->
-      <div class=" ">
-        <div class="ko koColor line pt5"> 그릭요거볼 </div>
-        <div class="ex exColor "> 그릭요거트+생과일 </div>
-        <div class="price120 priceColor tr pt5"> </div>
+    <div class="  img greekBowl disCen tc">
+      <div class="posNe">
+        <div class="en enColor  "> Greek Yogurt Bowl</div>
+        <div class=" ">
+          <div class="ko koColor pt8"> 그릭요거볼 </div>
+          <div class="ex exColor pt8"> 그릭요거트+생과일 </div>
+          <div class="price120 priceColor pt8"> </div>
+        </div>
       </div>
     </div>
 </div>
