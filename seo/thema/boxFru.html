@@ -123,14 +123,13 @@
           <div class="ex exColor "> 콜레스테롤 억제,<br> 시력 회복 <br> 노화 지연</div>
           <div class="tomato imgL"></div>
         </div>
-        <div class="swiper-slide border none">
+        <!-- <div class="swiper-slide border ">
           <div class="en enColor"> Apple + Carrot</div>
           <div class="ko koColor "> 사과 + 당근 </div>
           <div class="ex exColor"> 요통 감소,<br> 콜레스테롤 감소, <br> 눈 건강 탁월 </div> 
-          <!-- <div class="appleCarrot imgC"></div> -->
           <div class="carrot imgR"></div>
           <div class="applec imgL"></div>
-       </div>
+       </div> -->
         <div class="swiper-slide border ">
           <div class="en enColor"> Pear + Beet</div>
           <div class="ko koColor "> 배 + 비트 </div>
@@ -144,8 +143,6 @@
           <div class="ex exColor"> DNA 손상 예방, <br>심장병 예방, <br> 체중 감량</div>
           <div class="banana imgR"></div>
           <div class="kiwi imgL"></div>
-          
-          <!-- <div class="carrot imgL"></div> -->
         </div>
         <!-- <div class="swiper-slide border ">
           <div class="en enColor"> WaterMelon</div>
@@ -159,44 +156,32 @@
           <div class="ex exColor"> 암에 대한 대항성,<br> 피부 건강 증진 <br> 심혈관 개선 </div>
           <div class="grape imgD"></div>
         </div>
-        <div class="swiper-slide border none">
+        <!-- <div class="swiper-slide border ">
           <div class="en enColor"> WaterMelon</div>
           <div class="ko koColor "> 풋사과 </div>
           <div class="ex exColor"> 배변활동 원활 ,<br> 혈압 조절, <br>  활성산소 제거 </div>
           <div class="greenApple imgC"></div>
-        </div>
+        </div> -->
         <div class="swiper-pagination"></div>
       </div>
     </div>
-    <div class="disJcBet line border none">
-      <div class="dis">
-        <div class="en enColor "> Sweet Pumkin Latte</div>
-        <div class="ko koColor waviy ">
-          <span style="--i:1">단</span>
-          <span style="--i:2">호</span>
-          <span style="--i:3">박</span>
-          <span style="--i:4">라</span>
-          <span style="--i:5">떼</span>
-          
-        </div>
-      </div>
-      <div class="price90 priceColor"> </div>
-    </div>
     <script>
       const swiper = new Swiper('.swiper', {
-        loop: true,
         slidesPerView: 4,
         spaceBetween: 15,
-        // 자동반복
+        // 자동반복, display:none-작돈안함
+        loop: true,
+        loopAdditionalSlides: 1,
         autoplay: {
-          //시간 1000 이 1초
-          delay: 3000,
+          delay: 2500,
           disableOnInteraction: false,
         },
         // If we need pagination
         pagination: {
           el: '.swiper-pagination',
         },
+        observer: true,
+        observeParents: true
       });
     </script>
   <!-- </div>   -->
