@@ -44,7 +44,7 @@
     animation: reveal 10s infinite;
   }
   .we div:last-of-type span {
-    margin-left:-450px;
+    /* margin-left:-50px; */
     /* margin-left:-155px; */
     animation: slidein 10s infinite;
   }
@@ -61,18 +61,18 @@
     100% {opacity:1;}
   }
   @keyframes slidein {
-    0% { margin-left:-450px; }
-    20% { margin-left:-450px; }
+    0% { margin-left:-170px; }
+    20% { margin-left:-170px; }
     35% { margin-left:10px; }
     100% { margin-left:10px; }
   }
   @keyframes reveal {
     0% {opacity:0;width:0px;}
     20% {opacity:1;width:0px;}
-    30% {width:350px;}
+    30% {width:370px;}   /* 넓이조정 */
     80% {opacity:1;}
-    100% {opacity:0;width:350px;}
-  }
+    100% {opacity:0;width:370px;}
+  } 
   .we div, .hi div {
     display:inline-block;
     overflow:hidden;
@@ -92,18 +92,38 @@
     /* padding-top:-200px; */
     /* padding-top: 40px; */
   }
+  .we span:first-child {
+    width: 25px; 
+    height: 35px;
+    position: relative;
+   }
+  .ribbon {background: url('../img/ribbon.png') ; background-size: 100% 100%;}
+  .we span:first-child > img  {
+    width: 100%;
+    position: absolute;
+    bottom: -10%;
+    left: 10%;
+    opacity: 0.45;
+  }
 </style>
-
 <div class="we ">
-  <div> 쉼,   </div>
+  <div class=""> 
+    <!-- <img src="../img/ribbon.png" alt="bat" width="40px" height="40px"> -->
+    <img src="../img/bat.png" alt="bat" width="60px" height="35px"> 
+    Halloween Sweet Password ?    
+  </div>
+  <!-- <div> 쉼,   </div> -->
   <!-- <div> 풍요로운 행복과 넉넉한 마음으로  </div> -->
-  <div>
+  <div >
+    <!-- <span>at SEO</span><span class="here">가끔은 길을 잃어도 괜찮아 </span> -->
     <!-- <span> at CAFE SEO</span><span class="here"> 꽉찬 한가위 되세요!</span> -->
     <!-- <span>into amazing experiences at</span><span class="here"> SEO</span> -->
-    <span>at SEO</span><span class="here">가끔은 길을 잃어도 괜찮아 </span>
+    <span> at SEO  <img src="../img/ribbon.png" alt="ribbon"> </span>
+    <span class="here"> " Trick or Treat ! "<img src="../img/witch.png" alt="bat" width="60px" height="55px" style="margin-right: 10px;"></span>
+    <!-- <div class="ribbon "> </div> -->
+    </div>
   </div>
-</div>
-<div class="hi newYearColor none ">
-  Hello 2023, Happy New Year !
-</div>
+  <div class="hi newYearColor none ">
+    Hello 2023, Happy New Year !
+  </div>
 

@@ -127,7 +127,7 @@
 
 @keyframes flip {
   0%,80% {
-    color: #B93716;
+    color: #F93507;
     transform: rotateY(360deg);
   }
 }
