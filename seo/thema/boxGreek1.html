@@ -1,27 +1,27 @@
 <style>
-  .greek  { width: 40%;  }
-  .yogurt  { width: 57% ; }
-  .greek .leftBox { margin-left: 19px; width: 44% !important; }
+  /* .greek  { width: 40%;  }
+  .yogurt  { width: 57% ; } */
+  .greek .leftBox { margin-left: 19px; width: 41% !important; }
   .greek .leftBox .ko { padding-top: 44px; margin-left: 0;}
-  .greek .rightBox { width: 52% !important; }
+  .greek .rightBox { width: 58% !important; }
   .greek .rightBox .border .ko { padding-bottom: 6px;}
   /* .yogurt .img:first-child { height: 16.5vh; width: 7vw; margin-bottom: 20px;} */
-  /* .yogurt .img { height: 16.5vh; width: 7.3vw; margin-bottom: 20px;} */
+  .yogurt .img { height: 17.5vh; width: 5.5vw; margin-bottom: 20px;}
   /* .yogurt .border:nth-child(2) { margin-left: 5px;} */
   .imgS {   
     width: 2vw; 
     height: 3.5vh;
     position: absolute;
-    bottom: 33vh;
-    right: 17.7vw;
+    bottom: 31.1vh;
+    right: 0.7vw;
     opacity: 0.6;
   }
   .imgB {   
     width: 2vw; 
     height:3vh;
     position: absolute;
-    bottom: 26.2vh;
-    right: 17.7vw;
+    bottom: 23.2vh;
+    right: 0.7vw;
     opacity: 0.6;
   }
   .yogurt .img .en,
@@ -37,48 +37,47 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   }
-  .yogurt .img::before { border-radius: 50%;  }
-  .yogurt .border { border-radius: 50%; height: 230px; width: 200px;}
+  .img::before { border-radius: 50%;  }
+  /* .yogurt .border { border-radius: 50%; height: 230px; width: 200px;} */
 
   .strawberry { background: url('../img/strawberry.png');background-size: 100% 100%;}
   .blueberry { background: url('../img/blueberries.png');background-size: 100% 100%;}
 </style>
-
-<div class=" disJcBet">
-  <div class=" noDot  line dis">
-    <div class=" en enColor "> Hand-Made Yogurt & GreekYogurt </div>
-    <div class=" ko koColor "> 수제 요거트 & 그릭요거트 </div>
+<div class="disJcBet greek">
+  <div class=" leftBox">
+    <div class=" noDot  ">
+      <div class=" en enColor "> Hand-Made <br> Greek-Yogurt Smoothie </div>
+    </div>
+    <div class=" ko koColor "> 수제 <br> 그릭요거트 <br> 스무디</div>
+    <!-- <div class="disJcBet"> -->
+      <div class="price100 priceColor line "> </div>
+      <!-- </div> -->
   </div>
-  <!-- <div class="disJcBet"> -->
-    <!-- <div class="price100 priceColor "> </div> -->
-  <!-- </div> -->
-</div>
-<div class="disJcBet">
-  
-  <div class=" greek  ">
+  <div class=" rightBox  ">
     <div class="mt10 ">
       <div class="border">
-        <div class="dis line">
-          <div class="en enColor "> Plain Smoothie</div>
+        <div class=" ">
+          <div class="en enColor "> Plain </div>
           <div class="ko koColor "> 요거만 갈아 </div>
         </div>
       </div>
       <div class="border posNa">
-        <div class="dis line">
-          <div class="en enColor "> Strawberry Smoothie</div>
+        <div class=" ">
+          <div class="en enColor "> Strawberry </div>
           <div class="ko koColor "> 딸기 갈아 </div>
         </div>
         <div class="strawberry imgS"></div>
       </div>
       <div class="border posNa">
-        <div class="dis line">
-          <div class="en enColor "> BlueBerry Smoothie</div>
+        <div class="">
+          <div class="en enColor "> BlueBerry </div>
           <div class="ko koColor "> 블루베리 갈아 </div>
         </div>
         <div class="blueberry imgB"></div>
       </div>
     </div>
   </div>
+</div>
   <div class=" yogurt ">
     <div class="none ">
       <div class=" noDot  line disJcAr">
@@ -95,9 +94,9 @@
         <div class="posNe">
           <div class="en enColor  "> Yogurt Bowl</div>
           <div class="">
-            <div class="ko koColor pt8 "> 요거볼 </div>
-            <!-- <div class="ex exColor  pt8"> 요거트+생과일 </div> -->
-            <!-- <div class="price120 priceColor pt8"> </div> -->
+            <!-- <div class="ko koColor pt8 "> 요거볼 </div> -->
+            <div class="ex exColor  pt8"> 요거트+생과일 </div>
+            <div class="price120 priceColor pt8"> </div>
           </div>
         </div>
       </div>
@@ -105,13 +104,13 @@
         <div class="posNe">
           <div class="en enColor  "> Greek Yogurt Bowl</div>
           <div class=" ">
-            <div class="ko koColor pt8"> 그릭요거볼 </div>
-            <!-- <div class="ex exColor pt8"> 그릭요거트+생과일 </div> -->
-            <!-- <div class="price120 priceColor pt8"> </div> -->
+            <!-- <div class="ko koColor pt8"> 그릭요거볼 </div> -->
+            <div class="ex exColor pt8"> 그릭요거트+생과일 </div>
+            <div class="price120 priceColor pt8"> </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
   

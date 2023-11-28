@@ -30,12 +30,10 @@
     .container { width: 88.5vw; height: 84vh; }
     .hc { height: 77.6vh;}
     .grid:first-child {width: 23vw;}
-    .grid:nth-child(2) {width: 34.5vw; }
-    .grid:nth-child(3) {width: 29vw;}
-    /* .grid:nth-child(3) {width: 9vw;} */
-    /* .grid:nth-child(4) {width: 23vw;} */
-    /* .grid:nth-child(3) {width: 13vw;} */
-    /* .grid:nth-child(4) {width: 13vw;} */
+    .grid:nth-child(2) {width: 34vw; }
+    .grid:nth-child(3) {width: 30vw;}
+    /* .grid:nth-child(2) {width: 34.5vw; }
+    .grid:nth-child(3) {width: 29vw;} */
     .sandM {
       background: url('../img/sandM01.jpeg');
       background-size: 100% 100%;
@@ -72,32 +70,32 @@
       background-repeat: no-repeat;
     }
     /* .turning { display: none; } */
-    .koColor { color: #B93716;}
-    .turningColor { color: #F2BC19;}
-    .priceColor { color: #ddb76a; }
-    .enColor { color: #C58C29;}
-    .exColor { color: #F2BC19; }
-    .tiFont:nth-child(odd) { color: #BE1F15; }
-    .tiFont:nth-child(even) { color: #C58C29;}
-    .title { color: #B5110A; background: url('../img/backFall6.jpeg');}
+    .koColor { color: #B3000C;}
+    .priceColor { color: #870000; }
+    /* .priceColor { color: #677258; } */
+    .enColor { color: #0D5901;}
+    .exColor { color: #34685C; }
+    .tiFont:nth-child(odd) { color: #B3000C; }
+    .tiFont:nth-child(even) { color: #0D5901;}
+    .title { color: white; background: url('../img/backXmas.jpeg');}
     /* .title {  color: #fff; background: url('../img/backFall6.jpeg');} */
     .on {
       background-image: linear-gradient(to right top, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #efdcf2, #f9d8e8, #ffd6da) !important;
     }
   
     /* esoBox */
-    .esoKo { color: #BB2813; }
+    .esoKo { color: #B3000C; }
     .esoEn {
-      color: #C58C29;
+      color: #0D5901;
       text-shadow: 0 6.36px 3.896px #ddb76a, 0 -1px 1px #ddb76a;
     }
-    .esoEx { color: #ddb76a;}
+    .esoEx { color: #34685C;}
     #boxEso .esoEx span { color: #BB581E;}
   
     /* latter */
-    .cup_body { background-color: #F2BC19;}
-    .saucer { background-color: #BB2813;}
-    .cup_handle { border: 2px solid #BE1F15;}
+    .cup_body { background-color: #B3000C;}
+    .saucer { background-color: #0D5901;}
+    .cup_handle { border: 2px solid #0D5901;}
   
     /* mug effect */
     .mugBox { margin-left: 0 !important;}
@@ -106,17 +104,20 @@
     .handle { border: 2px solid #2444B1; }
     .steamimg::before { background-color: #fb92a7;}
     /* we */
-    .we { color: #704E2E;}
-    /* .we { color: #395f60;} */
-    .we span:first-child { color: #E0A92C;}
-    .here { color: #4D361D; }
+    .we > div > span:nth-child(odd) { color: #0D5901;}
+    .we > div > span:nth-child(even) { color: #B3000C;}
+    .we > div > span:first-child { color: #0D5901;}
+    .we > div:nth-child(2) > span:first-child { 
+      color: white; background-color: #0D5901; padding: px;
+    }
+    .here { color: #0D5901; }
     /* meal */
     /* .chiceSwi { color: #66A1CE;} */
     .w8 { width: 64%; }
     .w1 { width: 34%; }
 
-    .grid:nth-child(3) .leftBox{width: 48%; }
-    .grid:nth-child(3) .rightBox{width: 50%; }
+    .grid:nth-child(3) .leftBox{width: 46%; }
+    .grid:nth-child(3) .rightBox{width: 52%; }
     .grid:nth-child(3) > div:nth-child(2) .ex:last-child { padding-bottom: 11px ; }
     .grid:nth-child(3)> div:nth-child(2) .en { padding-bottom: 0 !important; }
     /* .grid:nth-child(3)> div:nth-child(2) .ko { padding-top: 4px;  } */
@@ -144,30 +145,34 @@
       <div class="thema ">
         <div id="boxHere"> </div>
       </div>
-      <div class="thema ">
-        <div class="title shadow"> Cafe SEO's 한끼</div>
-        <div id="boxMeal"> </div>
+      <div class="thema  ">
+        <div class="title shadow"> Hand-Made Greek Yogurt</div>
+        <div id="boxGreek"> </div>
       </div>
     </div>
     <div class="grid disJcBetCol ">
       <div class="thema  ">
-        <div class="title shadow"> 2023 Autumn</div>
-        <div class="disJcBet">
-          <div id="boxAutom" class="w8"> </div>
-          <div id="boxMilkShake" class="w1"> </div>
+        <div class="title shadow"> 2023 Winter</div>
+        <div class="">
+          <div id="boxAutom" > </div>
         </div>  
       </div>
-      <div class="disJcBetCol " >
-        <div class="disJcBet " >
-          <div class="thema leftBox disJcBetCol">
+      <div class="thema ">
+        <div class="title shadow"> Cafe SEO's 한끼</div>
+        <div id="boxMeal"> </div>
+      </div>
+      
+
+      <div class=" disJcBet" >
+        <!-- <div class=" " > -->
+          <div class="thema  disJcBetCol rightBox">
+            <div class="title shadow"> Milk </div>
+            <div id="boxMilkShake" > </div>
+          </div>
+          <div class="thema  disJcBetCol leftBox">
             <div class="title shadow"> Flower Tea</div>
             <div id="boxFlo"> </div>
           </div>
-          <div class="thema   rightBox  disJcBetCol">
-            <div class="title shadow"> Hand-Made Greek Yogurt</div>
-            <div id="boxGreek"> </div>
-          </div>
-        </div>
       </div>
     </div>
     
@@ -179,12 +184,12 @@
     $(document).ready(function () {
       $("#boxEso").load("../thema/boxEso.html");
       $("#boxEso2").load("../thema/boxEso2.html");
-      $("#boxFru").load("../thema/boxFru.html");
-      $("#boxGreek").load("../thema/boxGreek1.html");
+      $("#boxFru").load("../thema/boxFru2.html");
+      $("#boxGreek").load("../thema/boxGreek.html");
       $("#boxHere").load("../thema/boxHere.html");
-      $("#boxFlo").load("../thema/boxTea1.html");
-      $("#boxAutom").load("../thema/boxAutom.html");
-      $("#boxMilkShake").load("../thema/boxMilkShake1.html");
+      $("#boxFlo").load("../thema/boxTea.html");
+      $("#boxAutom").load("../thema/boxXmas.html");
+      $("#boxMilkShake").load("../thema/boxMilkShake.html");
       $("#boxMeal").load("../thema/boxMeal.html");
     });
   </script>
