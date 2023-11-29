@@ -1,0 +1,140 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+  .weare {
+    text-align:center;
+    overflow:hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+    /* height: 50px; */
+  }
+  .we{   
+    animation: showup 10s infinite;
+    margin-bottom: 10px;
+    /* margin-bottom: 30px; */
+    /* background-color: aqua; */
+  }
+  .hi{   
+    animation: showdown 10s infinite;
+   
+    /* padding-top: -150px; */
+  }
+  .we {
+    text-align:center;
+    font-family:'twayair';
+    font-weight:200;
+    padding-top:10px;
+  }
+  .we div:first-child {   
+    animation: showup 10s infinite;
+  }
+  .we div:first-child, .here {
+    /* color:#8f9e81; */
+    font-size:25px;
+    font-family: twayair;
+  } 
+  .we div:last-child  {
+    /* color:#dbc2ad; */
+    font-size:18px;
+    font-family: Poppins-Regular;
+    width:0px;
+    animation: reveal 10s infinite;
+  }
+  .we div:last-of-type span {
+    /* margin-left:-50px; */
+    /* margin-left:-155px; */
+    animation: slidein 10s infinite;
+  }
+  @keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+  }
+  @keyframes showdown {
+    0% {opacity:1;}
+    20% {opacity:0;}
+    70% {opacity:0;}
+    100% {opacity:1;}
+  }
+  @keyframes slidein {
+    0% { margin-left:-170px; }
+    20% { margin-left:-170px; }
+    35% { margin-left:10px; }
+    100% { margin-left:10px; }
+  }
+  @keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:370px;}   /* 넓이조정 */
+    80% {opacity:1;}
+    100% {opacity:0;width:370px;}
+  } 
+  .we div, .hi div {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+  }  
+  .hi {
+    height: 90px;
+    font-size:35px;
+    font-family: 'Tangerine', cursive;;
+    font-weight: 900;
+    /* position: absolute;
+    bottom: 30%;
+    left:50%;
+    transform:translateX(-50%); */
+    filter: opacity(0.6);
+    text-align: center;
+    /* padding-top:-200px; */
+    /* padding-top: 40px; */
+  }
+  .we span:first-child {
+    width: 25px; 
+    height: 35px;
+    position: relative;
+   }
+  .ribbon {background: url('../img/ribbon.png') ; background-size: 100% 100%;}
+  .we span:first-child > img  {
+    width: 100%;
+    position: absolute;
+    bottom: -10%;
+    left: 10%;
+    opacity: 0.45;
+  }
+</style>
+<div class="we ">
+  <div> 쉼,   </div>
+  <div >
+    <span>at SEO</span><span class="here">가끔은 길을 잃어도 괜찮아 </span>
+    </div>
+  </div>
+<div class="we none">
+  <div> 
+    <span class=""> M</span>
+    <span> e</span>
+    <span> r</span>
+    <span> r</span>
+    <span style="margin-right: 10px;"> y</span>
+    <span> C</span>
+    <span> h</span>
+    <span> r</span>
+    <span> i</span>
+    <span> s</span>
+    <span> t</span>
+    <span> m</span>
+    <span> a</span>
+    <span> s</span>
+  </div>
+  <div >
+    <span>at SEO</span> 
+    <span class="here">Happy New Year </span>
+  </div>
+</div>
+<div class="hi newYearColor none ">
+  Hello 2024, Happy New Year !
+</div>
+
