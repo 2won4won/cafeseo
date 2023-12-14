@@ -125,12 +125,13 @@
   animation-delay: calc(.3s * var(--i));
 }
 
-@keyframes flip {
+/* @keyframes flip {
   0%,80% {
-    color: #B93716;
+    /* color: #B93716; */
+    color: #537496;
     transform: rotateY(360deg);
   }
-}
+} */
 /* mug & steaming */
 .steamimg {
   position: absolute;
