@@ -30,7 +30,7 @@
   <style>
     .container {
       width: 88.5vw;
-      height: 85.5vh;
+      height: 87.2vh;
     }
 
     .bc {
@@ -55,6 +55,10 @@
 
     .grid:nth-child(3) {
       width: 32vw;
+    }
+    .grid:nth-child(3)  .leftBox,
+     grid:nth-child(3)  .rightBox {
+      width: 42%;
     }
 
     /* .grid:nth-child(2) {width: 34.5vw; }
@@ -266,6 +270,10 @@
       <div class="thema ">
         <div id="boxEso2"> </div>
       </div>
+      <div class="thema ">
+        <div id="boxBowl"> </div>
+      </div>
+      
     
     </div>
     <div class="grid disJcBetCol ">
@@ -298,16 +306,16 @@
       </div>
 
 
-      <div class=" ">
+      <div class="disJcBet ">
         <!-- <div class=" " > -->
-        <div class="thema  disJcBetCol ">
+        <div class="thema  disJcBetCol leftBox">
           <div class="title shadow"> Milk-Shake </div>
           <div id="boxMilkShake"> </div>
         </div>
-        <!-- <div class="thema  disJcBetCol leftBox ">
-            <div class="title shadow"> Flower Tea</div>
-            <div id="boxFlo"> </div>
-          </div> -->
+        <div class="thema  disJcBetCol rightBox ">
+          <div class="title shadow"> Flower Tea</div>
+          <div id="boxFlo"> </div>
+        </div>
       </div>
     </div>
 
@@ -322,11 +330,13 @@
       $("#boxFru").load("../thema/boxFru3.html");
       $("#boxGreek").load("../thema/boxGreek.html");
       $("#boxHere").load("../thema/boxHere1.html");
-      // $("#boxFlo").load("../thema/boxTea.html");
+      $("#boxFlo").load("../thema/boxTea.html");
       $("#boxTea").load("../thema/boxTea2.html");
       $("#boxAutom").load("../thema/boxXmas.html");
       $("#boxMilkShake").load("../thema/boxMilkShake.html");
       $("#boxMeal").load("../thema/boxMeal1.html");
+      $("#boxBowl").load("../thema/boxWinter.html");
+    
     });
   </script>
 
